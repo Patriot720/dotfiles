@@ -1,0 +1,4 @@
+.ssh/*
+.gnupg/*
+.config/systemd/user/*
+.zsh-scripts/private/*
