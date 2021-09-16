@@ -5,13 +5,16 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode","idle_inhibitor", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["clock",  "pulseaudio","custom/wireguard", "backlight","keyboard-state", "sway/language", "battery", "battery#bat2",  "custom/bluetoothapplet" ,"tray", "custom/powerapplet"],
+    "modules-right": ["custom/wireguard", "backlight","keyboard-state", "sway/language", "battery", "battery#bat2",  "custom/bluetoothapplet" ,"pulseaudio", "tray", "clock","custom/powerapplet"],
     "keyboard-state": {
         "format": "{name} {icon}",
         "format-icons": {
             "locked": "",
             "unlocked": "",
         }
+    },
+    "sway/window":{
+        "max-length": 70
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -125,19 +128,11 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{icon}",
+        "tooltip": false,
+        "format-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "headset": ["", "", ""],
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"

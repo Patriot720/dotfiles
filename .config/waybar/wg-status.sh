@@ -22,8 +22,11 @@ show_status(){
 
 wg-toggle(){
     if is_off; then
+        if [ ! -f "$HOME/wgcf-profile.conf" ]; then
+            wg-generate;
+        fi
         wg-start
-        if ping google.com; then
+        if ping -c 2 google.com; then
         else
             wg-stop;
             wg-generate;

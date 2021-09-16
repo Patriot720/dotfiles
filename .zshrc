@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zsh-scripts/private/private.zsh
 source ~/.zsh-scripts/video.zsh
+source ~/.zsh-scripts/clipboard.zsh
 source ~/.zsh-scripts/docs.zsh
 source ~/.zsh-scripts/colorpicker.zsh
 source ~/.zsh-scripts/peco.zsh
@@ -123,6 +124,7 @@ export VISUAL="vim"
 export EDITOR="emacsclient -n"
 alias em="emacsclient -n"
 
+export HUGO_BLOG="$HOME/.dump"
 export PATH="$PATH:/home/$USER/.emacs.d/bin"
 
 export PATH="$PATH:/home/$USER/.local/bin"
