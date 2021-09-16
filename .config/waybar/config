@@ -1,11 +1,11 @@
 {
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 25, // Waybar height (to be removed for auto height)
+    "height": 29, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode","idle_inhibitor", "custom/media"],
+    "modules-left": ["sway/workspaces", "sway/mode","idle_inhibitor",],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/wireguard", "backlight","keyboard-state", "sway/language", "battery", "battery#bat2",  "custom/bluetoothapplet" ,"pulseaudio", "tray", "clock","custom/powerapplet"],
+    "modules-right": ["custom/wireguard", "backlight","keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock","custom/powerapplet"],
     "keyboard-state": {
         "format": "{name} {icon}",
         "format-icons": {
@@ -117,13 +117,18 @@
     },
     "custom/wireguard":{
         "on-click": "~/.config/waybar/wg-status.sh",
-        "interval": 1,
+        "interval": 2,
         "return-type": "json",
         "exec": "~/.config/waybar/wg-status.sh --status"
     },
     "custom/bluetoothapplet":{
-        "exec": "~/.config/polybar/system-bluetooth-bluetoothctl.sh",
-        "exec-on-event": false,
+        "format": "{icon} {}",
+        "exec": "~/.config/waybar/system-bluetooth-bluetoothctl.sh",
+        "restart-interval": 1,
+        "format-icons": {
+            "default": ""
+        },
+        "return-type": "json",
         "on-click": "~/.config/rofi/bin/rofi-bluetooth"
     },
     "pulseaudio": {

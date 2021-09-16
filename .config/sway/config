@@ -2,6 +2,7 @@ set $mod Mod4
 
 default_border pixel 5
 default_floating_border normal
+urgent enable
 
 hide_edge_borders both
 
