@@ -1,0 +1,477 @@
+[2021-09-16 20:42:59.348] [info] Resources files: /home/andrew/.config/waybar/config, /home/andrew/.config/waybar/style.css
+[2021-09-16 20:42:59.357] [debug] Output detection done: DP-1 (Goldstar Company Ltd LG HDR WFHD 0x00007717)
+[2021-09-16 20:42:59.358] [debug] Output detection done: DVI-D-1 (Unknown 2269W BGMD59A000839)
+[2021-09-16 20:42:59.364] [warning] module backlight: Disabling module "backlight", No backlight found
+[2021-09-16 20:42:59.365] [warning] module keyboard-state: Disabling module "keyboard-state", Failed to find keyboard device
+[2021-09-16 20:42:59.375] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:42:59.375] [debug] Cmd exited with code 0
+[2021-09-16 20:42:59.376] [warning] module battery: Disabling module "battery", No batteries.
+[2021-09-16 20:42:59.376] [warning] module battery#bat2: Disabling module "battery#bat2", No battery named BAT2
+[2021-09-16 20:42:59.378] [warning] For a functional tray you must have libappindicator-* installed and export XDG_CURRENT_DESKTOP=Unity
+[2021-09-16 20:42:59.398] [debug] GTK widget tree:
+window#waybar.background.bottom..DVI-D-1:dir(ltr)
+  decoration:dir(ltr)
+  box.horizontal:dir(ltr)
+    box.horizontal.modules-left:dir(ltr)
+      widget:dir(ltr)
+        box#workspaces.horizontal:dir(ltr)
+      widget:dir(ltr)
+        label#mode:dir(ltr)
+      widget:dir(ltr)
+        label#idle_inhibitor:dir(ltr)
+    box.horizontal.modules-center:dir(ltr)
+      widget:dir(ltr)
+        label#window:dir(ltr)
+    box.horizontal.modules-right:dir(ltr)
+      widget:dir(ltr)
+        label#custom-wireguard:dir(ltr)
+      widget:dir(ltr)
+        label#language:dir(ltr)
+      widget:dir(ltr)
+        label#custom-bluetoothapplet:dir(ltr)
+      widget:dir(ltr)
+        label#pulseaudio:dir(ltr)
+      widget:dir(ltr)
+        box#tray.horizontal:dir(ltr)
+      widget:dir(ltr)
+        label#clock:dir(ltr)
+      widget:dir(ltr)
+        label#custom-powerapplet:dir(ltr)
+
+[2021-09-16 20:42:59.403] [warning] module backlight: Disabling module "backlight", No backlight found
+[2021-09-16 20:42:59.403] [warning] module keyboard-state: Disabling module "keyboard-state", Failed to find keyboard device
+[2021-09-16 20:42:59.419] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:42:59.419] [debug] Cmd exited with code 0
+[2021-09-16 20:42:59.420] [warning] module battery: Disabling module "battery", No batteries.
+[2021-09-16 20:42:59.420] [warning] module battery#bat2: Disabling module "battery#bat2", No battery named BAT2
+[2021-09-16 20:42:59.423] [warning] For a functional tray you must have libappindicator-* installed and export XDG_CURRENT_DESKTOP=Unity
+[2021-09-16 20:42:59.426] [debug] GTK widget tree:
+window#waybar.background.bottom.DP-1.:dir(ltr)
+  decoration:dir(ltr)
+  box.horizontal:dir(ltr)
+    box.horizontal.modules-left:dir(ltr)
+      widget:dir(ltr)
+        box#workspaces.horizontal:dir(ltr)
+      widget:dir(ltr)
+        label#mode:dir(ltr)
+      widget:dir(ltr)
+        label#idle_inhibitor:dir(ltr)
+    box.horizontal.modules-center:dir(ltr)
+      widget:dir(ltr)
+        label#window:dir(ltr)
+    box.horizontal.modules-right:dir(ltr)
+      widget:dir(ltr)
+        label#custom-wireguard:dir(ltr)
+      widget:dir(ltr)
+        label#language:dir(ltr)
+      widget:dir(ltr)
+        label#custom-bluetoothapplet:dir(ltr)
+      widget:dir(ltr)
+        label#pulseaudio:dir(ltr)
+      widget:dir(ltr)
+        box#tray.horizontal:dir(ltr)
+      widget:dir(ltr)
+        label#clock:dir(ltr)
+      widget:dir(ltr)
+        label#custom-powerapplet:dir(ltr)
+
+[2021-09-16 20:42:59.484] [info] Bar configured (width: 1920, height: 29) for output: DVI-D-1
+[2021-09-16 20:42:59.484] [info] Bar configured (width: 2560, height: 29) for output: DP-1
+[2021-09-16 20:42:59.492] [trace] Set tray item property: :1.51.AttentionIconName = ''
+[2021-09-16 20:42:59.493] [trace] Set tray item property: :1.51.AttentionIconPixmap = []
+[2021-09-16 20:42:59.493] [trace] Set tray item property: :1.51.AttentionMovieName = ''
+[2021-09-16 20:42:59.493] [trace] Set tray item property: :1.51.Category = 'Communications'
+[2021-09-16 20:42:59.493] [trace] Set tray item property: :1.51.IconName = 'telegram-mute-panel'
+[2021-09-16 20:42:59.493] [trace] Set tray item property: :1.51.IconPixmap = []
+[2021-09-16 20:42:59.493] [trace] Set tray item property: :1.51.IconThemePath = ''
+[2021-09-16 20:42:59.493] [trace] Set tray item property: :1.51.Id = 'TelegramDesktop'
+[2021-09-16 20:42:59.493] [trace] Set tray item property: TelegramDesktop.ItemIsMenu = false
+[2021-09-16 20:42:59.493] [trace] Set tray item property: TelegramDesktop.Menu = '/MenuBar'
+[2021-09-16 20:42:59.494] [trace] Set tray item property: TelegramDesktop.OverlayIconName = ''
+[2021-09-16 20:42:59.494] [trace] Set tray item property: TelegramDesktop.OverlayIconPixmap = []
+[2021-09-16 20:42:59.494] [trace] Set tray item property: TelegramDesktop.Status = 'Active'
+[2021-09-16 20:42:59.494] [trace] Set tray item property: TelegramDesktop.Title = 'Telegram Desktop'
+[2021-09-16 20:42:59.494] [trace] Set tray item property: TelegramDesktop.ToolTip = (sa(iiay)ss)
+[2021-09-16 20:42:59.494] [trace] Set tray item property: TelegramDesktop.WindowId = 0
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.AttentionIconName = ''
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.AttentionIconPixmap = []
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.AttentionMovieName = ''
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.Category = 'Communications'
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.IconName = 'telegram-mute-panel'
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.IconPixmap = []
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.IconThemePath = ''
+[2021-09-16 20:42:59.518] [trace] Set tray item property: :1.51.Id = 'TelegramDesktop'
+[2021-09-16 20:42:59.518] [trace] Set tray item property: TelegramDesktop.ItemIsMenu = false
+[2021-09-16 20:42:59.518] [trace] Set tray item property: TelegramDesktop.Menu = '/MenuBar'
+[2021-09-16 20:42:59.519] [trace] Set tray item property: TelegramDesktop.OverlayIconName = ''
+[2021-09-16 20:42:59.519] [trace] Set tray item property: TelegramDesktop.OverlayIconPixmap = []
+[2021-09-16 20:42:59.519] [trace] Set tray item property: TelegramDesktop.Status = 'Active'
+[2021-09-16 20:42:59.519] [trace] Set tray item property: TelegramDesktop.Title = 'Telegram Desktop'
+[2021-09-16 20:42:59.519] [trace] Set tray item property: TelegramDesktop.ToolTip = (sa(iiay)ss)
+[2021-09-16 20:42:59.519] [trace] Set tray item property: TelegramDesktop.WindowId = 0
+[2021-09-16 20:42:59.528] [trace] Set tray item property: :1.62.AttentionAccessibleDesc = ''
+[2021-09-16 20:42:59.528] [trace] Set tray item property: :1.62.AttentionIconName = ''
+[2021-09-16 20:42:59.528] [trace] Set tray item property: :1.62.Category = 'ApplicationStatus'
+[2021-09-16 20:42:59.528] [trace] Set tray item property: :1.62.IconAccessibleDesc = ''
+[2021-09-16 20:42:59.528] [trace] Set tray item property: :1.62.IconName = 'dropboxstatus-idle'
+[2021-09-16 20:42:59.528] [trace] Set tray item property: :1.62.IconThemePath = '/home/andrew/.dropbox-dist/dropbox-lnx.x86_64-131.4.3968/images'
+[2021-09-16 20:42:59.528] [trace] Set tray item property: :1.62.Id = 'dropbox-client-1117'
+[2021-09-16 20:42:59.528] [trace] Set tray item property: dropbox-client-1117.Menu = '/org/ayatana/NotificationItem/dropbox_client_1117/Menu'
+[2021-09-16 20:42:59.528] [trace] Set tray item property: dropbox-client-1117.Status = 'Active'
+[2021-09-16 20:42:59.528] [trace] Set tray item property: dropbox-client-1117.Title = 'dropbox'
+[2021-09-16 20:42:59.528] [trace] Set tray item property: dropbox-client-1117.XAyatanaLabel = ''
+[2021-09-16 20:42:59.528] [trace] Set tray item property: dropbox-client-1117.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.528] [trace] Set tray item property: dropbox-client-1117.XAyatanaOrderingIndex = 0
+[2021-09-16 20:42:59.529] [trace] Set tray item property: :1.62.AttentionAccessibleDesc = ''
+[2021-09-16 20:42:59.529] [trace] Set tray item property: :1.62.AttentionIconName = ''
+[2021-09-16 20:42:59.529] [trace] Set tray item property: :1.62.Category = 'ApplicationStatus'
+[2021-09-16 20:42:59.529] [trace] Set tray item property: :1.62.IconAccessibleDesc = ''
+[2021-09-16 20:42:59.529] [trace] Set tray item property: :1.62.IconName = 'dropboxstatus-idle'
+[2021-09-16 20:42:59.529] [trace] Set tray item property: :1.62.IconThemePath = '/home/andrew/.dropbox-dist/dropbox-lnx.x86_64-131.4.3968/images'
+[2021-09-16 20:42:59.529] [trace] Set tray item property: :1.62.Id = 'dropbox-client-1117'
+[2021-09-16 20:42:59.529] [trace] Set tray item property: dropbox-client-1117.Menu = '/org/ayatana/NotificationItem/dropbox_client_1117/Menu'
+[2021-09-16 20:42:59.529] [trace] Set tray item property: dropbox-client-1117.Status = 'Active'
+[2021-09-16 20:42:59.529] [trace] Set tray item property: dropbox-client-1117.Title = 'dropbox'
+[2021-09-16 20:42:59.529] [trace] Set tray item property: dropbox-client-1117.XAyatanaLabel = ''
+[2021-09-16 20:42:59.529] [trace] Set tray item property: dropbox-client-1117.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.529] [trace] Set tray item property: dropbox-client-1117.XAyatanaOrderingIndex = 0
+[2021-09-16 20:42:59.530] [trace] Set tray item property: :1.14.AttentionAccessibleDesc = ''
+[2021-09-16 20:42:59.530] [trace] Set tray item property: :1.14.AttentionIconName = ''
+[2021-09-16 20:42:59.530] [trace] Set tray item property: :1.14.Category = 'ApplicationStatus'
+[2021-09-16 20:42:59.530] [trace] Set tray item property: :1.14.IconAccessibleDesc = ''
+[2021-09-16 20:42:59.530] [trace] Set tray item property: :1.14.IconName = 'redshift-status-on'
+[2021-09-16 20:42:59.530] [trace] Set tray item property: :1.14.IconThemePath = ''
+[2021-09-16 20:42:59.530] [trace] Set tray item property: :1.14.Id = 'redshift'
+[2021-09-16 20:42:59.530] [trace] Set tray item property: redshift.Menu = '/org/ayatana/NotificationItem/redshift/Menu'
+[2021-09-16 20:42:59.531] [trace] Set tray item property: redshift.Status = 'Active'
+[2021-09-16 20:42:59.531] [trace] Set tray item property: redshift.Title = 'redshift-gtk'
+[2021-09-16 20:42:59.531] [trace] Set tray item property: redshift.XAyatanaLabel = ''
+[2021-09-16 20:42:59.531] [trace] Set tray item property: redshift.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.531] [trace] Set tray item property: redshift.XAyatanaOrderingIndex = 0
+[2021-09-16 20:42:59.540] [trace] Set tray item property: :1.14.AttentionAccessibleDesc = ''
+[2021-09-16 20:42:59.540] [trace] Set tray item property: :1.14.AttentionIconName = ''
+[2021-09-16 20:42:59.540] [trace] Set tray item property: :1.14.Category = 'ApplicationStatus'
+[2021-09-16 20:42:59.540] [trace] Set tray item property: :1.14.IconAccessibleDesc = ''
+[2021-09-16 20:42:59.540] [trace] Set tray item property: :1.14.IconName = 'redshift-status-on'
+[2021-09-16 20:42:59.540] [trace] Set tray item property: :1.14.IconThemePath = ''
+[2021-09-16 20:42:59.540] [trace] Set tray item property: :1.14.Id = 'redshift'
+[2021-09-16 20:42:59.540] [trace] Set tray item property: redshift.Menu = '/org/ayatana/NotificationItem/redshift/Menu'
+[2021-09-16 20:42:59.541] [trace] Set tray item property: redshift.Status = 'Active'
+[2021-09-16 20:42:59.541] [trace] Set tray item property: redshift.Title = 'redshift-gtk'
+[2021-09-16 20:42:59.541] [trace] Set tray item property: redshift.XAyatanaLabel = ''
+[2021-09-16 20:42:59.541] [trace] Set tray item property: redshift.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.541] [trace] Set tray item property: redshift.XAyatanaOrderingIndex = 0
+[2021-09-16 20:42:59.548] [trace] Set tray item property: :1.13.AttentionAccessibleDesc = ''
+[2021-09-16 20:42:59.548] [trace] Set tray item property: :1.13.AttentionIconName = ''
+[2021-09-16 20:42:59.548] [trace] Set tray item property: :1.13.Category = 'ApplicationStatus'
+[2021-09-16 20:42:59.548] [trace] Set tray item property: :1.13.IconAccessibleDesc = ''
+[2021-09-16 20:42:59.548] [trace] Set tray item property: :1.13.IconName = 'variety-indicator'
+[2021-09-16 20:42:59.548] [trace] Set tray item property: :1.13.IconThemePath = ''
+[2021-09-16 20:42:59.548] [trace] Set tray item property: :1.13.Id = 'variety'
+[2021-09-16 20:42:59.548] [trace] Set tray item property: variety.Menu = '/org/ayatana/NotificationItem/variety/Menu'
+[2021-09-16 20:42:59.548] [trace] Set tray item property: variety.Status = 'Active'
+[2021-09-16 20:42:59.548] [trace] Set tray item property: variety.Title = 'variety'
+[2021-09-16 20:42:59.548] [trace] Set tray item property: variety.XAyatanaLabel = ''
+[2021-09-16 20:42:59.548] [trace] Set tray item property: variety.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.548] [trace] Set tray item property: variety.XAyatanaOrderingIndex = 0
+[2021-09-16 20:42:59.555] [trace] Set tray item property: :1.13.AttentionAccessibleDesc = ''
+[2021-09-16 20:42:59.555] [trace] Set tray item property: :1.13.AttentionIconName = ''
+[2021-09-16 20:42:59.555] [trace] Set tray item property: :1.13.Category = 'ApplicationStatus'
+[2021-09-16 20:42:59.555] [trace] Set tray item property: :1.13.IconAccessibleDesc = ''
+[2021-09-16 20:42:59.555] [trace] Set tray item property: :1.13.IconName = 'variety-indicator'
+[2021-09-16 20:42:59.555] [trace] Set tray item property: :1.13.IconThemePath = ''
+[2021-09-16 20:42:59.555] [trace] Set tray item property: :1.13.Id = 'variety'
+[2021-09-16 20:42:59.555] [trace] Set tray item property: variety.Menu = '/org/ayatana/NotificationItem/variety/Menu'
+[2021-09-16 20:42:59.555] [trace] Set tray item property: variety.Status = 'Active'
+[2021-09-16 20:42:59.555] [trace] Set tray item property: variety.Title = 'variety'
+[2021-09-16 20:42:59.555] [trace] Set tray item property: variety.XAyatanaLabel = ''
+[2021-09-16 20:42:59.555] [trace] Set tray item property: variety.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.555] [trace] Set tray item property: variety.XAyatanaOrderingIndex = 0
+[2021-09-16 20:42:59.602] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:42:59.602] [debug] Cmd exited with code 0
+[2021-09-16 20:42:59.620] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:42:59.620] [debug] Cmd exited with code 0
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.AttentionIconName = ''
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.AttentionIconPixmap = []
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.AttentionMovieName = ''
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.Category = 'SystemServices'
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.IconPixmap = []
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.IconThemePath = ''
+[2021-09-16 20:42:59.851] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.Id = 'Fcitx'
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.ItemIsMenu = false
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.Menu = '/MenuBar'
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.OverlayIconName = ''
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.OverlayIconPixmap = []
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.Status = 'Active'
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.Title = 'Input Method'
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.ToolTip = ('', [], '', '')
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.WindowId = 0
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.XAyatanaLabel = ''
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.851] [trace] Set tray item property: Fcitx.XAyatanaOrderingIndex = 0
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.AttentionIconName = ''
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.AttentionIconPixmap = []
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.AttentionMovieName = ''
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.Category = 'SystemServices'
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.IconPixmap = []
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.IconThemePath = ''
+[2021-09-16 20:42:59.858] [trace] Set tray item property: org.fcitx.Fcitx5.StatusNotifierItem-1169-208.Id = 'Fcitx'
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.ItemIsMenu = false
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.Menu = '/MenuBar'
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.OverlayIconName = ''
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.OverlayIconPixmap = []
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.Status = 'Active'
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.Title = 'Input Method'
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.ToolTip = ('', [], '', '')
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.WindowId = 0
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.XAyatanaLabel = ''
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.XAyatanaLabelGuide = ''
+[2021-09-16 20:42:59.858] [trace] Set tray item property: Fcitx.XAyatanaOrderingIndex = 0
+[2021-09-16 20:43:00.762] [debug] Cmd exited with code 0
+[2021-09-16 20:43:00.762] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:00.773] [debug] Cmd exited with code 0
+[2021-09-16 20:43:00.773] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:00.777] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:00.789] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:00.789] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:00.790] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:00.790] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:01.388] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:01.388] [debug] Cmd exited with code 0
+[2021-09-16 20:43:01.432] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:01.432] [debug] Cmd exited with code 0
+[2021-09-16 20:43:01.915] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:01.915] [debug] Cmd exited with code 0
+[2021-09-16 20:43:01.926] [debug] Cmd exited with code 0
+[2021-09-16 20:43:01.926] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:03.075] [debug] Cmd exited with code 0
+[2021-09-16 20:43:03.075] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:03.089] [debug] Cmd exited with code 0
+[2021-09-16 20:43:03.089] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:03.108] [warning] Requested height: 29 exceeds the minimum height: 30 required by the modules
+[2021-09-16 20:43:03.108] [info] Bar configured (width: 1920, height: 30) for output: DVI-D-1
+[2021-09-16 20:43:03.191] [info] Bar configured (width: 1920, height: 29) for output: DVI-D-1
+[2021-09-16 20:43:03.402] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:03.402] [debug] Cmd exited with code 0
+[2021-09-16 20:43:03.445] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:03.445] [debug] Cmd exited with code 0
+[2021-09-16 20:43:04.226] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:04.226] [debug] Cmd exited with code 0
+[2021-09-16 20:43:04.238] [debug] Cmd exited with code 0
+[2021-09-16 20:43:04.238] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:05.378] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:05.378] [debug] Cmd exited with code 0
+[2021-09-16 20:43:05.390] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:05.390] [debug] Cmd exited with code 0
+[2021-09-16 20:43:05.416] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:05.416] [debug] Cmd exited with code 0
+[2021-09-16 20:43:05.460] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:05.460] [debug] Cmd exited with code 0
+[2021-09-16 20:43:05.574] [warning] Requested height: 29 exceeds the minimum height: 30 required by the modules
+[2021-09-16 20:43:05.574] [info] Bar configured (width: 1920, height: 30) for output: DVI-D-1
+[2021-09-16 20:43:05.591] [info] Bar configured (width: 1920, height: 29) for output: DVI-D-1
+[2021-09-16 20:43:05.824] [warning] Requested height: 29 exceeds the minimum height: 30 required by the modules
+[2021-09-16 20:43:05.824] [info] Bar configured (width: 1920, height: 30) for output: DVI-D-1
+[2021-09-16 20:43:05.858] [info] Bar configured (width: 1920, height: 29) for output: DVI-D-1
+[2021-09-16 20:43:06.191] [warning] Requested height: 29 exceeds the minimum height: 30 required by the modules
+[2021-09-16 20:43:06.191] [info] Bar configured (width: 1920, height: 30) for output: DVI-D-1
+[2021-09-16 20:43:06.238] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:06.238] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:06.239] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:06.239] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:06.239] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:06.239] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:06.239] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:06.239] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:06.249] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:06.249] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:06.250] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:06.250] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:06.258] [info] Bar configured (width: 1920, height: 29) for output: DVI-D-1
+[2021-09-16 20:43:06.529] [debug] Cmd exited with code 0
+[2021-09-16 20:43:06.529] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:06.541] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:06.541] [debug] Cmd exited with code 0
+[2021-09-16 20:43:07.430] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:07.430] [debug] Cmd exited with code 0
+[2021-09-16 20:43:07.472] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:07.472] [debug] Cmd exited with code 0
+[2021-09-16 20:43:07.702] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:07.702] [debug] Cmd exited with code 0
+[2021-09-16 20:43:07.719] [debug] Cmd exited with code 0
+[2021-09-16 20:43:07.719] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:08.863] [debug] Cmd exited with code 0
+[2021-09-16 20:43:08.863] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:08.876] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:08.876] [debug] Cmd exited with code 0
+[2021-09-16 20:43:09.444] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:09.444] [debug] Cmd exited with code 0
+[2021-09-16 20:43:09.482] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:09.482] [debug] Cmd exited with code 0
+[2021-09-16 20:43:10.002] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:10.002] [debug] Cmd exited with code 0
+[2021-09-16 20:43:10.012] [debug] Cmd exited with code 0
+[2021-09-16 20:43:10.012] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:11.153] [debug] Cmd exited with code 0
+[2021-09-16 20:43:11.153] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:11.164] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:11.164] [debug] Cmd exited with code 0
+[2021-09-16 20:43:11.457] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:11.457] [debug] Cmd exited with code 0
+[2021-09-16 20:43:11.496] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:11.496] [debug] Cmd exited with code 0
+[2021-09-16 20:43:12.312] [debug] Cmd exited with code 0
+[2021-09-16 20:43:12.312] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:12.323] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:12.323] [debug] Cmd exited with code 0
+[2021-09-16 20:43:13.461] [debug] Cmd exited with code 0
+[2021-09-16 20:43:13.461] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:13.470] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:13.470] [debug] Cmd exited with code 0
+[2021-09-16 20:43:13.471] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:13.471] [debug] Cmd exited with code 0
+[2021-09-16 20:43:13.508] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:13.508] [debug] Cmd exited with code 0
+[2021-09-16 20:43:14.566] [debug] Cmd exited with code 0
+[2021-09-16 20:43:14.566] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:14.604] [debug] Cmd exited with code 0
+[2021-09-16 20:43:14.604] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:14.953] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:14.953] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:14.953] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:14.953] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:14.963] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:14.964] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:14.964] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:14.964] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:15.484] [debug] Cmd exited with code 0
+[2021-09-16 20:43:15.484] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:15.522] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:15.522] [debug] Cmd exited with code 0
+[2021-09-16 20:43:15.726] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:15.726] [debug] Cmd exited with code 0
+[2021-09-16 20:43:15.762] [debug] Cmd exited with code 0
+[2021-09-16 20:43:15.762] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:16.879] [debug] Cmd exited with code 0
+[2021-09-16 20:43:16.879] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:16.918] [debug] Cmd exited with code 0
+[2021-09-16 20:43:16.918] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:17.498] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:17.498] [debug] Cmd exited with code 0
+[2021-09-16 20:43:17.535] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:17.535] [debug] Cmd exited with code 0
+[2021-09-16 20:43:18.037] [debug] Cmd exited with code 0
+[2021-09-16 20:43:18.037] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:18.066] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:18.066] [debug] Cmd exited with code 0
+[2021-09-16 20:43:19.192] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:19.192] [debug] Cmd exited with code 0
+[2021-09-16 20:43:19.216] [debug] Cmd exited with code 0
+[2021-09-16 20:43:19.216] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:19.512] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:19.512] [debug] Cmd exited with code 0
+[2021-09-16 20:43:19.549] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:19.549] [debug] Cmd exited with code 0
+[2021-09-16 20:43:20.342] [debug] Cmd exited with code 0
+[2021-09-16 20:43:20.342] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:20.367] [debug] Cmd exited with code 0
+[2021-09-16 20:43:20.367] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:21.493] [debug] Cmd exited with code 0
+[2021-09-16 20:43:21.493] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:21.513] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:21.513] [debug] Cmd exited with code 0
+[2021-09-16 20:43:21.525] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:21.525] [debug] Cmd exited with code 0
+[2021-09-16 20:43:21.563] [debug] Cmd exited with code 0
+[2021-09-16 20:43:21.563] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:22.647] [debug] Cmd exited with code 0
+[2021-09-16 20:43:22.647] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:22.658] [debug] Cmd exited with code 0
+[2021-09-16 20:43:22.658] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:23.539] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:23.539] [debug] Cmd exited with code 0
+[2021-09-16 20:43:23.576] [debug] Cmd exited with code 0
+[2021-09-16 20:43:23.576] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:23.696] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:23.696] [trace] Tray item 'Fcitx' got signal NewIcon
+[2021-09-16 20:43:23.696] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:23.696] [trace] Tray item 'Fcitx' got signal XAyatanaNewLabel
+[2021-09-16 20:43:23.710] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:23.710] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:23.711] [trace] Set tray item property: Fcitx.IconName = 'input-keyboard-symbolic'
+[2021-09-16 20:43:23.711] [trace] Set tray item property: Fcitx.IconPixmap = []
+[2021-09-16 20:43:23.798] [debug] Cmd exited with code 0
+[2021-09-16 20:43:23.798] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:23.809] [debug] Cmd exited with code 0
+[2021-09-16 20:43:23.809] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:24.950] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:24.950] [debug] Cmd exited with code 0
+[2021-09-16 20:43:24.960] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:24.960] [debug] Cmd exited with code 0
+[2021-09-16 20:43:25.553] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:25.553] [debug] Cmd exited with code 0
+[2021-09-16 20:43:25.591] [debug] Cmd exited with code 0
+[2021-09-16 20:43:25.591] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:26.099] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:26.099] [debug] Cmd exited with code 0
+[2021-09-16 20:43:26.111] [debug] Cmd exited with code 0
+[2021-09-16 20:43:26.111] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:27.239] [debug] Cmd exited with code 0
+[2021-09-16 20:43:27.239] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:27.251] [debug] Cmd exited with code 0
+[2021-09-16 20:43:27.251] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:27.566] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:27.566] [debug] Cmd exited with code 0
+[2021-09-16 20:43:27.605] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:27.605] [debug] Cmd exited with code 0
+[2021-09-16 20:43:28.387] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:28.387] [debug] Cmd exited with code 0
+[2021-09-16 20:43:28.397] [debug] Cmd exited with code 0
+[2021-09-16 20:43:28.397] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:29.526] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:29.526] [debug] Cmd exited with code 0
+[2021-09-16 20:43:29.577] [debug] Cmd exited with code 0
+[2021-09-16 20:43:29.577] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:29.586] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:29.586] [debug] Cmd exited with code 0
+[2021-09-16 20:43:29.617] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:29.617] [debug] Cmd exited with code 0
+[2021-09-16 20:43:30.692] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:30.692] [debug] Cmd exited with code 0
+[2021-09-16 20:43:30.750] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:30.750] [debug] Cmd exited with code 0
+[2021-09-16 20:43:31.590] [debug] Cmd exited with code 0
+[2021-09-16 20:43:31.590] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:31.632] [debug] Cmd exited with code 0
+[2021-09-16 20:43:31.632] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:31.859] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:31.859] [debug] Cmd exited with code 0
+[2021-09-16 20:43:31.926] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:31.926] [debug] Cmd exited with code 0
+[2021-09-16 20:43:33.029] [debug] Cmd exited with code 0
+[2021-09-16 20:43:33.029] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:33.102] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:33.102] [debug] Cmd exited with code 0
+[2021-09-16 20:43:33.604] [debug] Cmd exited with code 0
+[2021-09-16 20:43:33.604] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:33.646] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:33.646] [debug] Cmd exited with code 0
+[2021-09-16 20:43:34.197] [debug] Cmd exited with code 0
+[2021-09-16 20:43:34.197] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:34.262] [debug] Cmd exited with code 0
+[2021-09-16 20:43:34.262] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:35.371] [debug] Cmd exited with code 0
+[2021-09-16 20:43:35.371] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:35.431] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:35.431] [debug] Cmd exited with code 0
+[2021-09-16 20:43:35.617] [debug] Received SIGCHLD in signalThread
+[2021-09-16 20:43:35.617] [debug] Cmd exited with code 0

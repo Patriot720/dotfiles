@@ -1,0 +1,18 @@
+
+** (waybar:202839): WARNING **: 20:42:59.397: gtk-layer-shell v0.6.0 may not work on GTK v3.24.30. If you experience crashes, check https://github.com/wmww/gtk-layer-shell/blob/master/compatibility.md
+
+(waybar:202839): GLib-GObject-WARNING **: 20:42:59.398: ../glib/gobject/gsignal.c:2081: type 'GtkWindow' is already overridden for signal id '85'
+
+(waybar:202839): GLib-GObject-WARNING **: 20:42:59.398: ../glib/gobject/gsignal.c:2081: type 'GtkWindow' is already overridden for signal id '84'
+
+** (waybar:202839): WARNING **: 20:42:59.516: Status Notifier Item with bus name ':1.14' and object path '/org/ayatana/NotificationItem/redshift' is already registered
+
+** (waybar:202839): WARNING **: 20:42:59.517: Status Notifier Item with bus name ':1.62' and object path '/org/ayatana/NotificationItem/dropbox_client_1117' is already registered
+
+** (waybar:202839): WARNING **: 20:42:59.517: Status Notifier Item with bus name ':1.13' and object path '/org/ayatana/NotificationItem/variety' is already registered
+
+** (waybar:202839): WARNING **: 20:42:59.848: Status Notifier Item with bus name ':1.62' and object path '/org/ayatana/NotificationItem/dropbox_client_1117' is already registered
+
+** (waybar:202839): WARNING **: 20:42:59.848: Status Notifier Item with bus name ':1.14' and object path '/org/ayatana/NotificationItem/redshift' is already registered
+
+** (waybar:202839): WARNING **: 20:42:59.848: Status Notifier Item with bus name ':1.13' and object path '/org/ayatana/NotificationItem/variety' is already registered
