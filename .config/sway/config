@@ -85,7 +85,7 @@ bindsym $mod+e layout toggle split
 
 
 bindsym $mod+Mod1+space floating toggle
-bindsym $mod+Mod1+l exec --no-startup-id swaylock
+bindsym $mod+Shift+l exec swaylock
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
