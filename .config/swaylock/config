@@ -1,0 +1,5 @@
+color=#000000FF
+image=~/.config/swaylock/bsod.png
+hide-keyboard-layout
+no-unlock-indicator
+scaling=center
