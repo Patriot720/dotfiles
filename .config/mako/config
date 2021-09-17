@@ -1,6 +1,6 @@
-default-timeout=5000
+default-timeout=4000
 border-size=0
-background-color=#00000066
+background-color=#00000088
 font=Roboto 11
 width=450
 height=300

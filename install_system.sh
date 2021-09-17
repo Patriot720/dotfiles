@@ -17,7 +17,7 @@ install_packages(){
         peco-bin cronie linux-zen sway waybar \
         polybar \
         bluez-utils pulseaudio-bluetooth breeze breeze-gtk panther-launcher-git fcitx5 fcitx5-mozc fcitx5-gtk \
-        i3-gaps lightdm-webkit2-greeter lightdm-webkit2-theme-glorious python-pywal i3lock-color \
+        i3-gaps lightdm-webkit2-greeter lightdm-webkit2-theme-glorious slurp xorg-xwayland python-pywal i3lock-color \
         qt5ct qbittorrent wgcf wireguard-tools lxappearance gimp discord docker docker-compose ttf-fira-code \
         ttf-weather-icons ttf-comfortaa gnu-free-fonts ttf-arphic-uming ttf-baekmuk \
         ttf-nerd-fonts-symbols-mono kdeconnect xorg-server brave adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts \
