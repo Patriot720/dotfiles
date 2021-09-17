@@ -10,7 +10,7 @@
 window#waybar {
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.75);
     /* padding: 15px; */
     transition-property: background-color;
     transition-duration: .5s;

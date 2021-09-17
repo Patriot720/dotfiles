@@ -12,7 +12,7 @@ fi
 home_dir=/home/$USER
 
 install_packages(){
-    yay -Sy dmenu rofi rofi-calc spotify-adblock-git telegram-desktop ttf-font-awesome feh redshift-wayland-git emacs-gcc-wayland-devel-bin  \
+    yay -Sy dmenu rofi-lbonn-wayland-git rofi-calc spotify-adblock-git telegram-desktop ttf-font-awesome feh redshift-wayland-git emacs-gcc-wayland-devel-bin  \
         i3lock swaylock zramd guake npm gnome-terminal paprefs pavucontrol yad openresolv mako nautilus gnome-disk-utility polkit-gnome flameshot pasystray pulseaudio \
         peco-bin cronie linux-zen sway waybar \
         polybar \
@@ -185,7 +185,7 @@ case $1 in
     install)
         add_multilib
         install_packages
-        add_gpg_key
+        # add_gpg_key
         install_zsh
         install_lightdm_webkit_greeter
         install_webkit_theme
