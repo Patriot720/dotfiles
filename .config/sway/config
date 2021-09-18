@@ -252,9 +252,9 @@ exec termite --name=terminal_scratchpad
 
 # }
 
-# input 0:0:OpenTabletDriver_Virtual_Tablet {
-#   events enabled
-# }
+input 0:0:OpenTabletDriver_Virtual_Tablet {
+  tap enabled
+}
 
 input type:keyboard {
     xkb_layout us,ru
