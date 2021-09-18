@@ -247,6 +247,7 @@ input type:tablet_tool {
     map_to_output *
 }
 input 0:0:OpenTabletDriver_Virtual_Tablet events disabled
+input 0:0:OpenTabletDriver_Virtual_Artist_Tablet events enabled
 input type:keyboard {
     xkb_layout us,ru
     xkb_options grp:alt_shift_toggle
