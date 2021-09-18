@@ -242,7 +242,7 @@ input type:pointer {
     accel_profile flat
     pointer_accel -0.1
 }
-input type:tablet_tool{
+input type:tablet_tool {
     tool_mode * absolute
 }
 input type:keyboard {
