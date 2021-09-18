@@ -238,14 +238,18 @@ bindsym F1 exec swaymsg [app_id="terminal_scratchpad"] scratchpad show
 
 exec termite --name=terminal_scratchpad
 
-input type:pointer {
-    accel_profile flat
-    pointer_accel -0.1
-}
+# input type:pointer {
+#     accel_profile flat
+#     pointer_accel -0.1
+# }
 
 input type:tablet_tool {
     tool_mode * absolute
     map_to_output *
+}
+
+input 0:0:OpenTabletDriver_Virtual_Artist_Tablet {
+
 }
 
 input 0:0:OpenTabletDriver_Virtual_Tablet {
