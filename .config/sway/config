@@ -253,9 +253,12 @@ input 4152:4996:SteelSeries_Rival_Gaming_Mouse {
 # }
 
 input 0:0:OpenTabletDriver_Virtual_Tablet {
-    drag enabled
+    drag disabled
     dwt disabled
 }
+
+
+
 
 input type:keyboard {
     xkb_layout us,ru
