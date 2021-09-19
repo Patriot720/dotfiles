@@ -240,7 +240,7 @@ exec termite --name=terminal_scratchpad
 
 input 4152:4996:SteelSeries_Rival_Gaming_Mouse {
     accel_profile flat
-    pointer_accel 0.1
+    pointer_accel -0.1
 }
 
 # input type:tablet_tool {
