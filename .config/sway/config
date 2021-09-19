@@ -268,6 +268,12 @@ input type:keyboard {
 exec env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U
 exec telegram-desktop
 
+exec swayidle -w \
+	timeout 300 'swaymsg "output * dpms off"' \
+	timeout 1800 'swaylock' \
+	timeout 1805 'swaymsg "output * dpms off"' \
+	resume 'swaymsg "output * dpms on"'
+
 exec_always --no-startup-id mako
 exec_always --no-startup-id fcitx5 -d
 exec_always --no-startup-id /usr/bin/zsh -c "source $HOME/.zshrc;sync_repos;"
