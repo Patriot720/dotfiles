@@ -6,7 +6,7 @@ docker_setup(){
     sudo usermod -aG docker $USER
 }
 
-if prompt "Install Docker?"; then
+if prompt_default_yes "Install Docker?"; then
     yay -Sy docker docker-compose;
     docker_setup;
 fi

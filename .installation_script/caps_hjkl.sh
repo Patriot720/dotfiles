@@ -5,6 +5,6 @@ enable_caps_hjkl(){
     sudo sed -i '3 a include "altgr_vim(altgr-vim)"'  /usr/share/X11/xkb/symbols/us
 }
 
-if prompt "Enable Caps HJKL?"; then
+if prompt_default_yes "Enable Caps HJKL?"; then
     enable_caps_hjkl
 fi

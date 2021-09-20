@@ -10,6 +10,30 @@ function prompt(){
     done
 }
 
+function prompt_default_yes(){
+    while true; do
+        read -r -n 1 -p "$1 [Y/n] " yn
+        case $yn in
+            "" ) echo;return 0;;
+            [Yy]* ) echo;return 0;;
+            [Nn]* ) echo;return -1;;
+            * ) echo "Please answer [Y/n]"
+        esac
+    done
+}
+
+function prompt_default_no(){
+    while true; do
+        read -n 1 -p "$1 [y/N] " yn
+        case $yn in
+            "" ) echo;return -1;;
+            [Yy]* ) echo;return 0;;
+            [Nn\r]* ) echo;return -1;;
+            * ) echo "Please answer [y/N]"
+        esac
+    done
+}
+
 if ! command -v yay &> /dev/null
 then
     sudo pacman -S --needed base-devel

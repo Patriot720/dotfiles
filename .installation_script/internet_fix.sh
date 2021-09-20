@@ -6,6 +6,6 @@ internet_fix(){
     sudo systemctl start dhcpcd;
 }
 
-if prompt "Install dhcpcd?"; then
+if prompt_default_yes "Install dhcpcd?"; then
     internet_fix
 fi

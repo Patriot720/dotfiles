@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if prompt "Install Cronie?"; then
+if prompt_default_yes "Install Cronie?"; then
     yay -Sy cronie
     sudo systemctl enable cronie.service
 fi

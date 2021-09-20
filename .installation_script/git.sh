@@ -13,7 +13,7 @@ configure_git_credentials(){
     git config --global user.name "$username";
 }
 
-if prompt "Redirect github https to ssh?"; then
+if prompt_default_yes "Redirect github https to ssh?"; then
     redirect_github_https_to_ssh;
 fi
 

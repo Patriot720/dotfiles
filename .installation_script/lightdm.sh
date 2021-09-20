@@ -18,7 +18,7 @@ enable_lightdm_service(){
     sudo systemctl enable lightdm.service;
 }
 
-if prompt "Install lightdm + webkit greeter + glorious theme"; then
+if prompt_default_yes "Install lightdm + webkit greeter + glorious theme"; then
     yay -Sy lightdm lightdm-webkit2-greeter lightdm-webkit2-theme-glorious;
     install_lightdm_webkit_greeter;
     install_webkit_theme;

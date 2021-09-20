@@ -6,9 +6,10 @@ install_shure_font(){
     fc-cache
 }
 
-if prompt "Install fonts?"; then
+if prompt_default_yes "Install fonts?"; then
     yay -Sy ttf-font-awesome gnu-free-fonts ttf-nerd-fonts-symbols-mono ttf-weather-icons ttf-comfortaa ttf-arphic-uming \
         adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts ttf-baekmuk otf-ipafont noto-fonts ttf-fira-code \
         ttf-hanazono;
+    mkdir -p .local/share/fonts/
     install_shure_font;
 fi
