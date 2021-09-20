@@ -1,4 +1,15 @@
 
+function prompt(){
+    while true; do
+        read -n 1 -p "$1 [Y/y/N/n] " yn
+        case $yn in
+            [Yy]* ) echo;return 0;;
+            [Nn]* ) echo;return -1;;
+            * ) echo "Please answer [Y/y/N/n]"
+        esac
+    done
+}
+
 if ! command -v yay &> /dev/null
 then
     sudo pacman -S --needed base-devel
