@@ -16,7 +16,7 @@ home_dir=/home/$USER
 
 install_packages(){
     yay -Sy rofi-lbonn-wayland-git xorg-server rofi-calc spotify-adblock-git telegram-desktop wget redshift-wayland-git   \
-        swaylock zramd guake npm paprefs pavucontrol yad openresolv mako nautilus gnome-disk-utility polkit-gnome pulseaudio \
+        swaylock zramd variety npm paprefs pavucontrol yad openresolv mako nautilus gnome-disk-utility polkit-gnome pulseaudio \
         peco vim vi sway waybar \
         bluez-utils pulseaudio-bluetooth breeze breeze-gtk panther-launcher-git fcitx5 fcitx5-mozc fcitx5-gtk \
         dropbox  slurp xorg-xwayland python-pywal \
@@ -62,6 +62,7 @@ case $1 in
         source ./.installation_script/emacs.sh
         source ./.installation_script/internet_fix.sh
         source ./.installation_script/cronie.sh
+        source ./.installation_script/guake.sh
         source ./.installation_script/zsh.sh
         enable_services
         add_git_aliases
