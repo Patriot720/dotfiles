@@ -21,3 +21,4 @@ clip-files(){
     done
     echo $arr | wl-copy clipboard -t text/uri-list
 }
+

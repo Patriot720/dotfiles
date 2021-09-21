@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh-scripts/private/private.zsh
 source ~/.zsh-scripts/video.zsh
 source ~/.zsh-scripts/clipboard.zsh
+source ~/.zsh-scripts/youtube.zsh
 source ~/.zsh-scripts/docs.zsh
 source ~/.zsh-scripts/colorpicker.zsh
 source ~/.zsh-scripts/peco.zsh
