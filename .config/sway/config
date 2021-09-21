@@ -213,7 +213,6 @@ bindsym $mod+r mode "resize"
 # }
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec pasystray
 
 exec --no-startup-id ~/.dropbox-dist/dropboxd
 exec --no-startup-id /usr/lib/kdeconnectd
