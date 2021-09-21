@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-fonts_dir=$home_dir/.local/share/fonts/
+fonts_dir=$HOME/.local/share/fonts/
 
 install_shure_font(){
     wget -O shure_mono.ttf https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/ShareTechMono/complete/Shure%20Tech%20Mono%20Nerd%20Font%20Complete.ttf?raw=true
-    mv shure_mono.ttf $home_dir/.local/share/fonts/
+    mv shure_mono.ttf $HOME/.local/share/fonts/
     fc-cache
 }
 
@@ -14,6 +14,7 @@ install_rofi_fonts(){
     cp -rf fonts/* "$fonts_dir";
     cd ..;
     rm -rf rofi;
+    fc-cache
 }
 
 if prompt_default_yes "Install fonts?"; then
