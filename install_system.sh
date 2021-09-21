@@ -51,7 +51,7 @@ home_dir=/home/$USER
 install_packages(){
     yay -Sy rofi-lbonn-wayland-git xorg-server rofi-calc spotify-adblock-git telegram-desktop wget redshift-wayland-git   \
         swaylock zramd guake npm paprefs pavucontrol yad openresolv mako nautilus gnome-disk-utility polkit-gnome pulseaudio \
-        peco linux-zen sway waybar \
+        peco vim vi sway waybar \
         bluez-utils pulseaudio-bluetooth breeze breeze-gtk panther-launcher-git fcitx5 fcitx5-mozc fcitx5-gtk \
         dropbox  slurp xorg-xwayland python-pywal \
         qt5ct qbittorrent wgcf wireguard-tools lxappearance gimp discord \
