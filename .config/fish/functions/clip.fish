@@ -1,0 +1,2 @@
+alias clip="wl-copy"
+
