@@ -5,7 +5,9 @@
 (history-item "image-new" 0)
 (history-item "tools-move" 1)
 (history-item "layers-new" 0)
-(history-item "edit-copy-visible" 1)
+(history-item "edit-copy-visible" 0)
+(history-item "file-export-as" 0)
+(history-item "file-quit" 1)
 (history-item "edit-paste-into" 0)
 (history-item "image-crop-to-content" 0)
 (history-item "tools-crop" 1)
@@ -13,9 +15,7 @@
 (history-item "edit-paste-in-place" 0)
 (history-item "edit-paste-as-new-image" 0)
 (history-item "edit-copy" 0)
-(history-item "file-export-as" 0)
 (history-item "image-resize-to-layers" 0)
-(history-item "layers-delete" 0)
-(history-item "file-quit" 1)
+(history-item "layers-delete" 1)
 
 # end of action-history
