@@ -2,6 +2,7 @@ default-timeout=4000
 border-size=0
 background-color=#00000088
 font=Roboto 11
+# on-notify=exec mpv ~/.config/mako/system_notifications_11.ogg
 width=450
 height=300
 padding=20
