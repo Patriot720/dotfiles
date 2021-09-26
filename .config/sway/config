@@ -44,6 +44,7 @@ bindsym XF86AudioPrev exec  --no-startup-id dbus-send --print-reply --dest=org.m
 
 bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png
 bindsym Ctrl+Print exec grim -g "$(slurp -d)" ~/Pictures/$(date +'%s_grim.png')
+bindsym Shift+Print exec grim | wl-copy -t image/png
 
 bindsym $mod+x kill
 
