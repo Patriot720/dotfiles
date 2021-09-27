@@ -157,7 +157,6 @@ bindsym $mod+Shift+9 move container to workspace number $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10; workspace $ws10
 
 bindsym $mod+Shift+e exec ~/.config/rofi/applets/menu/powermenu.sh
-# bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 bindsym $mod+Shift+r exec ~/.config/waybar/launch.sh
 bindsym $mod+Shift+c reload
 
@@ -248,10 +247,10 @@ input 4152:4996:SteelSeries_Rival_Gaming_Mouse {
 
 # }
 
-input 0:0:OpenTabletDriver_Virtual_Tablet {
-    drag disabled
-    dwt disabled
-}
+# input 0:0:OpenTabletDriver_Virtual_Tablet {
+#     drag disabled
+#     dwt disabled
+# }
 
 
 
@@ -270,10 +269,10 @@ exec telegram-desktop
 # 	timeout 1805 'swaymsg "output * dpms off"' \
 # 	resume 'swaymsg "output * dpms on"'
 
+exec_always --no-startup-id ~/.config/waybar/launch.sh
 exec_always --no-startup-id mako
 exec_always --no-startup-id fcitx5 -d
-exec_always --no-startup-id /usr/bin/zsh -c "source $HOME/.zshrc;sync_repos;"
-exec_always --no-startup-id ~/.config/waybar/launch.sh
 
 
 include /etc/sway/config.d/*
+exec_always --no-startup-id /usr/bin/zsh -c "source $HOME/.zshrc;sync_repos;"
