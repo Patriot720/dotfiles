@@ -1,6 +1,6 @@
 set $mod Mod4
 
-default_border pixel 5
+default_border pixel 0
 default_floating_border normal
 
 hide_edge_borders both
@@ -31,16 +31,16 @@ for_window [class="Yad" title="yad-calendar"] floating enable
 font pango:DejaVu Sans Mono 8
 
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
-bindsym XF86AudioPlay exec  --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-bindsym XF86AudioPause exec  --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
-bindsym XF86AudioNext exec  --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-bindsym XF86AudioPrev exec  --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+bindsym XF86AudioPlay exec  dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym XF86AudioPause exec  dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
+bindsym XF86AudioNext exec  dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym XF86AudioPrev exec  dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
 bindsym Print exec grim -g "$(slurp -d)" - | wl-copy -t image/png
 bindsym Ctrl+Print exec grim -g "$(slurp -d)" ~/Pictures/$(date +'%s_grim.png')
@@ -51,9 +51,9 @@ bindsym $mod+x kill
 
 floating_modifier $mod
 
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/colorful/launcher.sh
-bindsym $mod+b exec --no-startup-id ~/.config/rofi/bin/rofi-bluetooth
-bindsym $mod+c exec --no-startup-id ~/.config/rofi/launchers/text/calc.sh
+bindsym $mod+d exec ~/.config/rofi/launchers/colorful/launcher.sh
+bindsym $mod+b exec ~/.config/rofi/bin/rofi-bluetooth
+bindsym $mod+c exec ~/.config/rofi/launchers/text/calc.sh
 
 bindsym --to-code $mod+j focus down
 bindsym --to-code $mod+k focus up
@@ -114,7 +114,7 @@ set $monitor_1 DP-1
 set $monitor_2 DVI-D-1
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # output $monitor_1 adaptive_sync on
-exec --no-startup-id variety
+exec variety
 output $monitor_1 scale 1
 output $monitor_1 pos 0 0 mode 2560x1080@74.991Hz
 output $monitor_2 scale 1
@@ -200,59 +200,17 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# bar {
-#     position top
-
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-#     colors {
-#         statusline #ffffff
-#         background #323232
-#         inactive_workspace #32323200 #32323200 #5c5c5c
-#     }
-# }
-
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-exec --no-startup-id ~/.dropbox-dist/dropboxd
-exec --no-startup-id /usr/lib/kdeconnectd
-
-exec_always  guake
+exec_always guake
 exec ~/import-gsettings.sh
-exec --no-startup-id redshift-gtk
+exec redshift-gtk
 
-exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
-
-# Mouse acceleration
-# Find mouse automatically
-# exec --no-startup-id xinput --set-prop 12 'libinput Accel Profile Enabled' 0, 1
-# exec --no-startup-id xinput --set-prop 13 'libinput Accel Profile Enabled' 0, 1
-# exec --no-startup-id xinput --set-prop 18 'libinput Accel Profile Enabled' 0, 1
-# exec --no-startup-id xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1
-# exec --no-startup-id xinput --set-prop 11 'libinput Accel Profile Enabled' 0, 1
+exec setxkbmap us,ru -option 'grp:alt_shift_toggle'
 
 input 4152:4996:SteelSeries_Rival_Gaming_Mouse {
     accel_profile flat
     pointer_accel -0.1
 }
-
-# input type:tablet_tool {
-#     tool_mode * absolute
-#     map_to_output *
-# }
-
-# input 0:0:OpenTabletDriver_Virtual_Artist_Tablet {
-
-# }
-
-# input 0:0:OpenTabletDriver_Virtual_Tablet {
-#     drag disabled
-#     dwt disabled
-# }
-
-
 
 
 input type:keyboard {
@@ -260,8 +218,6 @@ input type:keyboard {
     xkb_options grp:alt_shift_toggle
 }
 
-exec env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U
-exec telegram-desktop
 
 # exec swayidle -w \
 # 	timeout 300 'swaymsg "output * dpms off"' \
@@ -269,10 +225,17 @@ exec telegram-desktop
 # 	timeout 1805 'swaymsg "output * dpms off"' \
 # 	resume 'swaymsg "output * dpms on"'
 
-exec_always --no-startup-id ~/.config/waybar/launch.sh
-exec_always --no-startup-id mako
-exec_always --no-startup-id fcitx5 -d
+exec_always ~/.config/waybar/launch.sh
+exec_always mako
+exec_always fcitx5 -d
 
 
 include /etc/sway/config.d/*
-exec_always --no-startup-id /usr/bin/zsh -c "source $HOME/.zshrc;sync_repos;"
+
+exec ~/.dropbox-dist/dropboxd
+exec /usr/lib/kdeconnectd
+
+exec env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U
+exec telegram-desktop
+
+exec_always /usr/bin/zsh -c "source $HOME/.zshrc;sync_repos;"
