@@ -3,7 +3,7 @@ set $mod Mod4
 default_border pixel 0
 default_floating_border normal
 
-hide_edge_borders none
+hide_edge_borders smart_no_gaps
 
 for_window [class="Spotify"] move to workspace $ws10
 for_window [instance="gnome-[^t].+"] floating enable
