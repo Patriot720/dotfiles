@@ -3,6 +3,7 @@ set $mod Mod4
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec_always ~/.config/waybar/launch.sh
 
 default_border pixel 0
 default_floating_border normal
@@ -229,7 +230,6 @@ input type:keyboard {
 # 	timeout 1805 'swaymsg "output * dpms off"' \
 # 	resume 'swaymsg "output * dpms on"'
 
-exec_always ~/.config/waybar/launch.sh
 exec_always mako
 exec_always fcitx5 -d
 
