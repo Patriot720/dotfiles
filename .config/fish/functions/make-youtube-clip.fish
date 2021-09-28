@@ -25,7 +25,7 @@ function make-youtube-clip -d "Download trim and copy to clipboard youtube video
 
     if set -q _flag_realsubs
         echo "Real subs"
-        youtube-dl --write-sub --sub-lang en --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
+        youtube-dl --write-sub --sub-lang en-US --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
     else if set -q _flag_nosubs
         youtube-dl --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
     else
