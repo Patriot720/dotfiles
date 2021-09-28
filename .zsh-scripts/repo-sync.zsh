@@ -13,6 +13,7 @@ sync_repo(){
 }
 
 sync_yadm(){
+    fish -c "y"
     yadm add -u
     yadm commit -m "Update $(date "+%H:%M %a, %d %b")";
     yadm push origin master;

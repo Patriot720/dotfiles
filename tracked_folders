@@ -1,0 +1,17 @@
+$HOME/.config/yadm
+$HOME/.config/fish
+$HOME/.config/sway
+$HOME/.config/fcitx5
+$HOME/.config/i3
+$HOME/.config/omf
+$HOME/.config/guake
+$HOME/.config/GIMP
+$HOME/.config/gtk-3.0
+$HOME/.config/xdg-desktop-portal-wlr
+$HOME/.config/mako
+$HOME/.config/OpenTabletDriver
+$HOME/.config/rofi
+$HOME/.config/swaylock
+$HOME/.config/waybar
+$HOME/.local/share/nautilus
+$HOME/.installation_script
