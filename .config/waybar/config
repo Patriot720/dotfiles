@@ -133,7 +133,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}",
+        "format": "{volume}% {icon}",
         "tooltip": false,
         "format-muted": "",
         "format-icons": {

@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1633070872,
+    "timestamp": 1633093127,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/sunxi/u-boot",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,67 +16,7 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/sunxi/u-boot",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /mnt/md126/sunxi",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/u-boot",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /mnt/md126/sunxi/u-boot",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/u-boot",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /mnt/md126/sunxi/u-boot",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09",
+                    "label": "fish /home/andrew",
                     "custom_label_set": false
                 }
             ]

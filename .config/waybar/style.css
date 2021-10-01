@@ -164,8 +164,8 @@ label:focus {
 }
 
 #pulseaudio {
-    /* margin-top: 2px; */
-    font-size: 18px;
+    margin-top: 3px;
+    font-size: 15px;
 }
 
 #pulseaudio.muted {
