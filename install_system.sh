@@ -10,12 +10,13 @@ then
     makepkg -si
     cd ..
     rm -rf build
+    yay --save --answerclean None --answerdiff None
 fi
 
 home_dir=/home/$USER
 
 install_packages(){
-    yay -Sy rofi-lbonn-wayland-git xorg-server rofi-calc spotify-adblock-git telegram-desktop wget redshift-wayland-git   \
+    yay --noconfirm -Sy rofi-lbonn-wayland-git xorg-server rofi-calc spotify-adblock-git telegram-desktop wget redshift-wayland-git   \
         swaylock zramd variety npm paprefs pavucontrol yad openresolv mako nautilus gnome-disk-utility polkit-gnome pulseaudio \
         peco vim vi sway waybar \
         bluez-utils pulseaudio-bluetooth breeze breeze-gtk panther-launcher-git fcitx5 fcitx5-mozc fcitx5-gtk \

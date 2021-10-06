@@ -13,5 +13,6 @@ $HOME/.config/OpenTabletDriver
 $HOME/.config/rofi
 $HOME/.config/swaylock
 $HOME/.config/waybar
+$HOME/.config/environment.d
 $HOME/.local/share/nautilus
 $HOME/.installation_script
