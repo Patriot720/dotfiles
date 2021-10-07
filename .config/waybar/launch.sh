@@ -8,4 +8,5 @@ while pgrep -u $UID -x waybar > /dev/null; do sleep 1; done
 
 # Launch bars
 # export GTK_DEBUG=interactive
+# export GTK_USE_PORTAL=0
 waybar

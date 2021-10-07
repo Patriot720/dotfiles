@@ -1,6 +1,5 @@
 set $mod Mod4
 
-
 default_border pixel 0
 default_floating_border normal
 
@@ -15,5 +14,5 @@ focus_follows_mouse no
 # 	timeout 1805 'swaymsg "output * dpms off"' \
 # 	resume 'swaymsg "output * dpms on"'
 
+# include /etc/sway/config.d/*
 include ~/.config/sway/conf.d/*
-include /etc/sway/config.d/*

@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1633538150,
+    "timestamp": 1633632776,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2",
+                            "directory": "/mnt/md126/sunxi/u-boot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "docker-compose up /mnt/md126/favoka2",
+                    "label": "fish /mnt/md126/sunxi/u-boot",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.ssh",
+                            "directory": "/mnt/md126/sunxi/u-boot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,14 +31,14 @@
                             }
                         }
                     ],
-                    "label": "fish /home/andrew/.ssh",
+                    "label": "fish /mnt/md126/sunxi/u-boot",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                            "directory": "/mnt/md126/sunxi/u-boot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,14 +46,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "label": "fish /mnt/md126/sunxi/u-boot",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                            "directory": "/mnt/md126/sunxi/u-boot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,14 +61,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "label": "fish /mnt/md126/sunxi/u-boot",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                            "directory": "/mnt/md126/sunxi/u-boot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,14 +76,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "label": "fish /mnt/md126/sunxi/u-boot",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                            "directory": "/mnt/md126/sunxi/u-boot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -91,7 +91,82 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "label": "fish /mnt/md126/sunxi/u-boot",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/u-boot",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/sunxi/u-boot",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/u-boot",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/sunxi/u-boot",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.local/bin",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /home/andrew/.local/bin",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /home/andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.local/bin",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /home/andrew/.local/bin",
                     "custom_label_set": false
                 }
             ]

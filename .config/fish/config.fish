@@ -1,5 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    set -g QT_QPA_PLATFORM wayland
+    set -g XDG_CURRENT_DESKTOP sway
 end
 
 function fish_user_key_bindings
