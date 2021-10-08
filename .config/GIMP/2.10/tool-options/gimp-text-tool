@@ -2,5 +2,7 @@
 
 (palette "Color History")
 (font "Sans-serif")
+(justify center)
+(box-mode fixed)
 
 # end of gimp-text-tool options

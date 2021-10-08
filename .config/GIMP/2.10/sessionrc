@@ -42,7 +42,7 @@
     (gimp-dock
         (side right)
         (book
-            (current-page 0)
+            (current-page 4)
             (dockable "gimp-brush-grid"
                 (tab-style automatic)
                 (aux-info
@@ -58,7 +58,12 @@
             (dockable "gimp-document-list"
                 (tab-style automatic)
                 (aux-info
-                    (show-button-bar "true"))))
+                    (show-button-bar "true")))
+            (dockable "gimp-brush-editor"
+                (tab-style automatic)
+                (aux-info
+                    (edit-active "true")
+                    (current-data "2. Hardness 050"))))
         (book
             (position 336)
             (current-page 0)
@@ -84,7 +89,7 @@
     (monitor 1))
 (session-info "toplevel"
     (factory-entry "gimp-image-new-dialog")
-    (position 1495 0)
+    (position 750 384)
     (monitor 1))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")

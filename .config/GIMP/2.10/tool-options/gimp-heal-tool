@@ -3,7 +3,7 @@
 (brush "2. Hardness 050")
 (dynamics "Dynamics Off")
 (palette "Color History")
-(brush-size 51)
-(brush-hardness 0.5)
+(brush-size 15)
+(brush-force 1)
 
 # end of gimp-heal-tool options

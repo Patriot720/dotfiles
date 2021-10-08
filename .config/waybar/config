@@ -4,7 +4,7 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode","idle_inhibitor",],
-    "modules-center": ["sway/window"],
+    "modules-center": [],
     "modules-right": ["custom/wireguard", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock", "custom/powerapplet"],
     "keyboard-state": {
         "format": "{name} {icon}",
