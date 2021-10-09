@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1633766621,
+    "timestamp": 1633791437,
     "workspace": {
         "0": [
             [
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/tmp",
+                            "directory": "/home/andrew/.config/waybar",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,7 +31,22 @@
                             }
                         }
                     ],
-                    "label": "fish /tmp",
+                    "label": "fish /home/andrew/.config/waybar",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /home/andrew",
                     "custom_label_set": false
                 }
             ]

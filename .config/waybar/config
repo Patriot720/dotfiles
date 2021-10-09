@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode","idle_inhibitor",],
     "modules-center": [],
-    "modules-right": ["custom/wireguard", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock", "custom/powerapplet"],
+    "modules-right": ["custom/stopwatch", "custom/wireguard", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock", "custom/powerapplet"],
     "keyboard-state": {
         "format": "{name} {icon}",
         "format-icons": {
@@ -141,6 +141,13 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/stopwatch": {
+        "format": "   {} ",
+        "exec": "~/.config/waybar/stopwatch.sh",
+        "on-click": "~/.config/waybar/stopwatch.sh",
+        "on-click-right": "~/.config/waybar/stopwatch.sh --stop",
+        "return-type": "json"
     },
     "custom/media": {
         "format": "{icon} {}",
