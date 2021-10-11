@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1633851072,
+    "timestamp": 1633939487,
     "workspace": {
         "0": [
             [
@@ -68,7 +68,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/home/andrew/.config/sway/scripts/tests",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,7 +76,22 @@
                             }
                         }
                     ],
-                    "label": "fish /home/andrew",
+                    "label": "fish /home/andrew/.config/sway/scripts/tests",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.config/sway/scripts",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /home/andrew/.config/sway/scripts",
                     "custom_label_set": false
                 }
             ]
