@@ -1,8 +1,8 @@
 # GIMP action-history
 
-(history-item "edit-paste" 5)
-(history-item "tools-scale" 0)
-(history-item "file-quit" 2)
+(history-item "edit-paste" 4)
+(history-item "file-quit" 1)
+(history-item "tools-scale" 2)
 (history-item "file-export-as" 0)
 (history-item "image-new" 1)
 (history-item "file-open" 0)
