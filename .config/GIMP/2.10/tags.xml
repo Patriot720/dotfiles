@@ -1360,6 +1360,18 @@
   <resource identifier="D050000L" checksum="(null)">
   </resource>
 
+  <resource identifier="Fantasque Sans Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="Fantasque Sans Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Fantasque Sans Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Fantasque Sans Mono Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="FantasqueSansMono Nerd Font" checksum="(null)">
   </resource>
 

@@ -1,11 +1,11 @@
 # GIMP action-history
 
-(history-item "edit-paste" 4)
+(history-item "edit-paste" 3)
 (history-item "file-quit" 1)
-(history-item "tools-scale" 2)
-(history-item "file-export-as" 0)
+(history-item "file-export-as" 1)
+(history-item "tools-scale" 1)
+(history-item "file-open" 1)
 (history-item "image-new" 1)
-(history-item "file-open" 0)
 (history-item "layers-new" 0)
 (history-item "tools-move" 1)
 (history-item "tools-text" 0)
@@ -31,6 +31,7 @@
 (history-item "select-all" 0)
 (history-item "layers-alpha-selection-replace" 0)
 (history-item "layers-new-group" 0)
-(history-item "layers-mask-add" 1)
+(history-item "layers-mask-add" 0)
+(history-item "image-scale" 0)
 
 # end of action-history
