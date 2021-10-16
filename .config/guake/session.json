@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1634322337,
+    "timestamp": 1634367216,
     "workspace": {
         "0": [
             [
@@ -31,7 +31,7 @@
                             }
                         }
                     ],
-                    "label": "docker-compose up /mnt/md126/favoka2",
+                    "label": "fish /mnt/md126/favoka2",
                     "custom_label_set": false
                 },
                 {
@@ -76,7 +76,7 @@
                             }
                         }
                     ],
-                    "label": "fish /home/andrew/Downloads",
+                    "label": "fish /mnt/md126/Downloads",
                     "custom_label_set": false
                 },
                 {
@@ -91,7 +91,7 @@
                             }
                         }
                     ],
-                    "label": "ssh $favoka /mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/modules",
                     "custom_label_set": false
                 }
             ]
