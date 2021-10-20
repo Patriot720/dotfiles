@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1634669899,
+    "timestamp": 1634712738,
     "workspace": {
         "0": [
             [
@@ -91,7 +91,7 @@
                             }
                         }
                     ],
-                    "label": "docker-compose up /mnt/md126/favoka2",
+                    "label": "fish /mnt/md126/favoka2",
                     "custom_label_set": false
                 },
                 {
