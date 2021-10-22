@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1634830579,
+    "timestamp": 1634901665,
     "workspace": {
         "0": [
             [
@@ -136,7 +136,7 @@
                             }
                         }
                     ],
-                    "label": "otd /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
                     "custom_label_set": false
                 },
                 {
@@ -151,7 +151,7 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "label": "otd /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
                     "custom_label_set": false
                 }
             ]
