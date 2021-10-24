@@ -26,13 +26,13 @@ function make-youtube-clip -d "Download trim and copy to clipboard youtube video
     if set -q _flag_realsubs
         echo "Real subs $_flag_realsubs"
         test -z "$_flag_realsubs"; and set _flag_realsubs "en-US";
-        youtube-dl --write-sub --sub-lang $_flag_realsubs  --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
+        yt-dlp --write-sub --sub-lang $_flag_realsubs  --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
         mv "tmp_vid.$_flag_realsubs.vtt" tmp_vid.vtt
     else if set -q _flag_nosubs
-        youtube-dl --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
+        yt-dlp --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
     else
         echo "Auto generated subs"
-        youtube-dl --write-auto-sub --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
+        yt-dlp --write-auto-sub --no-continue $argv[1] -o tmp_vid.mp4 -f mp4
         python3 $HOME/.zsh-scripts/clean_youtube_dl_auto_subs.py tmp_vid.en.vtt > tmp_vid.vtt;
     end
 
