@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1635158028,
+    "timestamp": 1635171215,
     "workspace": {
         "0": [
             [
@@ -76,14 +76,14 @@
                             }
                         }
                     ],
-                    "label": "reboot /mnt/md126/favoka/schedule_parser",
+                    "label": "fish /mnt/md126/favoka/schedule_parser",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka/schedule_parser",
+                            "directory": "/etc",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -91,7 +91,7 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka/schedule_parser",
+                    "label": "fish /home/andrew",
                     "custom_label_set": false
                 }
             ]
