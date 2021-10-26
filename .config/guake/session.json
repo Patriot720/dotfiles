@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1635171215,
+    "timestamp": 1635245678,
     "workspace": {
         "0": [
             [
@@ -83,7 +83,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/etc",
+                            "directory": "/tmp",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -91,7 +91,7 @@
                             }
                         }
                     ],
-                    "label": "fish /home/andrew",
+                    "label": "fish /etc",
                     "custom_label_set": false
                 }
             ]
