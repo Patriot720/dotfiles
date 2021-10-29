@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1635438666,
+    "timestamp": 1635514543,
     "workspace": {
         "0": [
             [
@@ -16,7 +16,7 @@
                             }
                         }
                     ],
-                    "label": "docker-compose up /mnt/md126/favoka2",
+                    "label": "fish /mnt/md126/favoka2",
                     "custom_label_set": false
                 },
                 {
@@ -31,7 +31,7 @@
                             }
                         }
                     ],
-                    "label": "npm run debug /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
                     "custom_label_set": false
                 },
                 {
@@ -46,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": "z modules /mnt/md126",
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/modules",
                     "custom_label_set": false
                 },
                 {
@@ -61,7 +61,22 @@
                             }
                         }
                     ],
-                    "label": "fish /home/andrew/.emacs.d/.local/etc/dap-extension/vscode/felixfbecker.php-debug",
+                    "label": "root@89-108-76-60: /var/www/html",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/leha_panel/html/html",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/leha_panel/html",
                     "custom_label_set": false
                 }
             ]
