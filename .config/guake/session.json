@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1635245678,
+    "timestamp": 1635438666,
     "workspace": {
         "0": [
             [
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka2",
+                    "label": "docker-compose up /mnt/md126/favoka2",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka/schedule_parser",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,14 +31,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka/schedule_parser",
+                    "label": "npm run debug /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka/schedule_parser",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,14 +46,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka/schedule_parser",
+                    "label": "z modules /mnt/md126",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka/schedule_parser",
+                            "directory": "/home/andrew/.emacs.d/.local/etc/dap-extension/vscode/felixfbecker.php-debug",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,37 +61,7 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka/schedule_parser",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka/schedule_parser",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /mnt/md126/favoka/schedule_parser",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/tmp",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /etc",
+                    "label": "fish /home/andrew/.emacs.d/.local/etc/dap-extension/vscode/felixfbecker.php-debug",
                     "custom_label_set": false
                 }
             ]
