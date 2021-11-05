@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1635952014,
+    "timestamp": 1636130948,
     "workspace": {
         "0": [
             [
@@ -31,7 +31,7 @@
                             }
                         }
                     ],
-                    "label": "docker-compose up /mnt/md126/favoka2",
+                    "label": "fish /mnt/md126/favoka2",
                     "custom_label_set": false
                 },
                 {
@@ -46,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": "./OpenCore-Boot.sh /mnt/md126/OSX-KVM",
+                    "label": "fish /mnt/md126/OSX-KVM",
                     "custom_label_set": false
                 },
                 {
@@ -61,7 +61,52 @@
                             }
                         }
                     ],
-                    "label": "z _dev /mnt/md126/OSX-KVM",
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/tdd_kata/string_calculator_kata_cljs/test/string_calculator_kata_cljs",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "otd /mnt/md126/tdd_kata/string_calculator_kata_cljs/test/string_calculator_kata_cljs",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "z favoka2 /mnt/md126/Downloads",
                     "custom_label_set": false
                 }
             ]

@@ -9,4 +9,5 @@ color="${styles[7]}"
 
 rofi -no-lazy-grab -show calc \
 -modi calc \
--theme $dir/"$theme"
+-theme $dir/"$theme" \
+-calc-command 'wl-copy {result}'
