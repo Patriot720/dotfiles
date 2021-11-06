@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode","idle_inhibitor",],
     "modules-center": [],
-    "modules-right": ["custom/wireguard", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock", "custom/powerapplet"],
+    "modules-right": ["custom/scratchpad-indicator","custom/weather", "custom/wireguard", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock", "custom/powerapplet"],
     "keyboard-state": {
         "format": "{name} {icon}",
         "format-icons": {
@@ -145,6 +145,18 @@
         },
         "on-click": "pavucontrol"
     },
+    "custom/weather": {
+        "exec": "curl 'https://wttr.in/?format=%c%20%t%20(%f)'",
+        "interval": 3600
+    },
+"custom/scratchpad-indicator": {
+    "interval": 3,
+    "return-type": "json",
+    "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '( select(.name == \"root\") | .nodes[] | select(.name == \"__i3\") | .nodes[] | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") }'",
+    "format": "{} 🗗",
+    "on-click": "exec swaymsg 'scratchpad show'",
+    "on-click-right": "exec swaymsg 'move scratchpad'"
+},
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
