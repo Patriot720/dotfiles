@@ -1,9 +1,39 @@
 {
     "schema_version": 2,
-    "timestamp": 1636556806,
+    "timestamp": 1636626449,
     "workspace": {
         "0": [
             [
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/favoka2",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "z _dev /mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                    "custom_label_set": false
+                },
                 {
                     "panes": [
                         {
@@ -23,7 +53,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/mnt/md126/favoka2",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,7 +61,7 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                    "label": "ssh $favoka /mnt/md126/favoka2",
                     "custom_label_set": false
                 },
                 {
@@ -46,7 +76,7 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/modules",
                     "custom_label_set": false
                 }
             ]
