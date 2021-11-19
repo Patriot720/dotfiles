@@ -1,9 +1,24 @@
 {
     "schema_version": 2,
-    "timestamp": 1637302551,
+    "timestamp": 1637346439,
     "workspace": {
         "0": [
             [
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/ud120-projects-py3-jupyter",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/ud120-projects-py3-jupyter",
+                    "custom_label_set": false
+                },
                 {
                     "panes": [
                         {
@@ -23,7 +38,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/sunxi/uboot_new/u-boot",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,14 +46,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/sunxi/uboot_new/u-boot",
+                    "label": "fish /home/andrew",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/sunxi/uboot_new/u-boot",
+                            "directory": "/mnt/md126/Downloads",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,22 +61,7 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/sunxi/uboot_new/u-boot",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/uboot_new/u-boot",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /mnt/md126/sunxi/uboot_new/u-boot",
+                    "label": "fish /home/andrew/Downloads",
                     "custom_label_set": false
                 }
             ]
