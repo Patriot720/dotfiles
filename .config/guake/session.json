@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1637481414,
+    "timestamp": 1637500916,
     "workspace": {
         "0": [
             [
@@ -32,21 +32,6 @@
                         }
                     ],
                     "label": "fish /mnt/md126/sunxi/uboot_new/u-boot/configs",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/uboot-sunxi/u-boot-sunxi/configs",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fish /mnt/md126/sunxi/uboot-sunxi/u-boot-sunxi/configs",
                     "custom_label_set": false
                 },
                 {

@@ -50,7 +50,7 @@
     (visible yes))
 (GimpToolGroup "tool group"
     (visible yes)
-    (active-tool "gimp-scale-tool")
+    (active-tool "gimp-unified-transform-tool")
     (children
         (GimpToolInfo "gimp-unified-transform-tool"
             (icon-name "gimp-tool-unified-transform")
@@ -133,7 +133,7 @@
             (visible yes))))
 (GimpToolGroup "tool group"
     (visible yes)
-    (active-tool "gimp-smudge-tool")
+    (active-tool "gimp-convolve-tool")
     (children
         (GimpToolInfo "gimp-smudge-tool"
             (icon-name "gimp-tool-smudge")
