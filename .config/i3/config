@@ -271,8 +271,8 @@ exec --no-startup-id ~/.dropbox-dist/dropboxd
 exec --no-startup-id /usr/lib/kdeconnectd
 
 #Bg
-# exec_always feh --bg-fill ~/.config/i3/bg/soheb-zaidi.png
-exec --no-startup-id variety
+exec_always feh --bg-fill ~/.config/i3/bg/soheb-zaidi.png
+# exec --no-startup-id variety
 
 #redshift night light
 exec --no-startup-id redshift-gtk

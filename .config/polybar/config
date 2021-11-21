@@ -76,9 +76,10 @@ font-3 = ShureTechMono Nerd Font:fontformat=truetype:size=17;3
 font-4 = ShureTechMono Nerd Font:fontformat=truetype:size=14;3
 font-5 = Weather Icons:size=12;5
 font-6 = MaterialIcons:size=15;6
+font-7 = NotoEmoji:fontformat=truetype:scale=7;4
 
 modules-left = i3
-modules-center = work-rest-switch
+modules-center =
 modules-right =  weather  popup-calendar xbacklight pulseaudio wireguard bluetooth powerapplet
 tray-position = none
 tray-padding = 2
@@ -553,8 +554,7 @@ click-left = ~/.config/rofi/bin/rofi-bluetooth
 
 [module/weather]
 type = custom/script
-exec = ~/.config/polybar/polybar-forecast-linux-x86_64
-exec-if = ping openweathermap.org -c 1
+exec = curl -s 'https://wttr.in/?format=%c%20%t%20(%f)'
 interval = 6000
 label-font = 6
 

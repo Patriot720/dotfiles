@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1637500916,
+    "timestamp": 1637501889,
     "workspace": {
         "0": [
             [
@@ -47,6 +47,21 @@
                         }
                     ],
                     "label": "fish /mnt/md126/sunxi/uboot-sunxi/u-boot-sunxi/configs",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.config/polybar",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /home/andrew/.config/polybar",
                     "custom_label_set": false
                 }
             ]
