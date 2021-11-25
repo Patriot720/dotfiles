@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1637741833,
+    "timestamp": 1637824621,
     "workspace": {
         "0": [
             [
@@ -38,7 +38,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/conduit/frontend/src/frontend",
+                            "directory": "/mnt/md126/ilzabot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/conduit/frontend/src/frontend",
+                    "label": "fish /mnt/md126/ilzabot",
                     "custom_label_set": false
                 }
             ]
