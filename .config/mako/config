@@ -8,3 +8,5 @@ height=300
 padding=20
 border-radius=10
 anchor=bottom-right
+[mode=do-not-disturb]
+invisible=1
