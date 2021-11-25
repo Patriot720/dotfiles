@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1637848859,
+    "timestamp": 1637850802,
     "workspace": {
         "0": [
             [
@@ -92,6 +92,21 @@
                         }
                     ],
                     "label": "fish /mnt/md126/ilzabot",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/Downloads/osu",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/Downloads/osu",
                     "custom_label_set": false
                 },
                 {
