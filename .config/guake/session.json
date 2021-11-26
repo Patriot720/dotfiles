@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1637913221,
+    "timestamp": 1637918015,
     "workspace": {
         "0": [
             [
@@ -47,6 +47,36 @@
                         }
                     ],
                     "label": "fish /home/andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/favoka2",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/favoka2",
                     "custom_label_set": false
                 }
             ]
