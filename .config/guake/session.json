@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1638024207,
+    "timestamp": 1638086486,
     "workspace": {
         "0": [
             [
@@ -76,7 +76,7 @@
                             }
                         }
                     ],
-                    "label": "otd /mnt/md126/favoka2",
+                    "label": "fish /mnt/md126/favoka2",
                     "custom_label_set": false
                 },
                 {
