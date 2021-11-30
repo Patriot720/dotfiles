@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1638288263,
+    "timestamp": 1638300795,
     "workspace": {
         "0": [
             [
@@ -16,7 +16,7 @@
                             }
                         }
                     ],
-                    "label": "otd /mnt/md126/ud120-projects-py3-jupyter",
+                    "label": "fish /mnt/md126/ud120-projects-py3-jupyter",
                     "custom_label_set": false
                 },
                 {
