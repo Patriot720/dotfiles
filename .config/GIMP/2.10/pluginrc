@@ -135,6 +135,833 @@
         (proc-arg 0 "new-image" "Create a new image?")
         (proc-arg 13 "new-image" "Output image (-1 if new-image == FALSE)")
         (proc-arg 14 "new-layer" "Output layer (-1 if new-image == FALSE)")))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/layerfx.py" 1638197304
+    (proc-def "python_layerfx_drop_shadow" 1
+         "Adds a drop shadow to a layer."
+         "Adds a drop shadow to a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Drop Shadow...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         14 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The shadow's color")
+        (proc-arg 3 "opacity" "The shadow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the shadow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the shadow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "spread" "Spread (0 <= spread <= 100)")
+        (proc-arg 0 "size" "The size of the shadow's blur (0 <= size <= 250)")
+        (proc-arg 3 "offset-angle" "The angle the shadow is cast in (-180 <= offset_angle <= 180)")
+        (proc-arg 3 "offset-distance" "The distance between the layer and the shadow (0 <= offset_distance <= 30000)")
+        (proc-arg 0 "knockout" "Layer knocks out Drop Shadow (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_drop_shadow" 1
+         "Adds a drop shadow to a layer."
+         "Adds a drop shadow to a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Drop Shadow...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         14 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The shadow's color")
+        (proc-arg 3 "opacity" "The shadow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the shadow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the shadow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "spread" "Spread (0 <= spread <= 100)")
+        (proc-arg 0 "size" "The size of the shadow's blur (0 <= size <= 250)")
+        (proc-arg 3 "offset-angle" "The angle the shadow is cast in (-180 <= offset_angle <= 180)")
+        (proc-arg 3 "offset-distance" "The distance between the layer and the shadow (0 <= offset_distance <= 30000)")
+        (proc-arg 0 "knockout" "Layer knocks out Drop Shadow (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_inner_shadow" 1
+         "Adds an inner shadow to a layer"
+         "Adds an inner shadow to a layer"
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/I_nner Shadow...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         14 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The shadow's color")
+        (proc-arg 3 "opacity" "The shadow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the shadow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the shadow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "source" "Source (0 = Center, 1 = Edge)")
+        (proc-arg 3 "choke" "Choke (0 <= choke <= 100)")
+        (proc-arg 0 "size" "The size of the shadow's blur (0 <= size <= 250)")
+        (proc-arg 3 "offset-angle" "The angle the shadow is cast in (-180 <= offset_angle <= 180)")
+        (proc-arg 3 "offset-distance" "The distance between the layer and the shadow (0 <= offset_distance <= 30000)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_inner_shadow" 1
+         "Adds an inner shadow to a layer"
+         "Adds an inner shadow to a layer"
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/I_nner Shadow...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         14 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The shadow's color")
+        (proc-arg 3 "opacity" "The shadow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the shadow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the shadow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "source" "Source (0 = Center, 1 = Edge)")
+        (proc-arg 3 "choke" "Choke (0 <= choke <= 100)")
+        (proc-arg 0 "size" "The size of the shadow's blur (0 <= size <= 250)")
+        (proc-arg 3 "offset-angle" "The angle the shadow is cast in (-180 <= offset_angle <= 180)")
+        (proc-arg 3 "offset-distance" "The distance between the layer and the shadow (0 <= offset_distance <= 30000)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_outer_glow" 1
+         "Creates an outer glow effect around a layer."
+         "Creates an outer glow effect around a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Outer Glow...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         12 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The glow's color. You can also use a gradient name here.")
+        (proc-arg 3 "opacity" "The glow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the glow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the glow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The glow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "spread" "Spread (0 <= spread <= 100)")
+        (proc-arg 0 "size" "The size of the glow's blur (0 <= size <= 250)")
+        (proc-arg 0 "knockout" "Layer knocks out Outer Glow (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_outer_glow" 1
+         "Creates an outer glow effect around a layer."
+         "Creates an outer glow effect around a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Outer Glow...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         12 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The glow's color. You can also use a gradient name here.")
+        (proc-arg 3 "opacity" "The glow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the glow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the glow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The glow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "spread" "Spread (0 <= spread <= 100)")
+        (proc-arg 0 "size" "The size of the glow's blur (0 <= size <= 250)")
+        (proc-arg 0 "knockout" "Layer knocks out Outer Glow (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_inner_glow" 1
+         "Creates an inner glow effect around a layer."
+         "Creates an inner glow effect around a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Inner Glow...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         12 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The glow's color. You can also use a gradient name here.")
+        (proc-arg 3 "opacity" "The glow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the glow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the glow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The glow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "source" "Source (0 = Center, 1 = Edge)")
+        (proc-arg 3 "choke" "Choke (0 <= choke <= 100)")
+        (proc-arg 0 "size" "The size of the glow's blur (0 <= size <= 250)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_inner_glow" 1
+         "Creates an inner glow effect around a layer."
+         "Creates an inner glow effect around a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Inner Glow...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         12 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The glow's color. You can also use a gradient name here.")
+        (proc-arg 3 "opacity" "The glow's opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "contour" "A contour used to modify the glow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 3 "noise" "The amount of noise applied to the glow (0 <= noise <= 100)")
+        (proc-arg 0 "mode" "The glow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "source" "Source (0 = Center, 1 = Edge)")
+        (proc-arg 3 "choke" "Choke (0 <= choke <= 100)")
+        (proc-arg 0 "size" "The size of the glow's blur (0 <= size <= 250)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_bevel_emboss" 1
+         "Creates beveling and embossing effects over a layer."
+         "Creates beveling and embossing effects over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Bevel and Emboss...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         24 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 0 "style" "Beveling Style (0 = Outer Bevel, 1 = Inner Bevel, 2 = Emboss, 3 = Pillow Emboss)")
+        (proc-arg 0 "depth" "Depth (1 <= depth <= 65)")
+        (proc-arg 0 "direction" "Direction (0 = Up, 1 = Down)")
+        (proc-arg 0 "size" "The size of the bevel (0 <= size <= 250)")
+        (proc-arg 0 "soften" "Soften (0 <= soften <= 16)")
+        (proc-arg 3 "angle" "Angle of the light source (-180 <= angle <= 180)")
+        (proc-arg 3 "altitude" "Altitude of the light source (0 <= altitude <= 90)")
+        (proc-arg 0 "gloss-contour" "A contour used to modify the gloss's intensity curve (0 <= gloss_contour <= 11)")
+        (proc-arg 10 "highlight-color" "The highlight color")
+        (proc-arg 0 "highlight-mode" "The highlight layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "highlight-opacity" "The highlight's opacity (0 <= highlight_opacity <= 100)")
+        (proc-arg 10 "shadow-color" "The shadow color")
+        (proc-arg 0 "shadow-mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "shadow-opacity" "The shadow's opacity (0 <= shadow_opacity <= 100)")
+        (proc-arg 0 "surface-contour" "A contour used to modify the surface shape (0 <= gloss_contour <= 11)")
+        (proc-arg 0 "use-texture" "Apply a texture to the surface (TRUE or FALSE)")
+        (proc-arg 4 "pattern" "The texture pattern")
+        (proc-arg 3 "scale" "The texture scale (1 <= scale <= 1000)")
+        (proc-arg 3 "tex-depth" "The texture depth (-1000 <= tex_depth <= 1000)")
+        (proc-arg 0 "invert" "Invert (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_bevel_emboss" 1
+         "Creates beveling and embossing effects over a layer."
+         "Creates beveling and embossing effects over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Bevel and Emboss...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         24 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 0 "style" "Beveling Style (0 = Outer Bevel, 1 = Inner Bevel, 2 = Emboss, 3 = Pillow Emboss)")
+        (proc-arg 0 "depth" "Depth (1 <= depth <= 65)")
+        (proc-arg 0 "direction" "Direction (0 = Up, 1 = Down)")
+        (proc-arg 0 "size" "The size of the bevel (0 <= size <= 250)")
+        (proc-arg 0 "soften" "Soften (0 <= soften <= 16)")
+        (proc-arg 3 "angle" "Angle of the light source (-180 <= angle <= 180)")
+        (proc-arg 3 "altitude" "Altitude of the light source (0 <= altitude <= 90)")
+        (proc-arg 0 "gloss-contour" "A contour used to modify the gloss's intensity curve (0 <= gloss_contour <= 11)")
+        (proc-arg 10 "highlight-color" "The highlight color")
+        (proc-arg 0 "highlight-mode" "The highlight layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "highlight-opacity" "The highlight's opacity (0 <= highlight_opacity <= 100)")
+        (proc-arg 10 "shadow-color" "The shadow color")
+        (proc-arg 0 "shadow-mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "shadow-opacity" "The shadow's opacity (0 <= shadow_opacity <= 100)")
+        (proc-arg 0 "surface-contour" "A contour used to modify the surface shape (0 <= gloss_contour <= 11)")
+        (proc-arg 0 "use-texture" "Apply a texture to the surface (TRUE or FALSE)")
+        (proc-arg 4 "pattern" "The texture pattern")
+        (proc-arg 3 "scale" "The texture scale (1 <= scale <= 1000)")
+        (proc-arg 3 "tex-depth" "The texture depth (-1000 <= tex_depth <= 1000)")
+        (proc-arg 0 "invert" "Invert (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_satin" 1
+         "Creates a satin effect over a layer."
+         "Creates a satin effect over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Satin...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         12 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The shadow color")
+        (proc-arg 3 "opacity" "The shadow opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "offset-angle" "The angle the shadow is cast in (-180 <= offset_angle <= 180)")
+        (proc-arg 3 "offset-distance" "The offset distance (0 <= offset_distance <= 30000)")
+        (proc-arg 0 "size" "The size of the satin's blur (0 <= size <= 250)")
+        (proc-arg 0 "contour" "A contour used to modify the shadow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 0 "invert" "Invert (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_satin" 1
+         "Creates a satin effect over a layer."
+         "Creates a satin effect over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Satin...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         12 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The shadow color")
+        (proc-arg 3 "opacity" "The shadow opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The shadow layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "offset-angle" "The angle the shadow is cast in (-180 <= offset_angle <= 180)")
+        (proc-arg 3 "offset-distance" "The offset distance (0 <= offset_distance <= 30000)")
+        (proc-arg 0 "size" "The size of the satin's blur (0 <= size <= 250)")
+        (proc-arg 0 "contour" "A contour used to modify the shadow's intensity curve (0 <= contour <= 11)")
+        (proc-arg 0 "invert" "Invert (TRUE or FALSE)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_stroke" 1
+         "Creates a stroke around a layer."
+         "Creates a stroke around a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/S_troke...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         9 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The stroke color. This can also be a list or tuple to use gradients or patterns. For a gradient stroke, use a list or tuple of the form (gradient_name, gradient_type, repeat, reverse, center_x, center_y, angle, width). For a patterned stroke, use the form (pattern_name, scale, interpolation_type).")
+        (proc-arg 3 "opacity" "The stroke opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The stroke layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "size" "The stroke's width (1 <= size <= 250)")
+        (proc-arg 3 "position" "The stroke's position; 0 = inside the layer borders, 100 = outside the layer border (0 <= position <= 100)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_stroke" 1
+         "Creates a stroke around a layer."
+         "Creates a stroke around a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/S_troke...")
+        (icon icon-name -1 "")
+         "RGBA, GRAYA"
+         9 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The stroke color. This can also be a list or tuple to use gradients or patterns. For a gradient stroke, use a list or tuple of the form (gradient_name, gradient_type, repeat, reverse, center_x, center_y, angle, width). For a patterned stroke, use the form (pattern_name, scale, interpolation_type).")
+        (proc-arg 3 "opacity" "The stroke opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The stroke layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "size" "The stroke's width (1 <= size <= 250)")
+        (proc-arg 3 "position" "The stroke's position; 0 = inside the layer borders, 100 = outside the layer border (0 <= position <= 100)")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_color_overlay" 1
+         "Overlays a color over a layer."
+         "Overlays a color over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Color Overlay...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         7 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The color to overlay")
+        (proc-arg 3 "opacity" "The overlay opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The overlay layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_color_overlay" 1
+         "Overlays a color over a layer."
+         "Overlays a color over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Color Overlay...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         7 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 10 "color" "The color to overlay")
+        (proc-arg 3 "opacity" "The overlay opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The overlay layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_gradient_overlay" 1
+         "Overlays a gradient over a layer."
+         "Overlays a gradient over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Gradient Overlay...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         14 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "gradient" "The gradient to overlay")
+        (proc-arg 0 "gradient-type" "The type of gradient { GRADIENT-LINEAR (0), GRADIENT-BILINEAR (1), GRADIENT-RADIAL (2), GRADIENT-SQUARE (3), GRADIENT-CONICAL-SYMMETRIC (4), GRADIENT-CONICAL-ASYMMETRIC (5), GRADIENT-SHAPEBURST-ANGULAR (6), GRADIENT-SHAPEBURST-SPHERICAL (7), GRADIENT-SHAPEBURST-DIMPLED (8), GRADIENT-SPIRAL-CLOCKWISE (9), GRADIENT-SPIRAL-ANTICLOCKWISE (10) }")
+        (proc-arg 0 "repeat" "Repeat mode { REPEAT-NONE (0), REPEAT-SAWTOOTH (1), REPEAT-TRIANGULAR (2) }")
+        (proc-arg 0 "reverse" "Use the reverse gradient (TRUE or FALSE)")
+        (proc-arg 3 "opacity" "The overlay opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The overlay layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "center-x" "X coordinate of center")
+        (proc-arg 3 "center-y" "Y coordinate of center")
+        (proc-arg 3 "angle" "Gradient angle (-180 <= angle <= 180)")
+        (proc-arg 3 "width" "Gradient width (0 <= width <= 262144")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_gradient_overlay" 1
+         "Overlays a gradient over a layer."
+         "Overlays a gradient over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Gradient Overlay...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         14 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "gradient" "The gradient to overlay")
+        (proc-arg 0 "gradient-type" "The type of gradient { GRADIENT-LINEAR (0), GRADIENT-BILINEAR (1), GRADIENT-RADIAL (2), GRADIENT-SQUARE (3), GRADIENT-CONICAL-SYMMETRIC (4), GRADIENT-CONICAL-ASYMMETRIC (5), GRADIENT-SHAPEBURST-ANGULAR (6), GRADIENT-SHAPEBURST-SPHERICAL (7), GRADIENT-SHAPEBURST-DIMPLED (8), GRADIENT-SPIRAL-CLOCKWISE (9), GRADIENT-SPIRAL-ANTICLOCKWISE (10) }")
+        (proc-arg 0 "repeat" "Repeat mode { REPEAT-NONE (0), REPEAT-SAWTOOTH (1), REPEAT-TRIANGULAR (2) }")
+        (proc-arg 0 "reverse" "Use the reverse gradient (TRUE or FALSE)")
+        (proc-arg 3 "opacity" "The overlay opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The overlay layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "center-x" "X coordinate of center")
+        (proc-arg 3 "center-y" "Y coordinate of center")
+        (proc-arg 3 "angle" "Gradient angle (-180 <= angle <= 180)")
+        (proc-arg 3 "width" "Gradient width (0 <= width <= 262144")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_pattern_overlay" 1
+         "Overlays a pattern over a layer."
+         "Overlays a pattern over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Pattern Overlay...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         9 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "pattern" "The pattern to overlay")
+        (proc-arg 3 "opacity" "The overlay opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The overlay layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "scale" "Amount to scale the pattern (1 <= scale <= 1000)")
+        (proc-arg 0 "interpolation" "Type of interpolation { INTERPOLATION-NONE (0), INTERPOLATION-LINEAR (1), INTERPOLATION-CUBIC (2), INTERPOLATION-LANCZOS (3) }")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layer_fx_pattern_overlay" 1
+         "Overlays a pattern over a layer."
+         "Overlays a pattern over a layer."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Pattern Overlay...")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         9 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "pattern" "The pattern to overlay")
+        (proc-arg 3 "opacity" "The overlay opacity (0 <= opacity <= 100)")
+        (proc-arg 0 "mode" "The overlay layer's combination mode { NORMAL-MODE (0), DISSOLVE-MODE (1), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25) }")
+        (proc-arg 3 "scale" "Amount to scale the pattern (1 <= scale <= 1000)")
+        (proc-arg 0 "interpolation" "Type of interpolation { INTERPOLATION-NONE (0), INTERPOLATION-LINEAR (1), INTERPOLATION-CUBIC (2), INTERPOLATION-LANCZOS (3) }")
+        (proc-arg 0 "merge" "Merge with layer (TRUE or FALSE)"))
+    (proc-def "python_layerfx_reapply_effects" 1
+         "Reapply all effects previously applied to a layer."
+         "Reapply all effects previously applied to a layer. NOTE: Does not work for effects that were applied with the \"Merge with layer\" option active."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Image>/Layer/La_yer Effects/_Reapply Effects")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         3 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable"))
+    (proc-def "python_layer_fx_reapply_effects" 1
+         "Reapply all effects previously applied to a layer."
+         "Reapply all effects previously applied to a layer. NOTE: Does not work for effects that were applied with the \"Merge with layer\" option active."
+         "Jonathan Stipe"
+         "Jonathan Stipe"
+         "July 2008"
+         ""
+         1
+        (menu-path "<Layers>/_Layer Effects/_Reapply Effects")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         3 0
+        (proc-arg 0 "run-mode" "Run mode")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable"))
+    (has-init))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/spyro_plus/spyro_plus.py" 1638197273
+    (proc-def "plug_in_spyrogimp" 1
+         "Draw spyrographs using current tool settings and selection."
+         "Uses current tool settings to draw Spyrograph patterns. The size and location of the pattern is based on the current selection."
+         "Elad Shahar"
+         "Elad Shahar"
+         "2018"
+         "Spyrogimp..."
+         1
+        (menu-path "<Image>/Filters/Render/")
+        (icon icon-name -1 "")
+         "*"
+         16 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 0 "curve-type" "The curve type { Spyrograph (0), Epitrochoid (1), Sine (2), Lissajous(3) }")
+        (proc-arg 0 "shape" "Shape of fixed gear")
+        (proc-arg 0 "sides" "Number of sides of fixed gear (3 or greater). Only used by some shapes.")
+        (proc-arg 3 "morph" "Morph shape of fixed gear, between 0 and 1. Only used by some shapes.")
+        (proc-arg 0 "fixed-teeth" "Number of teeth for fixed gear")
+        (proc-arg 0 "moving-teeth" "Number of teeth for moving gear")
+        (proc-arg 3 "hole-percent" "Location of hole in moving gear in percent, where 100 means that the hole is at the edge of the gear, and 0 means the hole is at the center")
+        (proc-arg 0 "margin" "Margin from selection, in pixels")
+        (proc-arg 0 "equal-w-h" "Make height and width equal (TRUE or FALSE)")
+        (proc-arg 3 "pattern-rotation" "Pattern rotation, in degrees")
+        (proc-arg 3 "shape-rotation" "Shape rotation of fixed gear, in degrees")
+        (proc-arg 0 "tool" "Tool to use for drawing the pattern.")
+        (proc-arg 0 "long-gradient" "Whether to apply a long gradient to match the length of the pattern (TRUE or FALSE). Only applicable to some of the tools."))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/python-eval/python-eval.py" 1638197273
+    (proc-def "python-fu-eval" 1
+         "Evaluate Python code"
+         "Evaluate python code under the python interpreter (primarily for batch mode)"
+         "Manish Singh"
+         "Manish Singh"
+         "2006"
+         ""
+         0
+        (icon icon-name -1 "")
+         ""
+         2 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "code" "The code to evaluate")))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/python-console/python-console.py" 1638197273
+    (proc-def "python-fu-console" 1
+         "Interactive GIMP Python interpreter"
+         "Type in commands and see results"
+         "James Henstridge"
+         "James Henstridge"
+         "1997-1999"
+         "_Console"
+         1
+        (menu-path "<Image>/Filters/Languages/Python-Fu")
+        (icon icon-name -1 "")
+         ""
+         1 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/py-slice/py-slice.py" 1638197273
+    (proc-def "python-fu-slice" 1
+         "Cuts an image along its guides, creates images and a HTML table snippet"
+         "Add guides to an image. Then run this. It will cut along the guides,\n    and give you the html to reassemble the resulting images. If you\n    choose to generate javascript for onmouseover and clicked events, it\n    will use the lower three visible layers on the image for normal,\n    onmouseover and clicked states, in that order. If skip caps is\n    enabled, table cells on the edge of the table won't become animated,\n    and its images will be taken from the active layer."
+         "Manish Singh"
+         "Manish Singh"
+         "2003"
+         "_Slice..."
+         1
+        (menu-path "<Image>/Filters/Web")
+        (icon icon-name -1 "")
+         "*"
+         12 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "save-path" "Path for HTML export")
+        (proc-arg 4 "html-filename" "Filename for export")
+        (proc-arg 4 "image-basename" "Image name prefix")
+        (proc-arg 4 "image-extension" "Image format")
+        (proc-arg 0 "separate-image-dir" "Separate image folder")
+        (proc-arg 4 "relative-image-path" "Folder for image export")
+        (proc-arg 0 "cellspacing" "Space between table elements")
+        (proc-arg 0 "animate" "Javascript for onmouseover and clicked")
+        (proc-arg 0 "skip-caps" "Skip animation for table caps"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/palette-to-gradient/palette-to-gradient.py" 1638197273
+    (proc-def "python-fu-palette-to-gradient" 1
+         "Create a gradient using colors from the palette"
+         "Create a new gradient using colors from the palette."
+         "Carol Spears, reproduced from previous work by Adrian Likins and Jeff Trefftz"
+         "Carol Spears"
+         "2006"
+         "Palette to _Gradient"
+         1
+        (menu-path "<Palettes>")
+        (icon icon-name -1 "")
+         ""
+         2 1
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "palette" "Palette")
+        (proc-arg 4 "new-gradient" "Result"))
+    (proc-def "python-fu-palette-to-gradient-repeating" 1
+         "Create a repeating gradient using colors from the palette"
+         "Create a new repeating gradient using colors from the palette."
+         "Carol Spears, reproduced from previous work by Adrian Likins and Jeff Trefftz"
+         "Carol Spears"
+         "2006"
+         "Palette to _Repeating Gradient"
+         1
+        (menu-path "<Palettes>")
+        (icon icon-name -1 "")
+         ""
+         2 1
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "palette" "Palette")
+        (proc-arg 4 "new-gradient" "Result"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/palette-sort/palette-sort.py" 1638197273
+    (proc-def "python-fu-palette-sort" 1
+         "Sort the colors in a palette"
+         "palette_sort (palette, selection, slice_expr, channel,\nchannel2, quantize, ascending, pchannel, pquantize) -> new_palette\nSorts a palette, or part of a palette, using several options.\nOne can select two color channels over which to sort,\nand several auxiliary parameters create a 2D sorted\npalette with sorted rows, among other things.\nOne can optionally install colormath\n(https://pypi.python.org/pypi/colormath/1.0.8)\nto GIMP's Python to get even more channels to choose from.\n"
+         "João S. O. Bueno, Carol Spears, David Gowers"
+         "João S. O. Bueno, Carol Spears, David Gowers"
+         "2006-2014"
+         "_Sort Palette..."
+         1
+        (menu-path "<Palettes>")
+        (icon icon-name -1 "")
+         ""
+         11 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "palette" "Palette")
+        (proc-arg 0 "selections" "Selections")
+        (proc-arg 4 "slice-expr" "Slice expression")
+        (proc-arg 0 "channel1" "Channel to sort")
+        (proc-arg 0 "ascending1" "Ascending")
+        (proc-arg 0 "channel2" "Secondary Channel to sort")
+        (proc-arg 0 "ascending2" "Ascending")
+        (proc-arg 3 "quantize" "Quantization")
+        (proc-arg 0 "pchannel" "Partitioning channel")
+        (proc-arg 3 "pquantize" "Partition quantization"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/palette-offset/palette-offset.py" 1638197273
+    (proc-def "python-fu-palette-offset" 1
+         "Offset the colors in a palette"
+         "palette_offset (palette, amount) -> modified_palette"
+         "Joao S. O. Bueno Calligaris, Carol Spears"
+         "(c) Joao S. O. Bueno Calligaris"
+         "2004, 2006"
+         "_Offset Palette..."
+         1
+        (menu-path "<Palettes>")
+        (icon icon-name -1 "")
+         ""
+         3 1
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "palette" "Palette")
+        (proc-arg 0 "amount" "Offset")
+        (proc-arg 4 "new-palette" "Result"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/histogram-export/histogram-export.py" 1638197273
+    (proc-def "python-fu-histogram-export" 1
+         "Exports the image histogram to a text file (CSV)"
+         "\nExports the image histogram to a text file,\nso that it can be used by other programs\nand loaded into spreadsheets.\n\nThe resulting file is a CSV file (Comma Separated\nValues), which can be imported\ndirectly in most spreadsheet programs.\n\nThe first two collums are the bucket boundaries,\nfollowed by the selected columns. The histogram\nrefers to the selected image area, and\ncan use either Sample Average data or data\nfrom the current drawable only.;\n\nThe output is in \"weighted pixels\" - meaning\nall fully transparent pixels are not counted.\n\nCheck the gimp-histogram call\n"
+         "João S. O. Bueno"
+         "João S. O. Bueno, 2014"
+         "2014"
+         "_Export histogram..."
+         1
+        (menu-path "<Image>/Colors/Info")
+        (icon icon-name -1 "")
+         "*"
+         7 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 13 "img" "Image")
+        (proc-arg 16 "drw" "Drawable")
+        (proc-arg 4 "filename" "Histogram File")
+        (proc-arg 3 "bucket-size" "Bucket Size")
+        (proc-arg 0 "sample-average" "Sample Average")
+        (proc-arg 4 "output-format" "Output format"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/gradients-save-as-css/gradients-save-as-css.py" 1638197273
+    (proc-def "python-fu-gradient-save-as-css" 1
+         "Creates a new palette from a given gradient"
+         "palette_from_gradient (gradient, number, segment_colors) -> None"
+         "Joao S. O. Bueno"
+         "(c) GPL V3.0 or later"
+         "2011"
+         "Save as CSS..."
+         1
+        (menu-path "<Gradients>")
+        (icon icon-name -1 "")
+         ""
+         3 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "gradient" "Gradient to use")
+        (proc-arg 4 "file-name" "File Name"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/foggify/foggify.py" 1638197273
+    (proc-def "python-fu-foggify" 1
+         "Add a layer of fog"
+         "Adds a layer of fog to the image."
+         "James Henstridge"
+         "James Henstridge"
+         "1999,2007"
+         "_Fog..."
+         1
+        (menu-path "<Image>/Filters/Decor")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         7 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "name" "Layer name")
+        (proc-arg 10 "colour" "Fog color")
+        (proc-arg 3 "turbulence" "Turbulence")
+        (proc-arg 3 "opacity" "Opacity"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/file-openraster/file-openraster.py" 1638197273
+    (proc-def "file-openraster-load-thumb" 1
+         "loads a thumbnail from an OpenRaster (.ora) file"
+         "loads a thumbnail from an OpenRaster (.ora) file"
+         "Jon Nordby"
+         "Jon Nordby"
+         "2009"
+         ""
+         0
+        (icon icon-name -1 "")
+         ""
+         3 3
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "filename" "The name of the file to load")
+        (proc-arg 0 "thumb-size" "Preferred thumbnail size")
+        (proc-arg 13 "image" "Thumbnail image")
+        (proc-arg 0 "image-width" "Width of full-sized image")
+        (proc-arg 0 "image-height" "Height of full-sized image"))
+    (proc-def "file-openraster-load" 1
+         "load an OpenRaster (.ora) file"
+         "load an OpenRaster (.ora) file"
+         "Jon Nordby"
+         "Jon Nordby"
+         "2009"
+         "OpenRaster"
+         1
+        (menu-path "<Load>")
+        (icon icon-name -1 "")
+        (load-proc
+            (extensions "ora")
+            (mime-types "image/openraster")
+            (thumb-loader "file-openraster-load-thumb"))
+         ""
+         3 1
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 4 "filename" "The name of the file to load")
+        (proc-arg 4 "raw-filename" "The name entered")
+        (proc-arg 13 "image" "Output image"))
+    (proc-def "file-openraster-save" 1
+         "save an OpenRaster (.ora) file"
+         "save an OpenRaster (.ora) file"
+         "Jon Nordby"
+         "Jon Nordby"
+         "2009"
+         "OpenRaster"
+         1
+        (menu-path "<Save>")
+        (icon icon-name -1 "")
+        (save-proc
+            (extensions "ora"))
+         "*"
+         5 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "filename" "The name of the file")
+        (proc-arg 4 "raw-filename" "The name of the file")))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/colorxhtml/colorxhtml.py" 1638197273
+    (proc-def "file-colorxhtml-save" 1
+         "Save as colored XHTML"
+         "Saves the image as colored XHTML text (based on Perl version by Marc Lehmann)"
+         "Manish Singh and Carol Spears"
+         "Manish Singh and Carol Spears"
+         "2003"
+         "Colored XHTML"
+         1
+        (menu-path "<Save>")
+        (icon icon-name -1 "")
+        (save-proc
+            (extensions "xhtml"))
+         "RGB"
+         9 0
+        (proc-arg 0 "run-mode" "The run mode { RUN-INTERACTIVE (0), RUN-NONINTERACTIVE (1) }")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable")
+        (proc-arg 4 "filename" "The name of the file")
+        (proc-arg 4 "raw-filename" "The name of the file")
+        (proc-arg 4 "source" "Character source")
+        (proc-arg 4 "characters" "File to read or characters to use")
+        (proc-arg 0 "font-size" "Font size in pixels")
+        (proc-arg 0 "separate" "Write a separate CSS file"))
+    (locale-def "gimp20-python" "${gimp_installation_dir}/share/locale"))
 (plug-in-def "${gimp_plug_in_dir}/plug-ins/sphere-designer/sphere-designer" 1631652495
     (proc-def "plug-in-spheredesigner" 1
          "Create an image of a textured sphere"

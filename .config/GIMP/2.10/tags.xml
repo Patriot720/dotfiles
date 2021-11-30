@@ -1168,7 +1168,7 @@
   <resource identifier="${gimp_data_dir}/gradients/Yellow_Orange.ggr" checksum="428584726006e23e260baa2a7d79f295">
   </resource>
 
-  <resource identifier="gimp-palette-color-history" checksum="e16b0d5e6d1759d718ea16cad44e275d">
+  <resource identifier="gimp-palette-color-history" checksum="e4253f90723ac6be2b60e96fcc5f95c4">
   </resource>
 
   <resource identifier="${gimp_data_dir}/palettes/Bears.gpl" checksum="e82e818c20ac12bdd21049924ea2d1e7">
@@ -1427,6 +1427,18 @@
   </resource>
 
   <resource identifier="D050000L" checksum="(null)">
+  </resource>
+
+  <resource identifier="Evolventa" checksum="(null)">
+  </resource>
+
+  <resource identifier="Evolventa Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Evolventa Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Evolventa Oblique" checksum="(null)">
   </resource>
 
   <resource identifier="Fantasque Sans Mono" checksum="(null)">
@@ -1814,6 +1826,102 @@
   </resource>
 
   <resource identifier="Iosevka Ultra-Light Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono NL Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Latin Modern Math" checksum="(null)">
