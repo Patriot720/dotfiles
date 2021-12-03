@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1638384298,
+    "timestamp": 1638510264,
     "workspace": {
         "0": [
             [
@@ -16,7 +16,7 @@
                             }
                         }
                     ],
-                    "label": "otd /home/andrew",
+                    "label": "fish /home/andrew",
                     "custom_label_set": false
                 },
                 {
