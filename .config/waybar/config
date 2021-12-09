@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode","idle_inhibitor",],
     "modules-center": [],
-    "modules-right": ["custom/scratchpad-indicator","custom/weather", "custom/wireguard", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock", "custom/powerapplet"],
+    "modules-right": ["custom/text", "custom/scratchpad-indicator","custom/weather", "custom/wireguard", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2","custom/bluetoothapplet","pulseaudio", "tray", "clock", "custom/powerapplet"],
     "keyboard-state": {
         "format": "{name} {icon}",
         "format-icons": {
@@ -57,6 +57,9 @@
             "activated": "",
             "deactivated": ""
         }
+    },
+    "custom/text": {
+    "format": "Relax yo hands"
     },
     "tray": {
         // "icon-size": 21,
