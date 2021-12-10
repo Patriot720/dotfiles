@@ -43,6 +43,9 @@ case $1 in
     install_zsh)
         source ./.installation_script/zsh.sh
         ;;
+    install_fish)
+        source ./.installation_script/fish.sh
+        ;;
     enable_caps_hjkl)
         source ./.installation_script/caps_hjkl.sh
         ;;
@@ -64,7 +67,7 @@ case $1 in
         source ./.installation_script/internet_fix.sh
         source ./.installation_script/cronie.sh
         source ./.installation_script/guake.sh
-        source ./.installation_script/zsh.sh
+        source ./.installation_script/fish.sh
         enable_services
         add_git_aliases
         ;;
