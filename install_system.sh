@@ -68,7 +68,8 @@ case $1 in
         source ./.installation_script/cronie.sh
         source ./.installation_script/guake.sh
         source ./.installation_script/fish.sh
-        enable_services
+        source ./.installation_script/autologin.sh
+        # enable_services
         add_git_aliases
         ;;
 esac
