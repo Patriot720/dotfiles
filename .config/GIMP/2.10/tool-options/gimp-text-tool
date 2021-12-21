@@ -1,7 +1,9 @@
 # GIMP gimp-text-tool options
 
 (palette "Color History")
-(font "Sans-serif")
+(font "Sans-serif Bold")
 (justify center)
+(letter-spacing -1)
+(box-mode fixed)
 
 # end of gimp-text-tool options

@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1639890836,
+    "timestamp": 1640062847,
     "workspace": {
         "0": [
             [
@@ -53,7 +53,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/ilzabot",
+                            "directory": "/mnt/md126/favoka/appointments_frontend/appointments_frontend",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,14 +61,14 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/ilzabot",
+                    "label": "fish /mnt/md126/favoka/appointments_frontend/appointments_frontend",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/ilzabot",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,7 +76,37 @@
                             }
                         }
                     ],
-                    "label": "fish /mnt/md126/ilzabot",
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fish /mnt/md126/favoka2/prestashop_data/prestashop/modules",
                     "custom_label_set": false
                 }
             ]
