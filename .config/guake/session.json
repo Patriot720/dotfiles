@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1641204915,
+    "timestamp": 1641214180,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/usr/lib",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,7 +16,97 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/SteamLibrary/steamapps/common/Terraria",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Terraria",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/Downloads/fnaupdate/fna3d-git",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "src",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/Downloads/fnaupdate/fna3d-git",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "fna3d-git",
                     "custom_label_set": false
                 }
             ]
