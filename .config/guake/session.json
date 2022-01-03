@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1641214180,
+    "timestamp": 1641232778,
     "workspace": {
         "0": [
             [
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/SteamLibrary/steamapps/common/Terraria",
+                            "directory": "/mnt/md126/Downloads/fnaupdate/fna3d-git/src/build",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,22 +31,7 @@
                             }
                         }
                     ],
-                    "label": "Terraria",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/Downloads/fnaupdate/fna3d-git",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "src",
+                    "label": "build",
                     "custom_label_set": false
                 },
                 {
@@ -68,7 +53,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/usr/lib",
+                            "directory": "/mnt/md126/Downloads/fnaupdate/fna3d-git/src/build",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,14 +61,14 @@
                             }
                         }
                     ],
-                    "label": "lib",
+                    "label": "build",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/usr/lib",
+                            "directory": "/mnt/md126/Downloads/fnaupdate/fna3d-git/src/build",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -91,22 +76,7 @@
                             }
                         }
                     ],
-                    "label": "lib",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/Downloads/fnaupdate/fna3d-git",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "fna3d-git",
+                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
