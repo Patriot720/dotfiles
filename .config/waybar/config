@@ -135,7 +135,8 @@
             "default": ""
         },
         "return-type": "json",
-        "on-click": "~/.config/rofi/bin/rofi-bluetooth"
+        // "on-click": "~/.config/rofi/bin/rofi-bluetooth"
+        "on-click": "blueman-manager"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
