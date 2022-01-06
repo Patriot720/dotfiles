@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1641402569,
+    "timestamp": 1641493566,
     "workspace": {
         "0": [
             [
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2",
+                            "directory": "/usr/lib/systemd/system",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,7 +31,7 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "system",
                     "custom_label_set": false
                 }
             ]
