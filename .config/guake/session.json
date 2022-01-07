@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1641493566,
+    "timestamp": 1641576304,
     "workspace": {
         "0": [
             [
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/usr/lib/systemd/system",
+                            "directory": "/mnt/md126/ud120-projects-py3-jupyter",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,7 +31,22 @@
                             }
                         }
                     ],
-                    "label": "system",
+                    "label": "ud120-projects-py3-jupyter",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/ud120-projects-py3-jupyter",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
