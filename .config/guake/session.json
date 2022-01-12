@@ -1,24 +1,9 @@
 {
     "schema_version": 2,
-    "timestamp": 1641911568,
+    "timestamp": 1641975503,
     "workspace": {
         "0": [
             [
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "andrew",
-                    "custom_label_set": false
-                },
                 {
                     "panes": [
                         {
