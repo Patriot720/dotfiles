@@ -1,9 +1,114 @@
 {
     "schema_version": 2,
-    "timestamp": 1641975503,
+    "timestamp": 1642077381,
     "workspace": {
         "0": [
             [
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/sgminer",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "sgminer",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
                 {
                     "panes": [
                         {
