@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1642255520,
+    "timestamp": 1642337538,
     "workspace": {
         "0": [
             [
@@ -136,7 +136,7 @@
                             }
                         }
                     ],
-                    "label": "06-datasets-questions",
+                    "label": "ud120-projects-py3-jupyter",
                     "custom_label_set": false
                 },
                 {
@@ -167,6 +167,36 @@
                         }
                     ],
                     "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lib",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/lib",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
