@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1642337538,
+    "timestamp": 1642432411,
     "workspace": {
         "0": [
             [
@@ -137,66 +137,6 @@
                         }
                     ],
                     "label": "ud120-projects-py3-jupyter",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "(root)",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/usr/lib",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "lib",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/usr/lib",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "lib",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/usr/lib",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
