@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1642786367,
+    "timestamp": 1642855447,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/.cache/yay",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "yay",
+                    "label": "andrew",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/.cache/yay",
+                            "directory": "/home/andrew/.local/share/osu/exports/AA - Zero Two [AS - Zero Two] (dlwnstns99, Puffazz (for ranking-panel))",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,7 +31,7 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "exports",
                     "custom_label_set": false
                 }
             ]
