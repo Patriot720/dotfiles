@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1643302538,
+    "timestamp": 1643376897,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "lichee",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/sunxi",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,14 +31,14 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "sunxi",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.config/pipewire",
+                            "directory": "/mnt/md126/sunxi/u-boot/tools",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,14 +46,14 @@
                             }
                         }
                     ],
-                    "label": "pipewire",
+                    "label": "u-boot",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/",
+                            "directory": "/mnt/md126/sunxi",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,52 +61,7 @@
                             }
                         }
                     ],
-                    "label": "(root)",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "andrew",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "favoka2",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "Terminal",
+                    "label": "sunxi",
                     "custom_label_set": false
                 }
             ]
