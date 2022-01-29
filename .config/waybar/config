@@ -59,7 +59,8 @@
         }
     },
     "custom/text": {
-    "format": "Relax yo hands"
+    "format": "TODO Auto input dividends plugin"
+    //"Relax yo hands"
     },
     "tray": {
         // "icon-size": 21,
