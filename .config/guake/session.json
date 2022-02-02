@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1643734387,
+    "timestamp": 1643820121,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/Downloads/osu",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "osu",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/Downloads/osu",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,14 +31,14 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "osu",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/ilzabot",
+                            "directory": "/mnt/md126/Downloads/osu",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,14 +46,14 @@
                             }
                         }
                     ],
-                    "label": "ilzabot",
+                    "label": "osu",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/ilzabot",
+                            "directory": "/home/andrew/.config/fish/conf.d",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,7 +61,7 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "fish",
                     "custom_label_set": false
                 }
             ]
