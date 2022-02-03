@@ -264,7 +264,6 @@ bindsym $mod+r mode "resize"
 #Auth agent
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# exec pasystray --symbolic-icons
 #Dropbox
 exec --no-startup-id ~/.dropbox-dist/dropboxd
 #KDEConnect
@@ -316,3 +315,4 @@ exec_always --no-startup-id /usr/bin/zsh -c "source $HOME/.zshrc;sync_repos;"
 # focus_on_window_activation focus
 
 include ~/.config/i3/conf.d/*
+exec pasystray --symbolic-icons
