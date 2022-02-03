@@ -80,7 +80,7 @@ font-7 = NotoEmoji:fontformat=truetype:scale=7;4
 
 modules-left = i3
 modules-center =
-modules-right =  weather  popup-calendar xbacklight pulseaudio wireguard bluetooth powerapplet
+modules-right = scratchpad-indicator weather  popup-calendar xbacklight pulseaudio wireguard bluetooth powerapplet
 tray-position = none
 tray-padding = 8
 tray-maxsize = 20
@@ -124,6 +124,13 @@ type = custom/script
 exec = ~/.config/polybar/popup-calendar.sh
 interval = 5
 click-left = ~/.config/polybar/popup-calendar.sh --popup &
+
+[module/scratchpad-indicator]
+type = custom/script
+exec = i3-msg -t get_tree | jq ".nodes|.[]|.|.nodes|.[]|.nodes|.[]|select(.name==\"__i3_scratch\")|.floating_nodes|.[]|.nodes|.[]|.name"
+click-left = i3-msg 'scratchpad show'
+click-right = i3-msg 'move scratchpad'
+
 
 [module/work-rest-switch]
 type = custom/script
