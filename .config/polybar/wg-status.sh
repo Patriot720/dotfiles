@@ -1,8 +1,21 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 # requires wg-quick to be in sudoers file
-alias wg-generate="cd $HOME;wgcf register --accept-tos; wgcf generate;"
-alias wg-start="cd $HOME;sudo wg-quick up wgcf-profile.conf"
-alias wg-stop="cd $HOME;sudo wg-quick down wgcf-profile.conf"
+
+wg-generate(){
+    cd $HOME;
+    wgcf register --accept-tos;
+    wgcf generate;
+}
+
+wg-start(){
+    cd $HOME;
+    sudo wg-quick up wgcf-profile.conf
+}
+
+wg-stop(){
+    cd $HOME;
+    sudo wg-quick down wgcf-profile.conf
+}
 
 is_off(){
     wg_status=$(wg show 2>&1);
@@ -14,21 +27,23 @@ is_off(){
 
 show_status(){
     if is_off; then
-        echo " OFF"
+        echo ' OFF'
     else
-        echo " ON"
+        echo  ' ON'
     fi
 }
 
 wg-toggle(){
     if is_off; then
+        if [ ! -f "$HOME/wgcf-profile.conf" ]; then
+            wg-generate;
+        fi
         wg-start
-        if ping google.com; then
-        else
+        until ping -c 2 google.com; do
             wg-stop;
             wg-generate;
             wg-start;
-        fi
+        done
     else
         wg-stop
     fi
