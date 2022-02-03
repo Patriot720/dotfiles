@@ -77,7 +77,7 @@ font-4 = ShureTechMono Nerd Font:fontformat=truetype:size=14;3
 font-5 = Weather Icons:size=12;5
 font-6 = MaterialIcons:size=15;6
 font-7 = NotoEmoji:fontformat=truetype:scale=7;4
-font-7 = FontAwesome:pixelsize=12;4
+font-7 = FontAwesome:size=12;1
 
 modules-left = i3
 modules-center =
