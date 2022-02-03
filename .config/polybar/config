@@ -81,7 +81,7 @@ font-8 = FontAwesome:size=12;5
 
 modules-left = i3
 modules-center =
-modules-right = scratchpad-indicator weather  popup-calendar xbacklight pulseaudio wireguard bluetooth powerapplet
+modules-right = scratchpad-indicator weather  popup-calendar xbacklight bluetooth pulseaudio wireguard  powerapplet
 tray-position = none
 tray-padding = 8
 tray-maxsize = 20
