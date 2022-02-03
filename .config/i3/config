@@ -285,6 +285,7 @@ exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 
 # Mouse acceleration
 # Find mouse automatically
+exec --no-startup-id xinput --set-prop 14 'libinput Accel Profile Enabled' 0, 1
 exec --no-startup-id xinput --set-prop 12 'libinput Accel Profile Enabled' 0, 1
 exec --no-startup-id xinput --set-prop 13 'libinput Accel Profile Enabled' 0, 1
 exec --no-startup-id xinput --set-prop 18 'libinput Accel Profile Enabled' 0, 1

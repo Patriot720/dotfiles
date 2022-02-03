@@ -69,7 +69,6 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-; font-0 = Roboto:pixelsize=14;4
 font-0 = ShureTechMono Nerd Font:pixelsize=13;4
 font-1 = ShureTechMono Nerd Font:fontformat=truetype:size=12;3
 font-2 = ShureTechMono Nerd Font:pixelsize=12;1
