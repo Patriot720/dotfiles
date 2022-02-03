@@ -282,7 +282,7 @@ exec_always  guake
 
 #Language switch
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
-
+exec_always for id in $(xinput list | grep "pointer" | cut -d '=' -f 2 | cut -f 1); do xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1; done
 # Mouse acceleration
 # Find mouse automatically
 exec --no-startup-id xinput --set-prop 14 'libinput Accel Profile Enabled' 0, 1
