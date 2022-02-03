@@ -77,7 +77,7 @@ font-4 = ShureTechMono Nerd Font:fontformat=truetype:size=14;3
 font-5 = Weather Icons:size=12;5
 font-6 = MaterialIcons:size=15;6
 font-7 = NotoEmoji:fontformat=truetype:scale=7;4
-font-8 = FontAwesome:size=12;1
+font-8 = FontAwesome:size=12;5
 
 modules-left = i3
 modules-center =
@@ -97,8 +97,11 @@ wm-restack = i3
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+scroll-up = "#i3.prev"
+scroll-down = "#i3.next"
+
+; scroll-up = i3wm-wsnext
+; scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 ; cursor-scroll = ns-resize
@@ -131,7 +134,8 @@ type = custom/script
 exec = i3-msg -t get_tree | jq "[.nodes|.[]|.|.nodes|.[]|.nodes|.[]|select(.name==\"__i3_scratch\")|.floating_nodes|.[]|select(.scratchpad_state==\"changed\")]|length"
 click-left = i3-msg 'scratchpad show'
 click-right = i3-msg 'move scratchpad'
-format-prefix = "🗗"
+format-suffix = " 🗗"
+
 
 
 [module/work-rest-switch]
@@ -239,7 +243,7 @@ label-empty-padding = 2
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-wrapping-scroll = false
+wrapping-scroll = true
 ; format-font = 6
 
 ; Only show workspaces on the same output as the bar
@@ -404,6 +408,8 @@ label-muted-foreground = ${colors.foreground-alt}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+click-right = pavucontrol
+
 ; type = internal/pulseaudio
 
 ; format-volume = <label-volume> <bar-volume>
