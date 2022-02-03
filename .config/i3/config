@@ -313,6 +313,6 @@ exec_always --no-startup-id /usr/bin/zsh -c "source $HOME/.zshrc;sync_repos;"
 # switch to workspace with urgent window automatically
 # for_window [urgent=latest] focus
 # focus_on_window_activation focus
+exec pasystray symbolic-icons
 
 include ~/.config/i3/conf.d/*
-exec pasystray symbolic-icons
