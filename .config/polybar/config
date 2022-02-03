@@ -131,7 +131,7 @@ click-left = ~/.config/polybar/popup-calendar.sh --popup &
 
 [module/scratchpad-indicator]
 type = custom/script
-exec = i3-msg -t get_tree | jq "[.nodes|.[]|.|.nodes|.[]|.nodes|.[]|select(.name==\"__i3_scratch\")|.floating_nodes|.[]|select(.scratchpad_state==\"changed\")]|length"
+exec = i3-msg -t get_tree | jq "[.nodes|.[]|.|.nodes|.[]|.nodes|.[]|select(.name==\"__i3_scratch\")|.floating_nodes|.[]|select(.scratchpad_state!=\"none\")]|length"
 click-left = i3-msg 'scratchpad show'
 click-right = i3-msg 'move scratchpad'
 format-suffix = " 🗗"
@@ -568,7 +568,7 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/.config/polybar/system-bluetooth-bluetoothctl.sh
 tail = true
-click-left = ~/.config/rofi/bin/rofi-bluetooth
+click-left = blueman-manager
 ; click-left = ~/.config/polybar/system-bluetooth-bluetoothctl.sh --toggle &
 
 [module/weather]
