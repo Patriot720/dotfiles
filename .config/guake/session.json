@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1644141045,
+    "timestamp": 1644141465,
     "workspace": {
         "0": [
             [
@@ -17,6 +17,21 @@
                         }
                     ],
                     "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/Downloads/Telegram Desktop",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Telegram Desktop",
                     "custom_label_set": false
                 },
                 {
