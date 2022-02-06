@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export QT_STYLE_OVERRIDE="breezedark"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 # export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 # export QT_QPA_PLATFORM=gtk2
