@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1644671962,
+    "timestamp": 1644684648,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/sunxi",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "sunxi",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,7 +31,142 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "A23",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "brandy",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "sunxi",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "brandy",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/usr/include",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "include",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09/spl",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "spl",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "u-boot-2011.09",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/gcc-linaro/bin",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "bin",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "u-boot-2011.09",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "md126",
                     "custom_label_set": false
                 }
             ]
