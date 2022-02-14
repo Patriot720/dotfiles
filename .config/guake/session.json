@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1644764239,
+    "timestamp": 1644854090,
     "workspace": {
         "0": [
             [
@@ -31,7 +31,67 @@
                             }
                         }
                     ],
-                    "label": "ud120-projects-py3-jupyter",
+                    "label": "nbextensions",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09/spl/board/sunxi/sun8iw3/standby",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "standby",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "u-boot-2011.09",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/u-boot",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "u-boot",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/u-boot",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
