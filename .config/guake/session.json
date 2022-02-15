@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1644854090,
+    "timestamp": 1644945859,
     "workspace": {
         "0": [
             [
@@ -53,7 +53,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09",
+                            "directory": "/mnt/md126/sunxi",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,7 +61,52 @@
                             }
                         }
                     ],
-                    "label": "u-boot-2011.09",
+                    "label": "sunxi",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/a33_sdk/lichee",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "lichee",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/tools/sunxi-tools",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "sunxi-tools",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/a33_sdk/lichee/brandy",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "brandy",
                     "custom_label_set": false
                 },
                 {
@@ -83,7 +128,22 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/sunxi/u-boot",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,

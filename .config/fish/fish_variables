@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export CROSS_COMPILE:arm\x2dnone\x2deabi\x2d
+SETUVAR --export CROSS_COMPILE:/mnt/md126/sunxi/gcc/bin/arm\x2dlinux\x2dgnueabihf\x2d
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/andrew/\x2elocal/share/z/data
