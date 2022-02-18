@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1644945859,
+    "timestamp": 1645200948,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/ud120-projects-py3-jupyter",
+                            "directory": "/mnt/md126/favoka2",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "ud120-projects-py3-jupyter",
+                    "label": "favoka2",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.local/share/jupyter/nbextensions",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,119 +31,14 @@
                             }
                         }
                     ],
-                    "label": "nbextensions",
+                    "label": "modules",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/sunxi/sdk/A23-v1.0/A23/lichee/brandy/u-boot-2011.09/spl/board/sunxi/sun8iw3/standby",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "standby",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "sunxi",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/a33_sdk/lichee",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "lichee",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/tools/sunxi-tools",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "sunxi-tools",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/a33_sdk/lichee/brandy",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "brandy",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/sunxi/u-boot",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "u-boot",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "andrew",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
