@@ -67,17 +67,17 @@
       "Filters": [],
       "AbsoluteModeSettings": {
         "Display": {
-          "Width": 1080.0,
+          "Width": 1180.0,
           "Height": 1080.0,
           "X": 1280.0,
           "Y": 540.0,
           "Rotation": 0.0
         },
         "Tablet": {
-          "Width": 60.0,
-          "Height": 60.0,
+          "Width": 64.46296,
+          "Height": 59.0,
           "X": 82.55,
-          "Y": 69.09949,
+          "Y": 69.40309,
           "Rotation": -5.0
         },
         "EnableClipping": true,
