@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1645378099,
+    "timestamp": 1645458153,
     "workspace": {
         "0": [
             [
@@ -91,7 +91,22 @@
                             }
                         }
                     ],
-                    "label": ".dump",
+                    "label": ".ssh",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.ssh",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
