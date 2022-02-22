@@ -8,3 +8,5 @@ function fish_user_key_bindings
     bind -M normal -m insert \cr 'peco_select_history (commandline -b)'
     bind -M insert \cr 'peco_select_history (commandline -b)'
 end
+
+fish_add_path ~/.ghcup/bin/
