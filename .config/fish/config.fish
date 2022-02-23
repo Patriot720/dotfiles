@@ -10,3 +10,4 @@ function fish_user_key_bindings
 end
 
 fish_add_path ~/.ghcup/bin/
+fish_add_path ~/.cabal/bin/
