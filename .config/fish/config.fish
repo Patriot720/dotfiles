@@ -11,3 +11,5 @@ end
 
 fish_add_path ~/.ghcup/bin/
 fish_add_path ~/.cabal/bin/
+
+set -g XDG_CONFIG_HOME ~/.config/
