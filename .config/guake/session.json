@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1645960364,
+    "timestamp": 1645984031,
     "workspace": {
         "0": [
             [
@@ -113,7 +113,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.xmonad",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -121,7 +121,37 @@
                             }
                         }
                     ],
-                    "label": "_dev",
+                    "label": "modules",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "modules",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
