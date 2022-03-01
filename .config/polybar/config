@@ -56,13 +56,14 @@ underline-size = 0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
+spacing = 0
 
 line-size =  0
 line-color = #f00
 
 border-size = 0px
 border-color = #00000000
-
+padding-top = 0
 padding-left = 0
 padding-right = 1
 
@@ -79,9 +80,10 @@ font-6 = MaterialIcons:size=15;6
 font-7 = NotoEmoji:fontformat=truetype:scale=7;4
 font-8 = FontAwesome:size=12;5
 
-modules-left = i3
+modules-left = workspaces-xmonad
 modules-center =
-modules-right = scratchpad-indicator weather  popup-calendar xbacklight bluetooth pulseaudio wireguard  powerapplet
+modules-right = weather  popup-calendar xbacklight bluetooth wireguard
+; scratchpad-indicator
 tray-position = none
 tray-padding = 10
 tray-maxsize = 18
@@ -90,15 +92,16 @@ tray-transparent = true
 tray-scale = 1.0
 
 ; wm-restack = bspwm
-wm-restack = i3
+; wm-restack = generic
 
-; override-redirect = false
+override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-scroll-up = "#i3.prev"
-scroll-down = "#i3.next"
+scroll-up = "#workspaces-xmonad.prev"
+scroll-down = "#workspaces-xmonad.next"
+wrapping-scroll = false
 
 ; scroll-up = i3wm-wsnext
 ; scroll-down = i3wm-wsprev
@@ -109,6 +112,47 @@ cursor-click = pointer
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+
+[module/workspaces-xmonad]
+type = internal/xworkspaces
+
+pin-workspaces = false
+inline-mode = false
+wrapping-scroll = false
+
+icon-0 = 7;
+icon-1 = 8;
+icon-2 = 9;
+icon-3 = 10; 
+
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+fuzzy-match = true
+
+format = <label-state>
+
+label-active = %name% %icon%
+label-active-background = ${colors.accent}
+label-active-underline = ${color.background}
+label-active-foreground = ${color.background}
+label-active-padding = 2
+
+label-occupied = %name% %icon%
+label-occupied-foreground = ${color.altyellow}
+label-occupied-background = ${color.black}
+
+label-urgent = %name%
+label-urgent-foreground = ${color.black}
+label-urgent-background = ${color.black}
+label-urgent-underline = ${color.red}
+
+label-empty =
+label-empty-background = ${color.black}
+
+label-urgent-padding = 2
+label-occupied-padding = 2
+label-empty-padding = 2
 
 [module/wireguard]
 type = custom/script
@@ -619,8 +663,8 @@ screenchange-reload = true
 ; pseudo-transparency = true
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
 
