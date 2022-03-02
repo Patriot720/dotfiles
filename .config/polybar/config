@@ -82,7 +82,7 @@ font-8 = FontAwesome:size=12;5
 
 modules-left = workspaces-xmonad
 modules-center =
-modules-right = weather  popup-calendar xbacklight bluetooth wireguard
+modules-right = weather popup-calendar xbacklight bluetooth wireguard
 ; scratchpad-indicator
 tray-position = none
 tray-padding = 10

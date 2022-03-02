@@ -1,3 +1,6 @@
 [submodule ".intellimacs"]
 	path = .intellimacs
 	url = https://github.com/MarcoIeni/intellimacs.git
+[submodule ".config/taffybar/taffybar"]
+	path = .config/taffybar/taffybar
+	url = https://github.com/Patriot720/taffybar

@@ -16,3 +16,5 @@ $HOME/.config/waybar
 $HOME/.config/environment.d
 $HOME/.local/share/nautilus
 $HOME/.installation_script
+$HOME/.xmonad
+$HOME/.config/taffybar
