@@ -43,13 +43,35 @@ import XMonad.Util.Run (safeSpawn)
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Ungrab
 import XMonad.Util.WorkspaceCompare (getSortByXineramaRule)
+import XMonad.Layout.Tabbed
+import XMonad.Layout.ResizableTile
+import XMonad.Layout.TabBarDecoration
 
 instance Show (X ()) where
   show f = "Kekw"
 
+myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
+
+    -- mod-button1, Set the window to floating mode and move by dragging
+    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w
+                                       >> windows W.shiftMaster))
+
+    -- mod-button2, Raise the window to the top of the stack
+    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
+
+    -- mod-button3, Set the window to floating mode and resize by dragging
+    , ((modm, button3), \w -> focus w >> mouseResizeWindow w
+                                       >> windows W.shiftMaster)
+
+    -- you may also bind events to the mouse scroll wheel (button4 and button5)
+    , ((modm, button4), \w -> focus w >> windows W.focusDown)
+    , ((modm, button5), \w -> focus w >> windows W.focusUp)
+    ]
+
 myConfig =
   def
     { modMask = mod4Mask,
+      mouseBindings = myMouseBindings,
       layoutHook = layout,
       terminal = "alacritty",
       workspaces =
@@ -65,7 +87,6 @@ myConfig =
                 "/usr/lib/kdeconnectd",
                 "~/.dropbox-dist/dropboxd",
                 "dunst",
-                "pasystray",
                 "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U",
                 "telegram-desktop",
                 "flameshot",
@@ -74,12 +95,12 @@ myConfig =
                 "guake",
                 "fcitx -d"
               ],
-              spawn "killall taffybar;taffybar"
+              spawn "killall my-taffybar;my-taffybar"
               -- spawn "~/.config/polybar/launch.sh"
           ],
       handleEventHook =
         dynamicPropertyChange
-          "WM_NAME"
+          "WM_CLASS"
           $ composeAll
             [ insertPosition Above Newer,
               resource =? "spotify" --> doShift "1_10"
@@ -100,10 +121,22 @@ myConfig =
           ]
     }
 
-layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $ tiled ||| Full
+myTabConfig = def { activeColor = "#556064"
+                  , inactiveColor = "#2F3D44"
+                  , urgentColor = "#FDF6E3"
+                  , activeBorderColor = "#454948"
+                  , inactiveBorderColor = "#454948"
+                  , urgentBorderColor = "#268BD2"
+                  , activeTextColor = "#80FFF9"
+                  , inactiveTextColor = "#1ABC9C"
+                  , urgentTextColor = "#1ABC9C"
+                  , fontName = "xft:Noto Sans CJK:size=10:antialias=true"
+                  }
+
+layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $ tiled ||| tabbedBottom shrinkText myTabConfig
   where
     stackTile = avoidStruts $ TwoPane (3 / 100) (1 / 2)
-    tiled = Tall nmaster delta ratio
+    tiled = ResizableTall nmaster delta ratio []
     threeCol = ThreeColMid nmaster delta ratio
     nmaster = 1
     ratio = 3 / 5

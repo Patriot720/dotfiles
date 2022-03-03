@@ -5,11 +5,12 @@ maintainer:          email@email.com
 build-type:          Simple
 cabal-version:       >=1.10
 
-executable taffybar
-  hs-source-dirs:      .,lib
+executable my-taffybar
+  hs-source-dirs:      .
   main-is:             taffybar.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   ghc-prof-options: -fprof-auto
+  other-modules: ClickableWidget
   build-depends:       base
                      , X11
                      , bytestring
