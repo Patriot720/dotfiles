@@ -22,17 +22,24 @@ import qualified XMonad.Hooks.Focus as W
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDebug
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.Minimize
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.StatusBar.PP (PP (ppExtras))
+import XMonad.Layout.BoringWindows
 import XMonad.Layout.Drawer (Property (ClassName, Or), drawer, onRight, onTop, simpleDrawer)
 import XMonad.Layout.Grid
 import XMonad.Layout.IndependentScreens
 import qualified XMonad.Layout.IndependentScreens as W
 import XMonad.Layout.Magnifier (magnifier)
+import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
+import XMonad.Layout.ResizableTile
+import XMonad.Layout.SimpleFloat
 import XMonad.Layout.StackTile (StackTile (StackTile))
+import XMonad.Layout.TabBarDecoration
+import XMonad.Layout.Tabbed
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.TwoPane (TwoPane (TwoPane))
 import qualified XMonad.StackSet as W
@@ -43,29 +50,31 @@ import XMonad.Util.Run (safeSpawn)
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Ungrab
 import XMonad.Util.WorkspaceCompare (getSortByXineramaRule)
-import XMonad.Layout.Tabbed
-import XMonad.Layout.ResizableTile
-import XMonad.Layout.TabBarDecoration
+import XMonad.Actions.Minimize (withLastMinimized, maximizeWindow, minimizeWindow, withLastMinimized', maximizeWindowAndFocus)
+import qualified XMonad.Config.Prime as Xmonad.Config.Prime
 
 instance Show (X ()) where
   show f = "Kekw"
 
-myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
-
+myMouseBindings XConfig {XMonad.modMask = modm} =
+  M.fromList $
     -- mod-button1, Set the window to floating mode and move by dragging
-    [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w
-                                       >> windows W.shiftMaster))
-
-    -- mod-button2, Raise the window to the top of the stack
-    , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
-
-    -- mod-button3, Set the window to floating mode and resize by dragging
-    , ((modm, button3), \w -> focus w >> mouseResizeWindow w
-                                       >> windows W.shiftMaster)
-
-    -- you may also bind events to the mouse scroll wheel (button4 and button5)
-    , ((modm, button4), \w -> focus w >> windows W.focusDown)
-    , ((modm, button5), \w -> focus w >> windows W.focusUp)
+    [ ( (modm, button1),
+        \w ->
+          focus w >> mouseMoveWindow w
+            >> windows W.shiftMaster
+      ),
+      -- mod-button2, Raise the window to the top of the stack
+      ((modm, button2), \w -> focus w >> windows W.shiftMaster),
+      -- mod-button3, Set the window to floating mode and resize by dragging
+      ( (modm, button3),
+        \w ->
+          focus w >> mouseResizeWindow w
+            >> windows W.shiftMaster
+      ),
+      -- you may also bind events to the mouse scroll wheel (button4 and button5)
+      ((modm, button4), \w -> focus w >> windows W.focusDown),
+      ((modm, button5), \w -> focus w >> windows W.focusUp)
     ]
 
 myConfig =
@@ -81,8 +90,7 @@ myConfig =
       startupHook =
         composeAll
           [ spawnAllOnce
-              [
-                "status-notifier-watcher",
+              [ "status-notifier-watcher",
                 "redshift-gtk",
                 "/usr/lib/kdeconnectd",
                 "~/.dropbox-dist/dropboxd",
@@ -95,20 +103,21 @@ myConfig =
                 "guake",
                 "fcitx -d"
               ],
-              spawn "killall my-taffybar;my-taffybar"
-              -- spawn "~/.config/polybar/launch.sh"
+            spawn "killall my-taffybar;my-taffybar"
+            -- spawn "~/.config/polybar/launch.sh"
           ],
       handleEventHook =
         dynamicPropertyChange
           "WM_CLASS"
-          $ composeAll
-            [ insertPosition Above Newer,
-              resource =? "spotify" --> doShift "1_10"
-            ],
+          ( composeAll
+              [ insertPosition Above Newer,
+                resource =? "spotify" --> doShift "1_10"
+              ]
+          )
+          >> minimizeEventHook,
       manageHook =
         composeAll
-          [
-            floatAll
+          [ floatAll
               [ "Guake",
                 "Pavucontrol"
               ],
@@ -117,25 +126,28 @@ myConfig =
             className =? "qBittorrent" --> doShift "1_8",
             className =? "Guake" --> hasBorder False,
             className =? "Guake" --> doFloat,
+            className =? "Org.gnome.Nautilus" --> doFloat,
             insertPosition End Newer
           ]
     }
 
-myTabConfig = def { activeColor = "#556064"
-                  , inactiveColor = "#2F3D44"
-                  , urgentColor = "#FDF6E3"
-                  , activeBorderColor = "#454948"
-                  , inactiveBorderColor = "#454948"
-                  , urgentBorderColor = "#268BD2"
-                  , activeTextColor = "#80FFF9"
-                  , inactiveTextColor = "#1ABC9C"
-                  , urgentTextColor = "#1ABC9C"
-                  , fontName = "xft:Noto Sans CJK:size=10:antialias=true"
-                  }
+myTabConfig =
+  def
+    { activeColor = "#556064",
+      inactiveColor = "#2F3D44",
+      urgentColor = "#FDF6E3",
+      activeBorderColor = "#454948",
+      inactiveBorderColor = "#454948",
+      urgentBorderColor = "#268BD2",
+      activeTextColor = "#80FFF9",
+      inactiveTextColor = "#1ABC9C",
+      urgentTextColor = "#1ABC9C",
+      fontName = "xft:Noto Sans CJK:size=10:antialias=true"
+    }
 
-layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $ tiled ||| tabbedBottom shrinkText myTabConfig
+layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $ minimize $ boringWindows $ tiled ||| tabbedBottom shrinkText myTabConfig ||| Full
   where
-    stackTile = avoidStruts $ TwoPane (3 / 100) (1 / 2)
+    stackTile = minimize $ boringWindows $ avoidStruts $ TwoPane (3 / 100) (1 / 2)
     tiled = ResizableTall nmaster delta ratio []
     threeCol = ThreeColMid nmaster delta ratio
     nmaster = 1
@@ -144,6 +156,13 @@ layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $
 
 spawnAllOnce xs =
   forM_ xs spawnOnce
+
+toggleMaximization :: Maybe Xmonad.Config.Prime.Window -> X ()
+toggleMaximization window =
+  case window of
+    Nothing -> withFocused minimizeWindow
+    Just w -> maximizeWindowAndFocus w
+
 
 myKeysP =
   [ ("M-d", spawn "~/.config/rofi/launchers/colorful/launcher.sh"),
@@ -164,7 +183,8 @@ myKeysP =
     ("<XF86AudioPause>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause"),
     ("<XF86AudioNext>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"),
     ("<XF86AudioPrev>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"),
-    ("<Print>", spawn "flameshot gui")
+    ("<Print>", spawn "flameshot gui"),
+    ("M-z", withLastMinimized' toggleMaximization)
   ]
 
 shiftThenView i = W.view i . W.shift i
@@ -240,7 +260,7 @@ mainConfig = do
     docks $
       ewmhFullscreen $
         ewmh $
-        addEwmhWorkspaceRename (pure myRename) $
-          pagerHints $
-            myConfig `additionalKeysP` myKeysP
-              `additionalKeys` myKeys
+          addEwmhWorkspaceRename (pure myRename) $
+            pagerHints $
+              myConfig `additionalKeysP` myKeysP
+                `additionalKeys` myKeys
