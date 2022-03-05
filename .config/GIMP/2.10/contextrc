@@ -1,7 +1,8 @@
 # GIMP user context
 
-(tool "gimp-crop-tool")
+(tool "gimp-rect-select-tool")
 (paint-info "gimp-paintbrush")
+(foreground (color-rgb 1 1 1))
 (brush "2. Hardness 050")
 (dynamics "Dynamics Off")
 (mybrush "100% Opaque")

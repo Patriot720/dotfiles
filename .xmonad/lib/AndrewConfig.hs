@@ -11,10 +11,12 @@ import Data.Traversable (for)
 import System.Taffybar.Support.PagerHints
 import XMonad
 import XMonad.Actions.DynamicWorkspaceGroups
+import XMonad.Actions.Minimize (maximizeWindow, maximizeWindowAndFocus, minimizeWindow, withLastMinimized, withLastMinimized')
 import XMonad.Actions.OnScreen
 import XMonad.Actions.UpdatePointer
 import XMonad.Actions.WorkspaceCursors (workspaceCursors)
 import XMonad.Config.Dmwit (altMask, floatAll, ppWorkspaces)
+import qualified XMonad.Config.Prime as Xmonad.Config.Prime
 import XMonad.Hooks.DynamicLog (xmobarPP)
 import XMonad.Hooks.DynamicProperty
 import XMonad.Hooks.EwmhDesktops
@@ -50,8 +52,6 @@ import XMonad.Util.Run (safeSpawn)
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Ungrab
 import XMonad.Util.WorkspaceCompare (getSortByXineramaRule)
-import XMonad.Actions.Minimize (withLastMinimized, maximizeWindow, minimizeWindow, withLastMinimized', maximizeWindowAndFocus)
-import qualified XMonad.Config.Prime as Xmonad.Config.Prime
 
 instance Show (X ()) where
   show f = "Kekw"
@@ -90,8 +90,7 @@ myConfig =
       startupHook =
         composeAll
           [ spawnAllOnce
-              [ "status-notifier-watcher",
-                "redshift-gtk",
+              [ "redshift-gtk",
                 "/usr/lib/kdeconnectd",
                 "~/.dropbox-dist/dropboxd",
                 "dunst",
@@ -162,7 +161,6 @@ toggleMaximization window =
   case window of
     Nothing -> withFocused minimizeWindow
     Just w -> maximizeWindowAndFocus w
-
 
 myKeysP =
   [ ("M-d", spawn "~/.config/rofi/launchers/colorful/launcher.sh"),
