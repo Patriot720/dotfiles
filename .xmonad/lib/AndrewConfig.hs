@@ -107,7 +107,7 @@ myConfig =
           ],
       handleEventHook =
         dynamicPropertyChange
-          "WM_CLASS"
+          "WM_NAME"
           ( composeAll
               [ insertPosition Above Newer,
                 resource =? "spotify" --> doShift "1_10"
