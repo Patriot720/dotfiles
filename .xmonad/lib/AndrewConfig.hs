@@ -29,7 +29,7 @@ import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.StatusBar.PP (PP (ppExtras))
 import XMonad.Layout.BoringWindows
-import XMonad.Layout.Drawer (Property (ClassName, Or), drawer, onRight, onTop, simpleDrawer)
+import XMonad.Layout.Drawer (Property (ClassName, Or), onRight, onTop, simpleDrawer, onLeft, onBottom)
 import XMonad.Layout.Grid
 import XMonad.Layout.IndependentScreens
 import qualified XMonad.Layout.IndependentScreens as W
@@ -52,12 +52,13 @@ import XMonad.Util.Run (safeSpawn)
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Ungrab
 import XMonad.Util.WorkspaceCompare (getSortByXineramaRule)
+import qualified XMonad.Layout.Drawer as Layout
 
 instance Show (X ()) where
   show f = "Kekw"
 
 myMouseBindings XConfig {XMonad.modMask = modm} =
-  M.fromList $
+  M.fromList
     -- mod-button1, Set the window to floating mode and move by dragging
     [ ( (modm, button1),
         \w ->
@@ -87,33 +88,15 @@ myConfig =
         withScreen 0 ["1", "2", "3", "4", "5"]
           ++ withScreen 1 ["6", "7", "8", "9", "10"],
       logHook = updatePointer (0.5, 0.5) (0, 0),
-      startupHook =
-        composeAll
-          [ spawnAllOnce
-              [ "redshift-gtk",
-                "/usr/lib/kdeconnectd",
-                "~/.dropbox-dist/dropboxd",
-                "dunst",
-                "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U",
-                "telegram-desktop",
-                "flameshot",
-                "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
-                "blueman-applet",
-                "guake",
-                "fcitx -d"
-              ],
-            spawn "killall my-taffybar;my-taffybar"
-            -- spawn "~/.config/polybar/launch.sh"
-          ],
+      startupHook = spawn "killall my-taffybar;my-taffybar",
+      -- spawn "~/.config/polybar/launch.sh",
       handleEventHook =
         dynamicPropertyChange
-          "WM_NAME"
+          "WM_CLASS"
           ( composeAll
-              [ insertPosition Above Newer,
-                resource =? "spotify" --> doShift "1_10"
-              ]
+              [title =? "Spotify" --> doShift "1_10"]
           )
-          >> minimizeEventHook,
+          <+> minimizeEventHook,
       manageHook =
         composeAll
           [ floatAll
@@ -144,8 +127,10 @@ myTabConfig =
       fontName = "xft:Noto Sans CJK:size=10:antialias=true"
     }
 
-layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $ minimize $ boringWindows $ tiled ||| tabbedBottom shrinkText myTabConfig ||| Full
+layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $ minimize $ boringWindows $ -- drawer `onLeft`
+  tiled ||| tabbedBottom shrinkText myTabConfig ||| Full
   where
+    -- drawer = Layout.drawer 0.0 0.4 (ClassName "Spotify" `Or` ClassName "Telegram" `Or` ClassName "Org.gnome.Nautilus") Full
     stackTile = minimize $ boringWindows $ avoidStruts $ TwoPane (3 / 100) (1 / 2)
     tiled = ResizableTall nmaster delta ratio []
     threeCol = ThreeColMid nmaster delta ratio
