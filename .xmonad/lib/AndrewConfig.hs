@@ -29,7 +29,8 @@ import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.StatusBar.PP (PP (ppExtras))
 import XMonad.Layout.BoringWindows
-import XMonad.Layout.Drawer (Property (ClassName, Or), onRight, onTop, simpleDrawer, onLeft, onBottom)
+import XMonad.Layout.Drawer (Property (ClassName, Or), onBottom, onLeft, onRight, onTop, simpleDrawer)
+import qualified XMonad.Layout.Drawer as Layout
 import XMonad.Layout.Grid
 import XMonad.Layout.IndependentScreens
 import qualified XMonad.Layout.IndependentScreens as W
@@ -52,7 +53,6 @@ import XMonad.Util.Run (safeSpawn)
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Ungrab
 import XMonad.Util.WorkspaceCompare (getSortByXineramaRule)
-import qualified XMonad.Layout.Drawer as Layout
 
 instance Show (X ()) where
   show f = "Kekw"
@@ -88,13 +88,30 @@ myConfig =
         withScreen 0 ["1", "2", "3", "4", "5"]
           ++ withScreen 1 ["6", "7", "8", "9", "10"],
       logHook = updatePointer (0.5, 0.5) (0, 0),
-      startupHook = spawn "killall my-taffybar;my-taffybar",
+      startupHook =
+        -- spawn "killall my-taffybar;my-taffybar" >>
+        spawnAllOnce
+            ["pasystray",
+              "redshift-gtk",
+              "/usr/lib/kdeconnectd",
+              "~/.dropbox-dist/dropboxd",
+              "dunst",
+              "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U",
+              "telegram-desktop",
+              "flameshot",
+              "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+              "blueman-applet",
+              "guake",
+              "fcitx -d"
+            ],
       -- spawn "~/.config/polybar/launch.sh",
       handleEventHook =
         dynamicPropertyChange
           "WM_CLASS"
           ( composeAll
-              [title =? "Spotify" --> doShift "1_10"]
+              [title =? "Spotify" --> doShift "1_10",
+               insertPosition Master Newer
+              ]
           )
           <+> minimizeEventHook,
       manageHook =
@@ -127,8 +144,13 @@ myTabConfig =
       fontName = "xft:Noto Sans CJK:size=10:antialias=true"
     }
 
-layout = onWorkspace "1_10" stackTile $ lessBorders Screen $ avoidStrutsOn [D] $ minimize $ boringWindows $ -- drawer `onLeft`
-  tiled ||| tabbedBottom shrinkText myTabConfig ||| Full
+layout =
+  onWorkspace "1_10" stackTile $
+    lessBorders Screen $
+      avoidStrutsOn [D] $
+        minimize $
+          boringWindows $ -- drawer `onLeft`
+            tiled ||| tabbedBottom shrinkText myTabConfig ||| Full
   where
     -- drawer = Layout.drawer 0.0 0.4 (ClassName "Spotify" `Or` ClassName "Telegram" `Or` ClassName "Org.gnome.Nautilus") Full
     stackTile = minimize $ boringWindows $ avoidStruts $ TwoPane (3 / 100) (1 / 2)
@@ -167,7 +189,8 @@ myKeysP =
     ("<XF86AudioNext>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"),
     ("<XF86AudioPrev>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"),
     ("<Print>", spawn "flameshot gui"),
-    ("M-z", withLastMinimized' toggleMaximization)
+    ("M-z", withLastMinimized' toggleMaximization),
+    ("M-S-t", spawn "killall my-taffybar;my-taffybar")
   ]
 
 shiftThenView i = W.view i . W.shift i
@@ -185,7 +208,7 @@ myKeys =
   ]
     ++ [ ((m .|. mod4Mask, key), screenWorkspace sc >>= flip whenJust (windows . f))
          | (key, sc) <- zip [xK_h, xK_l] [0 ..],
-           (f, m) <- [(W.view, 0), (shiftThenView, shiftMask)]
+           (f, m) <- [(W.view, 0), (shiftThenView, altMask)]
        ]
     ++ [ ((mod4Mask .|. altMask, xK_j), windows W.swapDown),
          ((mod4Mask .|. altMask, xK_k), windows W.swapUp)
