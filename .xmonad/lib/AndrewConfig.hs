@@ -125,8 +125,8 @@ myConfig =
             className =? "qBittorrent" --> doShift "1_8",
             className =? "Guake" --> hasBorder False,
             className =? "Guake" --> doFloat,
-            className =? "Org.gnome.Nautilus" --> doFloat,
-            insertPosition End Newer
+            className =? "Org.gnome.Nautilus" --> doFloat
+            -- insertPosition End Newer
           ]
     }
 
