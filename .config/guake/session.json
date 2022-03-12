@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1647013398,
+    "timestamp": 1647098991,
     "workspace": {
         "0": [
             [
@@ -92,6 +92,21 @@
                         }
                     ],
                     "label": "taffybar",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
                     "custom_label_set": false
                 },
                 {

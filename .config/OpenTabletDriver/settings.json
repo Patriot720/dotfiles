@@ -64,7 +64,112 @@
         "Settings": [],
         "Enable": true
       },
-      "Filters": [],
+      "Filters": [
+        {
+          "Path": "RadialFollow.RadialFollowSmoothingTabletSpace",
+          "Settings": [
+            {
+              "Property": "OuterRadius",
+              "Value": 1.0
+            },
+            {
+              "Property": "InnerRadius",
+              "Value": 0.0
+            },
+            {
+              "Property": "SmoothingCoefficient",
+              "Value": 0.95
+            },
+            {
+              "Property": "SoftKneeScale",
+              "Value": 1.0
+            },
+            {
+              "Property": "SmoothingLeakCoefficient",
+              "Value": 0.0
+            }
+          ],
+          "Enable": false
+        },
+        {
+          "Path": "TabletDriverFilters.Hawku.Smoothing",
+          "Settings": [
+            {
+              "Property": "Frequency",
+              "Value": 1000.0
+            },
+            {
+              "Property": "Latency",
+              "Value": 4.0
+            }
+          ],
+          "Enable": false
+        },
+        {
+          "Path": "OpenTabletDriver.Plugin.NoiseReduction",
+          "Settings": [
+            {
+              "Property": "DistanceThreshold",
+              "Value": 1.0
+            },
+            {
+              "Property": "Samples",
+              "Value": 15
+            }
+          ],
+          "Enable": true
+        },
+        {
+          "Path": "RadialFollow.RadialFollowSmoothingScreenSpace",
+          "Settings": [
+            {
+              "Property": "InnerRadius",
+              "Value": 0.0
+            },
+            {
+              "Property": "SoftKneeScale",
+              "Value": 1.0
+            },
+            {
+              "Property": "SmoothingLeakCoefficient",
+              "Value": 0.0
+            },
+            {
+              "Property": "OuterRadius",
+              "Value": 5.0
+            },
+            {
+              "Property": "SmoothingCoefficient",
+              "Value": 0.99
+            }
+          ],
+          "Enable": false
+        },
+        {
+          "Path": "Kuuube_s_Chatter_Exterminator.Kuuube_s_CHATTER_EXTERMINATOR_SMOOTH",
+          "Settings": [
+            {
+              "Property": "Frequency",
+              "Value": 1000.0
+            },
+            {
+              "Property": "Chatter_Extermination_Strength",
+              "Value": 10.0
+            }
+          ],
+          "Enable": false
+        },
+        {
+          "Path": "Kuuube_s_Chatter_Exterminator.Kuuube_s_CHATTER_EXTERMINATOR_RAW",
+          "Settings": [
+            {
+              "Property": "Chatter_Extermination_Strength",
+              "Value": 5.0
+            }
+          ],
+          "Enable": false
+        }
+      ],
       "AbsoluteModeSettings": {
         "Display": {
           "Width": 1080.0,
@@ -74,10 +179,10 @@
           "Rotation": 0.0
         },
         "Tablet": {
-          "Width": 46.0,
-          "Height": 46.0,
-          "X": 81.55383,
-          "Y": 74.516235,
+          "Width": 42.0,
+          "Height": 42.0,
+          "X": 80.55,
+          "Y": 67.68294,
           "Rotation": -5.0
         },
         "EnableClipping": false,
