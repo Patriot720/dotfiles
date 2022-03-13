@@ -110,7 +110,7 @@
           "Settings": [
             {
               "Property": "DistanceThreshold",
-              "Value": 1.0
+              "Value": 0.5
             },
             {
               "Property": "Samples",
@@ -179,8 +179,8 @@
           "Rotation": 0.0
         },
         "Tablet": {
-          "Width": 42.0,
-          "Height": 42.0,
+          "Width": 45.0,
+          "Height": 45.0,
           "X": 80.55,
           "Y": 67.68294,
           "Rotation": -5.0
