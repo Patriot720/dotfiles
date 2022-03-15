@@ -109,15 +109,15 @@
           "Path": "OpenTabletDriver.Plugin.NoiseReduction",
           "Settings": [
             {
-              "Property": "DistanceThreshold",
-              "Value": 0.5
+              "Property": "Samples",
+              "Value": 5
             },
             {
-              "Property": "Samples",
-              "Value": 15
+              "Property": "DistanceThreshold",
+              "Value": 1.0
             }
           ],
-          "Enable": true
+          "Enable": false
         },
         {
           "Path": "RadialFollow.RadialFollowSmoothingScreenSpace",

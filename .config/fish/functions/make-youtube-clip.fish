@@ -48,7 +48,7 @@ function make-youtube-clip -d "Download trim and copy to clipboard youtube video
         mv tmp_vid_out.mp4 tmp_vid.mp4
     end
 
-    clip-files tmp_vid.mp4
+    clip-files-in-current-dir tmp_vid.mp4
     notify-send "Youtube clip created"
     prevd
 end

@@ -11,6 +11,7 @@ end
 
 fish_add_path ~/.ghcup/bin/
 fish_add_path ~/.cabal/bin/
+fish_add_path ~/.pythonbin
 
 set -g XDG_CONFIG_HOME ~/.config/
 set -g BROWSER brave

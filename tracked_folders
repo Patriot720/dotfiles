@@ -18,3 +18,5 @@ $HOME/.local/share/nautilus
 $HOME/.installation_script
 $HOME/.xmonad
 $HOME/.config/taffybar
+$HOME/.config/slop
+$HOME/.pythonbin

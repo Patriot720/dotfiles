@@ -89,31 +89,23 @@ myConfig =
           ++ withScreen 1 ["6", "7", "8", "9", "10"],
       logHook = updatePointer (0.5, 0.5) (0, 0),
       startupHook =
-        -- spawn "killall my-taffybar;my-taffybar" >>
         spawnAllOnce
             ["pasystray",
               "redshift-gtk",
               "/usr/lib/kdeconnectd",
               "~/.dropbox-dist/dropboxd",
               "dunst",
-              "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U",
+              "youtube-music",
               "telegram-desktop",
               "flameshot",
               "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
               "blueman-applet",
+              "xcompmgr",
               "guake",
               "fcitx -d"
             ],
-      -- spawn "~/.config/polybar/launch.sh",
       handleEventHook =
-        dynamicPropertyChange
-          "WM_CLASS"
-          ( composeAll
-              [title =? "Spotify" --> doShift "1_10",
-               insertPosition Master Newer
-              ]
-          )
-          <+> minimizeEventHook,
+      minimizeEventHook,
       manageHook =
         composeAll
           [ floatAll
@@ -126,7 +118,8 @@ myConfig =
             className =? "Guake" --> hasBorder False,
             className =? "Guake" --> doFloat,
             className =? "Org.gnome.Nautilus" --> doFloat,
-            className =? "Steam" --> doFloat
+            className =? "Steam" --> doFloat,
+            className =? "YouTube Music" --> doShift "1_10"
             -- insertPosition End Newer
           ]
     }
@@ -146,7 +139,7 @@ myTabConfig =
     }
 
 layout =
-  onWorkspace "1_10" stackTile $
+  onWorkspace "1_10" (stackTile ||| Full) $
     lessBorders Screen $
       avoidStrutsOn [D] $
         minimize $
@@ -177,8 +170,8 @@ myKeysP =
     ("F12", spawn "guake-toggle"),
     -- ("M-0", windows $ W.view "1_10"),
     -- ("M-M1-0", windows $ W.shift "1_10"),
-    ("M-M1-h", sendMessage Shrink),
-    ("M-M1-l", sendMessage Expand),
+    ("M-S-h", sendMessage Shrink),
+    ("M-S-l", sendMessage Expand),
     ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%"),
     ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%"),
     ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"),
@@ -189,7 +182,10 @@ myKeysP =
     ("<XF86AudioPause>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause"),
     ("<XF86AudioNext>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"),
     ("<XF86AudioPrev>", spawn "--no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"),
-    ("<Print>", spawn "flameshot gui"),
+    ("<Print>", spawn "flameshot gui --delay=1000"),
+    ("C-<Print>", spawn "fish -c 'flameshot full -c'"),
+    ("<Pause>", spawn "fish -c 'record_region'"),
+    ("C-<Pause>", spawn "fish -c 'record_screen'"),
     ("M-z", withLastMinimized' toggleMaximization),
     ("M-S-t", spawn "killall my-taffybar;my-taffybar")
   ]
