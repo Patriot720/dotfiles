@@ -39,7 +39,7 @@ main = do
           }
         -- \61463
       clock = textClockNewWith $ defaultClockConfig {clockFormatString = "%H:%M %a, %d %b"}
-      cpu = pollingGraphNew cpuCfg 0.5 cpuCallback
+      -- cpu = pollingGraphNew cpuCfg 0.5 cpuCallback
       workspaces =
         flip widgetSetClassGI "workspaces"
           =<< workspacesNew
@@ -74,7 +74,7 @@ main = do
               ],
             endWidgets =
               [
-                cpu,
+                -- cpu,
                 sniTrayNew,
                 commandRunnerNew 6000 "curl" ["-s", "https://wttr.in/?format=%c%20%t%20(%f)"] "Failed",
                 vpn

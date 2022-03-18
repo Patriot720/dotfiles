@@ -24,6 +24,7 @@ import qualified XMonad.Hooks.Focus as W
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDebug
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.Minimize
 import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
@@ -90,22 +91,22 @@ myConfig =
       logHook = updatePointer (0.5, 0.5) (0, 0),
       startupHook =
         spawnAllOnce
-            ["pasystray",
-              "redshift-gtk",
-              "/usr/lib/kdeconnectd",
-              "~/.dropbox-dist/dropboxd",
-              "dunst",
-              "youtube-music",
-              "telegram-desktop",
-              "flameshot",
-              "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
-              "blueman-applet",
-              "xcompmgr",
-              "guake",
-              "fcitx -d"
-            ],
+          [ "pasystray",
+            "redshift-gtk",
+            "/usr/lib/kdeconnectd",
+            "~/.dropbox-dist/dropboxd",
+            "dunst",
+            "youtube-music",
+            "telegram-desktop",
+            "flameshot",
+            "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+            "blueman-applet",
+            "xcompmgr",
+            "guake",
+            "fcitx -d"
+          ],
       handleEventHook =
-      minimizeEventHook,
+        minimizeEventHook,
       manageHook =
         composeAll
           [ floatAll
@@ -196,6 +197,10 @@ screenShiftThenView i = focusScreen (unmarshallS i) . shiftThenView i
 
 screenView i = focusScreen (unmarshallS i) . W.view i
 
+myActivateHook :: ManageHook
+myActivateHook =
+  className /=? "YouTube Music" --> doFocus
+
 myKeys =
   [ ( (m .|. mod4Mask, k),
       windows $ onCurrentScreen f i
@@ -211,59 +216,18 @@ myKeys =
          ((mod4Mask .|. altMask, xK_k), windows W.swapUp)
        ]
 
--- viewWorkspace :: PhysicalWorkspace -> X ()
--- viewWorkspace phyWs = do
---   let (screen, _virtWs) = unmarshall phyWs
---   maybeScreenWorkspace <- screenWorkspace screen
---   case maybeScreenWorkspace of
---     Nothing -> mempty -- screen not found, don't do anything
---     Just screenWs ->
---       windows
---         ( W.view phyWs -- change to the workspace we want
---             . W.view screenWs -- move focus to the appropriate screen
---         )
-
 mySort = getSortByXineramaRule
 
 myRename :: String -> WindowSpace -> String
 myRename s _w = unmarshallW s
-
--- xmobarProp config =
---   withEasySB (statusBarProp "xmobar" (pure xmobarPP)) toggleStrutsKey config
-myXmobarPP :: PP
-myXmobarPP =
-  def
-    { ppSep = magenta " • ",
-      ppTitleSanitize = xmobarStrip,
-      ppCurrent = wrap " " "" . xmobarBorder "Top" "#8be9fd" 2,
-      ppHidden = white . wrap " " "",
-      ppHiddenNoWindows = lowWhite . wrap " " "",
-      ppUrgent = red . wrap (yellow "!") (yellow "!"),
-      ppOrder = \[ws, l, _, wins] -> [ws, l, wins],
-      ppExtras = [logTitles formatFocused formatUnfocused]
-    }
-  where
-    formatFocused :: String -> String
-    formatFocused x = ""
-    formatUnfocused = wrap (lowWhite "[") (lowWhite "]") . blue . ppWindow
-
-    ppWindow :: String -> String
-    ppWindow = xmobarRaw . (\w -> if null w then "untitled" else w) . shorten 30
-
-    blue, lowWhite, magenta, red, white, yellow :: String -> String
-    magenta = xmobarColor "#ff79c6" ""
-    blue = xmobarColor "#bd93f9" ""
-    white = xmobarColor "#f8f8f2" ""
-    yellow = xmobarColor "#f1fa8c" ""
-    red = xmobarColor "#ff5555" ""
-    lowWhite = xmobarColor "#bbbbbb" ""
 
 mainConfig = do
   xmonad $
     docks $
       ewmhFullscreen $
         ewmh $
-          addEwmhWorkspaceRename (pure myRename) $
-            pagerHints $
-              myConfig `additionalKeysP` myKeysP
-                `additionalKeys` myKeys
+          setEwmhActivateHook myActivateHook $
+            addEwmhWorkspaceRename (pure myRename) $
+              pagerHints $
+                myConfig `additionalKeysP` myKeysP
+                 `additionalKeys` myKeys
