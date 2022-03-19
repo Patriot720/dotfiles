@@ -120,6 +120,7 @@ myConfig =
             className =? "Guake" --> doFloat,
             className =? "Org.gnome.Nautilus" --> doFloat,
             className =? "Steam" --> doFloat,
+            className =? "steam" --> doFullFloat,
             className =? "YouTube Music" --> doShift "1_10"
             -- insertPosition End Newer
           ]
