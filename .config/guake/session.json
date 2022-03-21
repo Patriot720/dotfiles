@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1647783864,
+    "timestamp": 1647881752,
     "workspace": {
         "0": [
             [
@@ -152,6 +152,21 @@
                         }
                     ],
                     "label": "controllers",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "modules",
                     "custom_label_set": false
                 },
                 {
