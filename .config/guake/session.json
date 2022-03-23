@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1647881752,
+    "timestamp": 1647975020,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/Games/osu_lazer",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,172 +16,7 @@
                             }
                         }
                     ],
-                    "label": "osu_lazer",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/Games",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "Games",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew/.local/share",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "share",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "favoka2",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "favoka2",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "favoka2",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka/appointments_frontend/appointments_frontend",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "appointments_frontend",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "modules",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "favoka2",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/controllers",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "controllers",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "modules",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "Terminal",
+                    "label": "andrew",
                     "custom_label_set": false
                 }
             ]
