@@ -39,7 +39,6 @@ import XMonad.Layout.Magnifier (magnifier)
 import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
-import XMonad.Layout.ResizableTile
 import XMonad.Layout.SimpleFloat
 import XMonad.Layout.StackTile (StackTile (StackTile))
 import XMonad.Layout.TabBarDecoration
@@ -76,6 +75,8 @@ myMouseBindings XConfig {XMonad.modMask = modm} =
       ),
       -- you may also bind events to the mouse scroll wheel (button4 and button5)
       ((modm, button4), \w -> focus w >> windows W.focusDown),
+      ((modm .|. altMask, button4), \w -> focus w >> windows W.swapDown),
+      ((modm .|. altMask, button5), \w -> focus w >> windows W.swapUp),
       ((modm, button5), \w -> focus w >> windows W.focusUp)
     ]
 
@@ -150,10 +151,10 @@ layout =
   where
     -- drawer = Layout.drawer 0.0 0.4 (ClassName "Spotify" `Or` ClassName "Telegram" `Or` ClassName "Org.gnome.Nautilus") Full
     stackTile = minimize $ boringWindows $ avoidStruts $ TwoPane (3 / 100) (1 / 2)
-    tiled = ResizableTall nmaster delta ratio []
+    tiled = Tall nmaster delta ratio
     threeCol = ThreeColMid nmaster delta ratio
     nmaster = 1
-    ratio = 3 / 5
+    ratio = 0.7
     delta = 3 / 100
 
 spawnAllOnce xs =
@@ -189,6 +190,7 @@ myKeysP =
     ("<Pause>", spawn "fish -c 'record_region'"),
     ("C-<Pause>", spawn "fish -c 'record_screen'"),
     ("M-z", withLastMinimized' toggleMaximization),
+    ("M-t", withFocused toggleFloat),
     ("M-S-t", spawn "killall my-taffybar;my-taffybar")
   ]
 
@@ -201,6 +203,16 @@ screenView i = focusScreen (unmarshallS i) . W.view i
 myActivateHook :: ManageHook
 myActivateHook =
   className /=? "YouTube Music" --> doFocus
+
+centerWindow :: Window -> X ()
+centerWindow win = do
+    (_, W.RationalRect x y w h) <- floatLocation win
+    windows $ W.float win (W.RationalRect ((1 - w) / 2) ((1 - h) / 2) w h)
+    return ()
+
+toggleFloat w = windows (\s -> if M.member w (W.floating s)
+                            then W.sink w s
+                          else W.float w (W.RationalRect 0.15 0.15 0.65 0.65) s)
 
 myKeys =
   [ ( (m .|. mod4Mask, k),
@@ -231,4 +243,4 @@ mainConfig = do
             addEwmhWorkspaceRename (pure myRename) $
               pagerHints $
                 myConfig `additionalKeysP` myKeysP
-                 `additionalKeys` myKeys
+                  `additionalKeys` myKeys
