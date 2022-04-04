@@ -10,6 +10,8 @@ import qualified Data.Map as M
 import Data.Traversable (for)
 import System.Taffybar.Support.PagerHints
 import XMonad
+import XMonad.Actions.CopyWindow
+import XMonad.Actions.CycleRecentWS
 import XMonad.Actions.DynamicWorkspaceGroups
 import XMonad.Actions.Minimize (maximizeWindow, maximizeWindowAndFocus, minimizeWindow, withLastMinimized, withLastMinimized')
 import XMonad.Actions.OnScreen
@@ -48,11 +50,13 @@ import XMonad.Layout.TwoPane (TwoPane (TwoPane))
 import qualified XMonad.StackSet as W
 import XMonad.Util.EZConfig
 import XMonad.Util.Loggers
+import XMonad.Util.NamedScratchpad
 import XMonad.Util.NamedWindows (getName)
 import XMonad.Util.Run (safeSpawn)
+import XMonad.Util.Scratchpad
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Ungrab
-import XMonad.Util.WorkspaceCompare (getSortByXineramaRule)
+import XMonad.Util.WorkspaceCompare (filterOutWs, getSortByXineramaRule)
 
 instance Show (X ()) where
   show f = "Kekw"
@@ -100,6 +104,7 @@ myConfig =
             "youtube-music",
             "telegram-desktop",
             "flameshot",
+            "emacs -nw --daemon",
             "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
             "blueman-applet",
             "xcompmgr",
@@ -110,7 +115,9 @@ myConfig =
         minimizeEventHook,
       manageHook =
         composeAll
-          [ floatAll
+          [ namedScratchpadManageHook scratchpads,
+            insertPosition Below Newer,
+            floatAll
               [ "Guake",
                 "Pavucontrol"
               ],
@@ -119,11 +126,12 @@ myConfig =
             className =? "qBittorrent" --> doShift "1_8",
             className =? "Guake" --> hasBorder False,
             className =? "Guake" --> doFloat,
-            className =? "Org.gnome.Nautilus" --> doFloat,
+            -- className =? "Org.gnome.Nautilus" --> doFloat,
+            -- className =? "Gnome-calculator" --> doCenterFloat,
             className =? "Steam" --> doFloat,
             className =? "steam" --> doFullFloat,
-            className =? "YouTube Music" --> doShift "1_10"
-            -- insertPosition End Newer
+            className =? "YouTube Music" --> doShift "1_10",
+            isDialog --> doF W.shiftMaster <+> doF W.swapDown
           ]
     }
 
@@ -152,7 +160,7 @@ layout =
     -- drawer = Layout.drawer 0.0 0.4 (ClassName "Spotify" `Or` ClassName "Telegram" `Or` ClassName "Org.gnome.Nautilus") Full
     stackTile = minimize $ boringWindows $ avoidStruts $ TwoPane (3 / 100) (1 / 2)
     tiled = Tall nmaster delta ratio
-    threeCol = ThreeColMid nmaster delta ratio
+    threeCol = ThreeColMid nmaster delta 0.6
     nmaster = 1
     ratio = 0.7
     delta = 3 / 100
@@ -166,9 +174,39 @@ toggleMaximization window =
     Nothing -> withFocused minimizeWindow
     Just w -> maximizeWindowAndFocus w
 
+killAllOtherCopiesForWindowSet ss =
+  whenJust (W.peek ss) $ \w ->
+    windows $
+      W.view (W.currentTag ss)
+        . delFromAllButCurrent w
+  where
+    delFromAllButCurrent w ss =
+      foldr
+        (delWinFromWorkspace w . W.tag)
+        ss
+        (W.hidden ss ++ map W.workspace (W.visible ss))
+    delWinFromWorkspace w wid = viewing wid $ W.modify Nothing (W.filter (/= w))
+
+    viewing wis f ss = W.view (W.currentTag ss) $ f $ W.view wis ss
+
+-- copyToSecondScreen ::  a -> a
+copyToSecondScreen s =
+  foldr copy s (withScreen 1 ["6", "7", "8", "9", "10"])
+
+-- if null (copiesOfOn (W.peek s) (taggedWindows $ W.hidden s))
+-- then
+-- else s
+-- TODO toggle
+
+scratchpads =
+  [ -- NS "calc" "gnome-calculator" (className =? "Gnome-calculator") defaultFloating
+    NS "calc" "speedcrunch" (className =? "SpeedCrunch") doCenterFloat
+  ]
+
 myKeysP =
   [ ("M-d", spawn "~/.config/rofi/launchers/colorful/launcher.sh"),
-    ("M-c", spawn "~/.config/rofi/launchers/text/calc.sh"),
+    ("M-c", namedScratchpadAction scratchpads "calc"),
+    -- spawn "~/.config/rofi/launchers/text/calc.sh"
     ("M-x", kill),
     ("F12", spawn "guake-toggle"),
     -- ("M-0", windows $ W.view "1_10"),
@@ -191,6 +229,8 @@ myKeysP =
     ("C-<Pause>", spawn "fish -c 'record_screen'"),
     ("M-z", withLastMinimized' toggleMaximization),
     ("M-t", withFocused toggleFloat),
+    ("M-a", windows copyToSecondScreen),
+    ("M-S-a", killAllOtherCopies),
     ("M-S-t", spawn "killall my-taffybar;my-taffybar")
   ]
 
@@ -206,13 +246,17 @@ myActivateHook =
 
 centerWindow :: Window -> X ()
 centerWindow win = do
-    (_, W.RationalRect x y w h) <- floatLocation win
-    windows $ W.float win (W.RationalRect ((1 - w) / 2) ((1 - h) / 2) w h)
-    return ()
+  (_, W.RationalRect x y w h) <- floatLocation win
+  windows $ W.float win (W.RationalRect ((1 - w) / 2) ((1 - h) / 2) w h)
+  return ()
 
-toggleFloat w = windows (\s -> if M.member w (W.floating s)
-                            then W.sink w s
-                          else W.float w (W.RationalRect 0.15 0.15 0.65 0.65) s)
+toggleFloat w =
+  windows
+    ( \s ->
+        if M.member w (W.floating s)
+          then W.sink w s
+          else W.float w (W.RationalRect 0.15 0.15 0.65 0.65) s
+    )
 
 myKeys =
   [ ( (m .|. mod4Mask, k),
@@ -226,7 +270,8 @@ myKeys =
            (f, m) <- [(W.view, 0), (shiftThenView, altMask)]
        ]
     ++ [ ((mod4Mask .|. altMask, xK_j), windows W.swapDown),
-         ((mod4Mask .|. altMask, xK_k), windows W.swapUp)
+         ((mod4Mask .|. altMask, xK_k), windows W.swapUp),
+         ((mod4Mask, xK_Tab), toggleRecentWS)
        ]
 
 mySort = getSortByXineramaRule
@@ -234,13 +279,16 @@ mySort = getSortByXineramaRule
 myRename :: String -> WindowSpace -> String
 myRename s _w = unmarshallW s
 
+myFilter = filterOutWs [scratchpadWorkspaceTag]
+
 mainConfig = do
   xmonad $
     docks $
       ewmhFullscreen $
         ewmh $
           setEwmhActivateHook myActivateHook $
-            addEwmhWorkspaceRename (pure myRename) $
-              pagerHints $
-                myConfig `additionalKeysP` myKeysP
-                  `additionalKeys` myKeys
+            addEwmhWorkspaceSort (pure myFilter) $
+              addEwmhWorkspaceRename (pure myRename) $
+                pagerHints $
+                  myConfig `additionalKeysP` myKeysP
+                    `additionalKeys` myKeys

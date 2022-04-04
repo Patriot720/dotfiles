@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1648996458,
+    "timestamp": 1649097690,
     "workspace": {
         "0": [
             [
@@ -38,7 +38,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/mnt/md126/favoka/appointments_frontend/appointments_frontend",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": "modules",
+                    "label": "appointments_frontend",
                     "custom_label_set": false
                 },
                 {
@@ -68,7 +68,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/usr/share/applications",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,14 +76,89 @@
                             }
                         }
                     ],
-                    "label": "modules",
+                    "label": "applications",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
