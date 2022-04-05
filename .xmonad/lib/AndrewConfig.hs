@@ -8,11 +8,14 @@ import Data.List
 import Data.List.Split (splitOn)
 import qualified Data.Map as M
 import Data.Traversable (for)
+import qualified Debug.Trace
 import System.Taffybar.Support.PagerHints
 import XMonad
+import XMonad.Actions.AfterDrag
 import XMonad.Actions.CopyWindow
 import XMonad.Actions.CycleRecentWS
 import XMonad.Actions.DynamicWorkspaceGroups
+import XMonad.Actions.FloatSnap
 import XMonad.Actions.Minimize (maximizeWindow, maximizeWindowAndFocus, minimizeWindow, withLastMinimized, withLastMinimized')
 import XMonad.Actions.OnScreen
 import XMonad.Actions.UpdatePointer
@@ -57,6 +60,7 @@ import XMonad.Util.Scratchpad
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Ungrab
 import XMonad.Util.WorkspaceCompare (filterOutWs, getSortByXineramaRule)
+import XMonad.Actions.Submap
 
 instance Show (X ()) where
   show f = "Kekw"
@@ -64,25 +68,31 @@ instance Show (X ()) where
 myMouseBindings XConfig {XMonad.modMask = modm} =
   M.fromList
     -- mod-button1, Set the window to floating mode and move by dragging
-    [ ( (modm, button1),
-        \w ->
-          focus w >> mouseMoveWindow w
-            >> windows W.shiftMaster
-      ),
-      -- mod-button2, Raise the window to the top of the stack
-      ((modm, button2), \w -> focus w >> windows W.shiftMaster),
-      -- mod-button3, Set the window to floating mode and resize by dragging
-      ( (modm, button3),
-        \w ->
-          focus w >> mouseResizeWindow w
-            >> windows W.shiftMaster
-      ),
+    [ ((modm, button1), \w -> focus w >> mouseMoveWindow w >> ifClick (snapMagicMove (Just 50) (Just 50) w)),
+      ((modm .|. shiftMask, button1), \w -> focus w >> mouseMoveWindow w >> ifClick (snapMagicResize [L, R, U, D] (Just 50) (Just 50) w)),
+      ((modm, button3), \w -> focus w >> mouseResizeWindow w >> ifClick (snapMagicResize [R, D] (Just 50) (Just 50) w)),
+      -- ( (modm, button1),
+      --   \w ->
+      --     focus w >> mouseMoveWindow w
+      --       >> windows W.shiftMaster
+      -- ),
+      -- -- mod-button2, Raise the window to the top of the stack
+      -- ((modm, button2), \w -> focus w >> windows W.shiftMaster),
+      -- -- mod-button3, Set the window to floating mode and resize by dragging
+      -- ( (modm, button3),
+      --   \w ->
+      --     focus w >> mouseResizeWindow w
+      --       >> windows W.shiftMaster
+      -- ),
       -- you may also bind events to the mouse scroll wheel (button4 and button5)
       ((modm, button4), \w -> focus w >> windows W.focusDown),
       ((modm .|. altMask, button4), \w -> focus w >> windows W.swapDown),
       ((modm .|. altMask, button5), \w -> focus w >> windows W.swapUp),
       ((modm, button5), \w -> focus w >> windows W.focusUp)
     ]
+
+contains :: (Eq a, Functor m, Show a) => m [a] -> [a] -> m Bool
+q `contains` x = fmap (\s -> Debug.Trace.trace (show x ++ " isInfixOf " ++ show s ++ " " ++ show (x `isInfixOf` s)) (x `isInfixOf` s)) q
 
 myConfig =
   def
@@ -126,6 +136,11 @@ myConfig =
             className =? "qBittorrent" --> doShift "1_8",
             className =? "Guake" --> hasBorder False,
             className =? "Guake" --> doFloat,
+            title =? "emacs-everywhere" --> doFloat,
+            title =? "org-roam-everywhere" --> doFloat,
+            -- title `contains` "org-capture" --> doFloat,
+            -- "Emacs Everywhere" `isInProperty` "WM_NAME" --> doFloat,
+            -- title ^? "Emacs Everywhere" --> doFloat,
             -- className =? "Org.gnome.Nautilus" --> doFloat,
             -- className =? "Gnome-calculator" --> doCenterFloat,
             className =? "Steam" --> doFloat,
@@ -229,6 +244,7 @@ myKeysP =
     ("C-<Pause>", spawn "fish -c 'record_screen'"),
     ("M-z", withLastMinimized' toggleMaximization),
     ("M-t", withFocused toggleFloat),
+    ("M-e", spawn "emacsclient --eval \"(emacs-everywhere)\""),
     ("M-a", windows copyToSecondScreen),
     ("M-S-a", killAllOtherCopies),
     ("M-S-t", spawn "killall my-taffybar;my-taffybar")
@@ -271,7 +287,17 @@ myKeys =
        ]
     ++ [ ((mod4Mask .|. altMask, xK_j), windows W.swapDown),
          ((mod4Mask .|. altMask, xK_k), windows W.swapUp),
-         ((mod4Mask, xK_Tab), toggleRecentWS)
+         ((mod4Mask, xK_Tab), toggleRecentWS),
+         ((mod4Mask, xK_f), submap . M.fromList $
+         [ ((mod4Mask, xK_l), withFocused $ snapMove R Nothing),
+           ((mod4Mask, xK_h), withFocused $ snapMove L Nothing),
+           ((mod4Mask, xK_k), withFocused $ snapMove U Nothing),
+           ((mod4Mask, xK_j), withFocused $ snapMove D Nothing)
+         ]),
+         ((mod4Mask, xK_Left), withFocused $ snapMove L Nothing),
+         ((mod4Mask, xK_Right), withFocused $ snapMove R Nothing),
+         ((mod4Mask, xK_Up), withFocused $ snapMove U Nothing),
+         ((mod4Mask, xK_Down), withFocused $ snapMove D Nothing)
        ]
 
 mySort = getSortByXineramaRule

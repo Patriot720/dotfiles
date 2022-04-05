@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1649097690,
+    "timestamp": 1649155014,
     "workspace": {
         "0": [
             [
@@ -158,7 +158,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/home/andrew/.emacs.d/.local/straight/repos",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -166,7 +166,52 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "repos",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.emacs.d/.local/straight/repos",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "repos",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.xmonad",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.emacs.d/.local/straight/repos",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "repos",
                     "custom_label_set": false
                 }
             ]
