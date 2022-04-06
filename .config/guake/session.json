@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1649155014,
+    "timestamp": 1649253600,
     "workspace": {
         "0": [
             [
@@ -196,7 +196,7 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": ".xmonad",
                     "custom_label_set": false
                 },
                 {
@@ -212,6 +212,21 @@
                         }
                     ],
                     "label": "repos",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": ".config",
                     "custom_label_set": false
                 }
             ]
