@@ -22,6 +22,7 @@ myManageHook =
         [ "Guake",
           "Pavucontrol"
         ],
+      -- https://stackoverflow.com/questions/26028146/xmonad-open-a-window-into-a-particular-tile
       className =? "TelegramDesktop" --> doShift "1_10",
       className =? "discord" --> doShift "1_8",
       className =? "qBittorrent" --> doShift "1_8",
@@ -35,6 +36,7 @@ myManageHook =
       className =? "Blueman-manager" --> doCenterFloat,
       className =? "Steam" --> doFloat,
       className =? "steam" --> doFullFloat,
-      className =? "YouTube Music" --> doShift "1_10",
+      className =? "YouTube Music" --> doShift "1_10" <+> doF W.swapUp,
+      className =? "openhab-nativefier-9825c2" --> doShift "1_10",
       isDialog --> doF W.shiftMaster <+> doF W.swapDown
     ]

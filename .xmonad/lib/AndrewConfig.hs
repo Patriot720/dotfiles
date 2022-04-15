@@ -1,17 +1,21 @@
 {-# LANGUAGE FlexibleInstances #-}
 
 module AndrewConfig where
-import XMonad
+
+import Ewmh (myEwmh)
+import Hooks.ManageHook (myManageHook)
+import Hooks.Startup (myStartupHook)
+import Keys (myKeys)
 import Layouts (myLayout)
 import Workspaces (myWorkspaces)
+import XMonad
 import XMonad.Actions.UpdatePointer (updatePointer)
-import Hooks.Startup (myStartupHook)
-import XMonad.Hooks.Minimize (minimizeEventHook)
-import Hooks.ManageHook (myManageHook)
 import XMonad.Hooks.ManageDocks (docks)
-import Ewmh (myEwmh)
+import XMonad.Hooks.Minimize (minimizeEventHook)
 import XMonad.Hooks.TaffybarPagerHints (pagerHints)
-import Keys (myKeys)
+import XMonad.Hooks.DynamicProperty
+import XMonad.Hooks.InsertPosition
+import qualified XMonad.StackSet as W
 
 instance Show (X ()) where
   show f = "Kekw"
@@ -24,7 +28,14 @@ myConfig =
       workspaces = myWorkspaces,
       logHook = updatePointer (0.5, 0.5) (0, 0),
       startupHook = myStartupHook,
-      handleEventHook = minimizeEventHook,
+      handleEventHook =
+        minimizeEventHook
+          <+> dynamicPropertyChange
+            "WM_CLASS"
+            ( composeAll
+                [className =? "TelegramDesktop" --> doF W.shiftMaster
+                ]
+            ),
       manageHook = myManageHook
     }
 

@@ -10,6 +10,7 @@ import XMonad.Layout.Minimize
 import XMonad.Layout.BoringWindows
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.TwoPane
+import XMonad.Layout.Reflect (reflectHoriz)
 
 myTabConfig =
   def
@@ -34,7 +35,8 @@ myLayout =
             tiled ||| tabbedBottom shrinkText myTabConfig ||| Full
   where
     -- drawer = Layout.drawer 0.0 0.4 (ClassName "Spotify" `Or` ClassName "Telegram" `Or` ClassName "Org.gnome.Nautilus") Full
-    stackTile = minimize $ boringWindows $ avoidStruts $ TwoPane (3 / 100) (1 / 2)
+    stackTile = minimize $ boringWindows $ avoidStruts $ reflectHoriz (Tall 1 0.03 0.5)
+    -- $ TwoPane (3 / 100) (1 / 2)
     tiled = Tall nmaster delta ratio
     threeCol = ThreeColMid nmaster delta 0.6
     nmaster = 1
