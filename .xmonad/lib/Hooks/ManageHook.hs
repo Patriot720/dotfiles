@@ -38,5 +38,6 @@ myManageHook =
       className =? "steam" --> doFullFloat,
       className =? "YouTube Music" --> doShift "1_10" <+> doF W.swapUp,
       className =? "openhab-nativefier-9825c2" --> doShift "1_10",
-      isDialog --> doF W.shiftMaster <+> doF W.swapDown
+      isDialog --> doF W.shiftMaster <+> doF W.swapDown,
+      isFullscreen --> doFullFloat
     ]

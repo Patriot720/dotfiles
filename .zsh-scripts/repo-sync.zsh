@@ -21,6 +21,8 @@ sync_yadm(){
 
 sync_repos(){
     sync_yadm
+    sync_repo $HOME/.xmonad;
+    sync_repo $HOME/.config/taffybar;
     sync_repo $HOME/.doom.d;
     sync_repo $HOME/.dump;
 }

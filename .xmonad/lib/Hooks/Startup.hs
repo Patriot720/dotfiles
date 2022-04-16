@@ -22,9 +22,9 @@ myStartupHook =
       "guake",
       "fcitx -d"
     ]
-    <+> spawnAndDo (doShift "1_10") "telegram-desktop"
-    <+> spawnAndDo (doShift "1_10") "sleep 1;/mnt/md126/Downloads/OpenHab-linux/OpenHab"
-    <+> spawnAndDo (doShift "1_10") "youtube-music"
+    <+> spawnAndDoOnce (doShift "1_10") "telegram-desktop"
+    <+> spawnAndDoOnce (doShift "1_10") "sleep 5;/mnt/md126/Downloads/OpenHab-linux/OpenHab"
+    <+> spawnAndDoOnce (doShift "1_10") "youtube-music"
 
 spawnAllOnce xs =
   forM_ xs spawnOnce
