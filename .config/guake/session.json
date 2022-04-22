@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1650538168,
+    "timestamp": 1650619939,
     "workspace": {
         "0": [
             [
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2",
+                            "directory": "/",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,14 +31,14 @@
                             }
                         }
                     ],
-                    "label": "favoka2",
+                    "label": "(root)",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/home/andrew/.local/share/applications",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,14 +46,14 @@
                             }
                         }
                     ],
-                    "label": "modules",
+                    "label": "applications",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/home/andrew/.local/share/applications",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,14 +61,14 @@
                             }
                         }
                     ],
-                    "label": "modules",
+                    "label": "applications",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/home/andrew/.local/share/applications",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,59 +76,14 @@
                             }
                         }
                     ],
-                    "label": "modules",
+                    "label": "applications",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "modules",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "modules",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "modules",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
+                            "directory": "/home/andrew/.local/share/applications",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
