@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1650619939,
+    "timestamp": 1650696914,
     "workspace": {
         "0": [
             [
@@ -32,6 +32,21 @@
                         }
                     ],
                     "label": "(root)",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.local/share/applications",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "applications",
                     "custom_label_set": false
                 },
                 {
