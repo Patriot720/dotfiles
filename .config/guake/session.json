@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1650696914,
+    "timestamp": 1650800647,
     "workspace": {
         "0": [
             [
@@ -23,82 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "(root)",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew/.local/share/applications",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "applications",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew/.local/share/applications",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "applications",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew/.local/share/applications",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "applications",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew/.local/share/applications",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "applications",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/andrew/.local/share/applications",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
