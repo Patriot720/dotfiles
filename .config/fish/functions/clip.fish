@@ -1,2 +1,1 @@
-alias clip="wl-copy"
-
+alias clip="xclip -sel clip"
