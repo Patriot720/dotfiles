@@ -168,6 +168,16 @@
             }
           ],
           "Enable": false
+        },
+        {
+          "Path": "Circular_Area.Circular_Power3_Blend",
+          "Settings": [
+            {
+              "Property": "B_raw",
+              "Value": null
+            }
+          ],
+          "Enable": false
         }
       ],
       "AbsoluteModeSettings": {
@@ -182,7 +192,7 @@
           "Width": 45.0,
           "Height": 45.0,
           "X": 80.55,
-          "Y": 67.68294,
+          "Y": 67.682,
           "Rotation": -5.0
         },
         "EnableClipping": false,

@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1650999330,
+    "timestamp": 1651084649,
     "workspace": {
         "0": [
             [
@@ -23,21 +23,6 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "prestashop",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
                             "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
                             "custom_colors": {
                                 "fg_color": null,
@@ -53,7 +38,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/controllers",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,37 +46,7 @@
                             }
                         }
                     ],
-                    "label": "controllers",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "modules",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/modules",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "modules",
+                    "label": "Terminal",
                     "custom_label_set": false
                 }
             ]
