@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1652637640,
+    "timestamp": 1652710770,
     "workspace": {
         "0": [
             [
@@ -61,7 +61,22 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "modules",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/new_tools/sunxi-tools",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "sunxi",
                     "custom_label_set": false
                 }
             ]
