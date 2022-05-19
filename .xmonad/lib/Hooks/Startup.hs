@@ -10,12 +10,12 @@ import XMonad.Actions.SpawnOn
 myStartupHook =
   spawnAllOnce
     [ "pasystray",
-      "redshift-gtk",
+      -- "redshift-gtk",
       "/usr/lib/kdeconnectd",
       "~/.dropbox-dist/dropboxd",
       "dunst",
       "flameshot",
-      "emacs -nw --daemon",
+      -- "emacs -nw --daemon",
       "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
       "blueman-applet",
       "xcompmgr",
@@ -24,7 +24,6 @@ myStartupHook =
     ]
     <+> spawnAndDoOnce (doShift "1_10") "telegram-desktop"
     <+> spawnAndDoOnce (doShift "1_10") "sleep 5;/mnt/md126/Downloads/OpenHab-linux/OpenHab"
-    <+> spawnAndDoOnce (doShift "1_10") "youtube-music"
 
 spawnAllOnce xs =
   forM_ xs spawnOnce
