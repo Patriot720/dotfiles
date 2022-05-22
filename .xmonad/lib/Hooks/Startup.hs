@@ -10,7 +10,7 @@ import XMonad.Actions.SpawnOn
 myStartupHook =
   spawnAllOnce
     [ "pasystray",
-      -- "redshift-gtk",
+      "redshift-gtk",
       "/usr/lib/kdeconnectd",
       "~/.dropbox-dist/dropboxd",
       "dunst",
