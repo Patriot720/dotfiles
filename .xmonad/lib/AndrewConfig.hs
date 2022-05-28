@@ -17,8 +17,8 @@ import XMonad.Hooks.DynamicProperty
 import XMonad.Hooks.InsertPosition
 import qualified XMonad.StackSet as W
 
-instance Show (X ()) where
-  show f = "Kekw"
+-- instance Show (X ()) where
+--   show f = "Kekw"
 
 myConfig =
   def
@@ -29,13 +29,13 @@ myConfig =
       logHook = updatePointer (0.5, 0.5) (0, 0),
       startupHook = myStartupHook,
       handleEventHook =
-        minimizeEventHook
-          <+> dynamicPropertyChange
-            "WM_CLASS"
-            ( composeAll
-                [className =? "TelegramDesktop" --> doF W.shiftMaster
-                ]
-            ),
+        minimizeEventHook,
+          -- <+> dynamicPropertyChange
+          --   "WM_CLASS"
+          --   ( composeAll
+          --       [className =? "TelegramDesktop" --> doF W.shiftMaster
+          --       ]
+          --   ),
       manageHook = myManageHook
     }
 

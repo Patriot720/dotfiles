@@ -1,4 +1,5 @@
--- |
+-- | DOC:
+-- https://hackage.haskell.org/package/xmonad-contrib-0.17.0/docs/XMonad-Hooks-EwmhDesktops.html
 module Ewmh where
 
 import XMonad
@@ -7,12 +8,8 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.IndependentScreens
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.WorkspaceCompare
+import XMonad.Hooks.UrgencyHook (doAskUrgent)
 
-myActivateHook :: ManageHook
-myActivateHook =
-  className /=? "YouTube Music" --> doFocus
-
-mySort = getSortByXineramaRule
 
 myRename :: String -> WindowSpace -> String
 myRename s _w = unmarshallW s
@@ -23,6 +20,6 @@ myEwmh :: XConfig a -> XConfig a
 myEwmh c =
   ewmhFullscreen $
     ewmh $
-      setEwmhActivateHook myActivateHook $
+      setEwmhActivateHook doAskUrgent $
         addEwmhWorkspaceSort (pure myFilter) $
           addEwmhWorkspaceRename (pure myRename) c

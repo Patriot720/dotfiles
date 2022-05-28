@@ -17,6 +17,10 @@ import XMonad.Layout.IndependentScreens
 import qualified XMonad.StackSet as W
 import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
+import qualified XMonad.Prelude as L
+import Data.List (find)
+import qualified Debug.Trace as Debug
+import XMonad.Actions.OnScreen (greedyViewOnScreen, viewOnScreen)
 
 myMouseBindings XConfig {XMonad.modMask = modm} =
   M.fromList
@@ -60,7 +64,7 @@ functionKeys =
 screenshotAndRecordKeys =
   [ ("<Print>", spawn "flameshot gui --delay=1000"),
     ("C-<Print>", spawn "fish -c 'flameshot full -c'"),
-    ("<Pause>", spawn "fish -c 'record_region'"),
+    ("<Pause>", spawn "fish -c 'record'"),
     ("C-<Pause>", spawn "fish -c 'record_screen'")
   ]
 
@@ -83,16 +87,16 @@ keysP =
 
 shiftThenView i = W.view i . W.shift i
 
-screenShiftThenView i = focusScreen (unmarshallS i) . shiftThenView i
+screenShiftThenView :: PhysicalWorkspace -> WindowSet -> WindowSet
+screenShiftThenView i =  viewOnScreen (unmarshallS i) i . W.shift i
 
-screenView i = focusScreen (unmarshallS i) . W.view i
+screenView i =
+  viewOnScreen (unmarshallS i) i -- < https://xmonad.github.io/xmonad-docs/xmonad-contrib/XMonad-Actions-OnScreen.html
 
 windowsKeysForSwitchingAndMovingOnWorkspaces =
-  [ ( (m .|. mod4Mask, k),
-      windows $ onCurrentScreen f i
-    )
-    | (i, k) <- zip myWorkspaces' ([xK_1 .. xK_9] ++ [xK_0]),
-      (f, m) <- [(screenView, 0), (screenShiftThenView, altMask)]
+  [ ( (m .|. mod4Mask, k), windows $ f i)
+    | (i, k) <- zip myWorkspaces ([xK_1 .. xK_9] ++ [xK_0]),
+      (f, m) <- [(screenView, 0), (screenShiftThenView, shiftMask)]
   ]
 
 monitorsKeysForSwitchingAndMoving =

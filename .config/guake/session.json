@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1653721754,
+    "timestamp": 1653755398,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/home/andrew/.config/taffybar",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,7 +16,22 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "taffybar",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/.config/taffybar",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "taffybar",
                     "custom_label_set": false
                 }
             ]
