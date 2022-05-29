@@ -7,7 +7,7 @@ function record
     else
         set theme "style_7"
         set dir "$HOME/.config/rofi/launchers/colorful"
-        set choice (rofi -p "Record:" -input "$HOME/.config/fish/conf.d/choices.txt" -format 'i' -dmenu -theme $dir/"$theme")
+        set choice (rofi -i -p "Record:" -input "$HOME/.config/fish/conf.d/choices.txt" -format 'i' -dmenu -theme $dir/"$theme")
         switch $choice
             case 0
                 record_region;
