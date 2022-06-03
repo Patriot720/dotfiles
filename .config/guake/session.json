@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1654195487,
+    "timestamp": 1654265100,
     "workspace": {
         "0": [
             [
@@ -23,36 +23,6 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/_dev",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "_dev",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/MiBand2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "MiBand2",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
                             "directory": "/mnt/md126/Downloads",
                             "custom_colors": {
                                 "fg_color": null,
@@ -68,7 +38,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/Downloads",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": "Terminal",
+                    "label": "admin123",
                     "custom_label_set": false
                 }
             ]
