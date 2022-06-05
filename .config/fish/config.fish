@@ -2,6 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     # set -g QT_QPA_PLATFORM wayland
     # set -g XDG_CURRENT_DESKTOP sway
+    # bash -c "eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh)"
+    # for env_var in (gnome-keyring-daemon --start);
+    #     set -x (echo $env_var | string split "=")
+    # end
 end
 
 function fish_user_key_bindings
