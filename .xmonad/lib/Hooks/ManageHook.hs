@@ -17,7 +17,8 @@ q `contains` x = fmap (\s -> Debug.Trace.trace (show x ++ " isInfixOf " ++ show 
 myManageHook =
   composeAll
     [ namedScratchpadManageHook myScratchpads,
-      insertPosition Below Newer,
+      -- TODO Fix this
+      -- insertPosition Below Newer,
       floatAll
         [ "Guake",
           "Pavucontrol"

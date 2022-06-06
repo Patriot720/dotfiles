@@ -73,6 +73,7 @@ keysP =
     ++ screenshotAndRecordKeys
     ++ [ ("M-d", spawn "~/.config/rofi/launchers/colorful/launcher.sh"),
          ("M-c", namedScratchpadAction myScratchpads "calc"),
+         ("M-M1-t", namedScratchpadAction myScratchpads "chat"),
          ("M-x", kill),
          ("F12", spawn "guake-toggle"),
          ("M-S-h", sendMessage Shrink),
