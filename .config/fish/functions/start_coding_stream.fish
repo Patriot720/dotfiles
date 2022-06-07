@@ -1,5 +1,5 @@
 function start_coding_stream
-    screenkey_all_screens
+    screenkey_first_screen
     monitor_twitch_chat
 end
 
