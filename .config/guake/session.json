@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1654683483,
+    "timestamp": 1654697618,
     "workspace": {
         "0": [
             [
@@ -46,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": ".intellimacs",
+                    "label": "andrew",
                     "custom_label_set": false
                 },
                 {
@@ -77,6 +77,36 @@
                         }
                     ],
                     "label": ".local",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket/templates/_partials",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "_partials",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": ".git",
                     "custom_label_set": false
                 }
             ]
