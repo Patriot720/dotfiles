@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1654697618,
+    "timestamp": 1654800218,
     "workspace": {
         "0": [
             [
@@ -98,7 +98,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2/prestashop_data/prestashop/themes/classic-rocket",
+                            "directory": "/home/andrew/.config/taffybar",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -106,7 +106,7 @@
                             }
                         }
                     ],
-                    "label": ".git",
+                    "label": "taffybar",
                     "custom_label_set": false
                 }
             ]
