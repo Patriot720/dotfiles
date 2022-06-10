@@ -1,1 +1,2 @@
 $ ghc --make xmonad.hs -i -ilib -fforce-recomp -main-is main -v0 -outputdir /home/andrew/.xmonad/build-x86_64-linux -o /home/andrew/.xmonad/xmonad-x86_64-linux
+/home/andrew/.xmonad/build-x86_64-linux/Hooks/ManageHook.o.tmp: renameFile:renamePath:rename: does not exist (No such file or directory)

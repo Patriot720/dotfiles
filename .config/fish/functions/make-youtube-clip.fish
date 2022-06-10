@@ -40,10 +40,12 @@ function make-youtube-clip -d "Download trim and copy to clipboard youtube video
         if set -q _flag_length
 # (not set -q _flag_nosubs and subtitles=tmp_vid.vtt:force_style="FontSize=$fontsize")
             echo "Length based ffmpeg"
-            ffmpeg -ss $_flag_start -i tmp_vid.mp4 -t $_flag_length -vf -c:v libx264 -x264-params crf=22 -preset fast -profile:v high tmp_vid_out.mp4
+# -vf -c:v libx264 -x264-params crf=22 -preset fast -profile:v high
+            ffmpeg -ss $_flag_start -i tmp_vid.mp4 -t $_flag_length  tmp_vid_out.mp4
         else if set -q _flag_end
             echo "Timestamp based ffmpeg"
-            ffmpeg -i tmp_vid.mp4 -ss $_flag_start -to $_flag_end -vf -c:v libx264 -x264-params crf=22 -preset fast -profile:v high tmp_vid_out.mp4
+# -vf -c:v libx264 -x264-params crf=22 -preset fast -profile:v high
+            ffmpeg -i tmp_vid.mp4 -ss $_flag_start -to $_flag_end  tmp_vid_out.mp4
         end
         mv tmp_vid_out.mp4 tmp_vid.mp4
     end
