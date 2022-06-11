@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1654863553,
+    "timestamp": 1654973751,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/favoka2",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "favoka2",
+                    "label": "andrew",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.config/taffybar",
+                            "directory": "/home/andrew/.ssh",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,14 +31,14 @@
                             }
                         }
                     ],
-                    "label": "taffybar",
+                    "label": ".ssh",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.config/taffybar",
+                            "directory": "/home/andrew/.emacs.d/modules",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -46,14 +46,14 @@
                             }
                         }
                     ],
-                    "label": "taffybar",
+                    "label": "modules",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.config/taffybar",
+                            "directory": "/home/andrew/.emacs.d/modules",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -61,14 +61,14 @@
                             }
                         }
                     ],
-                    "label": "taffybar",
+                    "label": "modules",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.config/taffybar",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -76,14 +76,14 @@
                             }
                         }
                     ],
-                    "label": "taffybar",
+                    "label": "andrew",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.config/taffybar",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -91,14 +91,14 @@
                             }
                         }
                     ],
-                    "label": "taffybar",
+                    "label": "andrew",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/.config/taffybar",
+                            "directory": "/tmp",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -106,14 +106,14 @@
                             }
                         }
                     ],
-                    "label": "taffybar",
+                    "label": "tmp",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/MiBand2",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -121,7 +121,67 @@
                             }
                         }
                     ],
-                    "label": "MiBand2",
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/tmp",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "tmp",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/tmp",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "tmp",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/tmp",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
                     "custom_label_set": false
                 }
             ]
