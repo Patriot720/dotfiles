@@ -15,4 +15,4 @@ else
      dir="$base/$1"
 fi
 
-guake --show -n --rename-tab $dir --execute-command="cd '$dir'"
+guake --show -n $dir
