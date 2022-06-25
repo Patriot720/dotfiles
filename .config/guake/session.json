@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1655977949,
+    "timestamp": 1656165747,
     "workspace": {
         "0": [
             [
@@ -16,7 +16,22 @@
                             }
                         }
                     ],
-                    "label": "_dev",
+                    "label": "(root)",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/andrew/Factorio (1.1.59) + OST",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "andrew",
                     "custom_label_set": false
                 }
             ]
