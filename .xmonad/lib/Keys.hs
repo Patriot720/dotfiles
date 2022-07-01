@@ -1,33 +1,59 @@
+{-# OPTIONS_GHC -Wno-deferred-out-of-scope-variables #-}
+
 module Keys where
 
+import Data.List (find)
 import qualified Data.Map as M
 import Data.Map.Merge.Lazy
+import qualified Debug.Trace as Debug
 import Scratchpads (myScratchpads)
 import Workspaces
 import XMonad
 import XMonad.Actions.AfterDrag
 import XMonad.Actions.CopyWindow (copy, killAllOtherCopies)
 import XMonad.Actions.CycleRecentWS
+import XMonad.Actions.CycleWS (nextWS, prevWS)
 import XMonad.Actions.FloatSnap
 import XMonad.Actions.Minimize
+import XMonad.Actions.MouseGestures
+import XMonad.Actions.OnScreen (greedyViewOnScreen, viewOnScreen)
 import XMonad.Actions.Submap
 import XMonad.Config.Dmwit
 import qualified XMonad.Config.Prime as Xmonad.Config.Prime
 import XMonad.Layout.IndependentScreens
+import qualified XMonad.Prelude as L
 import qualified XMonad.StackSet as W
 import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
-import qualified XMonad.Prelude as L
-import Data.List (find)
-import qualified Debug.Trace as Debug
-import XMonad.Actions.OnScreen (greedyViewOnScreen, viewOnScreen)
+import XMonad.Util.Run
+
+sendMouseClickToWindow :: Window -> X ()
+sendMouseClickToWindow win =
+  safeSpawn
+    "xdotool"
+    ["click", "--window", show win, show button2]
+
+-- https://stackoverflow.com/questions/18304191/keyboard-free-mouse-gestures-for-xmonad
+gestures =
+  M.fromList
+    [ ([], sendMouseClickToWindow),
+      ([U], toggleFloat),
+      ([D], const $ withLastMinimized' toggleMaximization),
+      ([L], const prevWS),
+      ([R], const nextWS),
+      ([R, L], const kill),
+      -- ([L], \w -> screenWorkspace 0 >>= flip whenJust (windows . shiftThenView)),
+      -- ([R], \w -> screenWorkspace 1 >>= flip whenJust (windows . shiftThenView)),
+      ([R, D], \_ -> sendMessage NextLayout)
+    ]
 
 myMouseBindings XConfig {XMonad.modMask = modm} =
   M.fromList
     -- mod-button1, Set the window to floating mode and move by dragging
     [ ((modm, button1), \w -> focus w >> mouseMoveWindow w >> ifClick (snapMagicMove (Just 50) (Just 50) w)),
-      ((modm .|. shiftMask, button1), \w -> focus w >> mouseMoveWindow w >> ifClick (snapMagicResize [L, R, U, D] (Just 50) (Just 50) w)),
+      -- ((modm .|. shiftMask, button1), \w -> focus w >> mouseMoveWindow w >> ifClick (snapMagicResize [L, R, U, D] (Just 50) (Just 50) w)),
       ((modm, button3), \w -> focus w >> mouseResizeWindow w >> ifClick (snapMagicResize [R, D] (Just 50) (Just 50) w)),
+      ((0, button2), mouseGesture gestures),
       -- ( (modm, button1),
       --   \w ->
       --     focus w >> mouseMoveWindow w
@@ -89,13 +115,13 @@ keysP =
 shiftThenView i = W.view i . W.shift i
 
 screenShiftThenView :: PhysicalWorkspace -> WindowSet -> WindowSet
-screenShiftThenView i =  viewOnScreen (unmarshallS i) i . W.shift i
+screenShiftThenView i = viewOnScreen (unmarshallS i) i . W.shift i
 
 screenView i =
   viewOnScreen (unmarshallS i) i -- < https://xmonad.github.io/xmonad-docs/xmonad-contrib/XMonad-Actions-OnScreen.html
 
 windowsKeysForSwitchingAndMovingOnWorkspaces =
-  [ ( (m .|. mod4Mask, k), windows $ f i)
+  [ ((m .|. mod4Mask, k), windows $ f i)
     | (i, k) <- zip myWorkspaces ([xK_1 .. xK_9] ++ [xK_0]),
       (f, m) <- [(screenView, 0), (screenShiftThenView, shiftMask)]
   ]

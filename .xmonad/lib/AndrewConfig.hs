@@ -10,6 +10,7 @@ import Layouts (myLayout)
 import Transparency (enableTransparency)
 import Workspaces (myWorkspaces)
 import XMonad
+import XMonad.Actions.MouseGestures
 import XMonad.Actions.UpdatePointer (updatePointer)
 import XMonad.Hooks.DynamicProperty
 import XMonad.Hooks.InsertPosition
@@ -20,6 +21,7 @@ import qualified XMonad.StackSet as W
 
 -- instance Show (X ()) where
 --   show f = "Kekw"
+
 
 myConfig =
   def
