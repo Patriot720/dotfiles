@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1656698113,
+    "timestamp": 1656776295,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/dev",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "dev",
+                    "label": "andrew",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/dev",
+                            "directory": "/home/andrew",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,7 +31,7 @@
                             }
                         }
                     ],
-                    "label": "dev",
+                    "label": "andrew",
                     "custom_label_set": false
                 }
             ]
