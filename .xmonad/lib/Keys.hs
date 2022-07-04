@@ -42,9 +42,9 @@ gestures =
       ([L], const prevWS),
       ([R], const nextWS),
       ([R, L], const kill),
-      -- ([L], \w -> screenWorkspace 0 >>= flip whenJust (windows . shiftThenView)),
-      -- ([R], \w -> screenWorkspace 1 >>= flip whenJust (windows . shiftThenView)),
-      ([R, D], \_ -> sendMessage NextLayout)
+      ([L,D], \w -> screenWorkspace 0 >>= flip whenJust (windows . shiftThenView)),
+      ([R,D], \w -> screenWorkspace 1 >>= flip whenJust (windows . shiftThenView))
+      -- ([R, D], \_ -> sendMessage NextLayout)
     ]
 
 myMouseBindings XConfig {XMonad.modMask = modm} =
