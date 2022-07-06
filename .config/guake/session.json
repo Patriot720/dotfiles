@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1657045930,
+    "timestamp": 1657121248,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/home/andrew/.config/taffybar",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,14 +16,14 @@
                             }
                         }
                     ],
-                    "label": "andrew",
+                    "label": "taffybar",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew",
+                            "directory": "/mnt/md126/graf/tgbot",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -31,37 +31,7 @@
                             }
                         }
                     ],
-                    "label": "andrew",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "favoka2",
-                    "custom_label_set": false
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/mnt/md126/favoka2",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "favoka2",
+                    "label": "tgbot",
                     "custom_label_set": false
                 },
                 {
@@ -91,6 +61,21 @@
                             }
                         }
                     ],
+                    "label": "andrew",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/graf/tgbot",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
                     "label": "tgbot",
                     "custom_label_set": false
                 },
@@ -98,7 +83,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/graf/seesaw",
+                            "directory": "/mnt/md126/graf/final",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -106,14 +91,14 @@
                             }
                         }
                     ],
-                    "label": "seesaw",
+                    "label": "graf",
                     "custom_label_set": false
                 },
                 {
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/mnt/md126/graf/seesaw/test/seesaw/test/examples",
+                            "directory": "/mnt/md126/graf/final",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -121,7 +106,7 @@
                             }
                         }
                     ],
-                    "label": "examples",
+                    "label": "final",
                     "custom_label_set": false
                 }
             ]
