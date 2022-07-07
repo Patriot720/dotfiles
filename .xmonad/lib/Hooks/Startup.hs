@@ -18,7 +18,7 @@ myStartupHook =
       -- "emacs -nw --daemon",
       "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
       "blueman-applet",
-      "picom",
+      "picom --experimental-backends",
       -- "xcompmgr",
       "guake",
       "fcitx -d"
