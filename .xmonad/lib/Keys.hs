@@ -109,7 +109,8 @@ keysP =
          ("M-e", spawn "emacsclient --eval \"(emacs-everywhere)\""),
          ("M-a", windows copyToSecondScreen),
          ("M-S-a", killAllOtherCopies),
-         ("M-S-t", spawn "killall my-taffybar;my-taffybar")
+         ("M-S-t", spawn "killall my-taffybar;my-taffybar"),
+         ("M-S-p", spawn "killall picom;picom --experimental-backends")
        ]
 
 shiftThenView i = W.view i . W.shift i

@@ -1,17 +1,17 @@
 -- |
-
 module Layouts where
-import XMonad.Layout.Tabbed
-import XMonad.Layout.PerWorkspace
+
 import XMonad
-import XMonad.Layout.NoBorders
 import XMonad.Hooks.ManageDocks
-import XMonad.Layout.Minimize
 import XMonad.Layout.BoringWindows
+import XMonad.Layout.Minimize
+import XMonad.Layout.MultiColumns
+import XMonad.Layout.NoBorders
+import XMonad.Layout.PerWorkspace
+import XMonad.Layout.Reflect (reflectHoriz)
+import XMonad.Layout.Tabbed
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.TwoPane
-import XMonad.Layout.Reflect (reflectHoriz)
-import XMonad.Layout.MultiColumns
 
 myTabConfig =
   def
@@ -30,14 +30,16 @@ myTabConfig =
 myLayout =
   onWorkspace "1_10" (stackTile ||| Full) $
     lessBorders Screen $
-      avoidStrutsOn [D] $
-        minimize $
-          boringWindows $ -- drawer `onLeft`
-            tiled |||  tabbedBottom shrinkText myTabConfig ||| columns ||| threeCol ||| Full
+      avoidStrutsOn
+        [D]
+        (minimize $
+            boringWindows $ -- drawer `onLeft`
+              tiled ||| tabbedBottom shrinkText myTabConfig)
+        ||| Full
   where
     -- drawer = Layout.drawer 0.0 0.4 (ClassName "Spotify" `Or` ClassName "Telegram" `Or` ClassName "Org.gnome.Nautilus") Full
     stackTile = minimize $ boringWindows $ avoidStruts $ reflectHoriz (Tall 1 0.03 0.5)
-    -- $ TwoPane (3 / 100) (1 / 2)
+
     columns = multiCol [1] 1 0.01 0.5
     tiled = Tall nmaster delta ratio
     threeCol = ThreeColMid nmaster delta 0.6
