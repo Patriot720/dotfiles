@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1657475410,
+    "timestamp": 1657650608,
     "workspace": {
         "0": [
             [
@@ -158,7 +158,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/andrew/wallpaperengine/linux-wallpaperengine/build",
+                            "directory": "/mnt/md126/ud120-projects-py3-jupyter",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -166,7 +166,52 @@
                             }
                         }
                     ],
-                    "label": "build",
+                    "label": "ud120-projects-py3-jupyter",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/new_tools/sunxi-tools",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "sunxi-tools",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/new_tools/sunxi-tools",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "sunxi-tools",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/mnt/md126/sunxi/new_tools/sunxi-tools",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "sunxi-tools",
                     "custom_label_set": false
                 }
             ]
