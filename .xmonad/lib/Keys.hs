@@ -12,7 +12,7 @@ import XMonad
 import XMonad.Actions.AfterDrag
 import XMonad.Actions.CopyWindow (copy, killAllOtherCopies)
 import XMonad.Actions.CycleRecentWS
-import XMonad.Actions.CycleWS (nextWS, prevWS)
+import XMonad.Actions.CycleWS (nextWS, prevWS, shiftToNext, shiftToPrev)
 import XMonad.Actions.FloatSnap
 import XMonad.Actions.Minimize
 import XMonad.Actions.MouseGestures
@@ -39,8 +39,8 @@ gestures =
     [ ([], sendMouseClickToWindow),
       ([U], toggleFloat),
       ([D], const $ withLastMinimized' toggleMaximization),
-      ([L], const prevWS),
-      ([R], const nextWS),
+      ([L], const shiftToPrev),
+      ([R], const shiftToNext),
       ([R, L], const kill),
       ([L,D], \w -> screenWorkspace 0 >>= flip whenJust (windows . shiftThenView)),
       ([R,D], \w -> screenWorkspace 1 >>= flip whenJust (windows . shiftThenView))
