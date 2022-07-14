@@ -16,7 +16,7 @@
     (open-on-exit)
     (aux-info
         (left-docks-width "188")
-        (right-docks-width "205")
+        (right-docks-width "507")
         (maximized "no"))
     (gimp-toolbox
         (side left)
@@ -64,7 +64,7 @@
                     (edit-active "true")
                     (current-data "2. Hardness 050"))))
         (book
-            (position 563)
+            (position 564)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
@@ -91,7 +91,7 @@
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
     (position 456 179)
-    (size 996 680))
+    (size 974 658))
 (session-info "toplevel"
     (factory-entry "gimp-operation-tool-dialog")
     (position 775 358))
@@ -105,6 +105,9 @@
 (session-info "toplevel"
     (factory-entry "gimp-brightness-contrast-tool-dialog")
     (position 234 102))
+(session-info "toplevel"
+    (factory-entry "gimp-scale-tool-dialog")
+    (position 0 0))
 
 (hide-docks no)
 (single-window-mode yes)
