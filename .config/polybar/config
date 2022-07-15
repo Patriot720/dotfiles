@@ -173,12 +173,12 @@ exec = ~/.config/polybar/popup-calendar.sh
 interval = 5
 click-left = ~/.config/polybar/popup-calendar.sh --popup &
 
-[module/scratchpad-indicator]
-type = custom/script
-exec = i3-msg -t get_tree | jq "[.nodes|.[]|.|.nodes|.[]|.nodes|.[]|select(.name==\"__i3_scratch\")|.floating_nodes|.[]|select(.scratchpad_state!=\"none\")]|length"
-click-left = i3-msg 'scratchpad show'
-click-right = i3-msg 'move scratchpad'
-format-suffix = " 🗗"
+; [module/scratchpad-indicator]
+; type = custom/script
+; exec = i3-msg -t get_tree | jq "[.nodes|.[]|.|.nodes|.[]|.nodes|.[]|select(.name==\"__i3_scratch\")|.floating_nodes|.[]|select(.scratchpad_state!=\"none\")]|length"
+; click-left = i3-msg 'scratchpad show'
+; click-right = i3-msg 'move scratchpad'
+; format-suffix = " 🗗"
 
 
 
@@ -670,5 +670,5 @@ margin-bottom = 0
 
 [bar/DVI]
 inherit = bar/mybar
-monitor = DVI-D-1
+; monitor = DVI-D-1
 tray-position = right

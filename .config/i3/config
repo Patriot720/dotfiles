@@ -18,7 +18,7 @@
 # Compton pimac
 # exec_always picom  --config ~/.config/picom/picom.conf -b
 
-set $mod Mod1
+set $mod Mod4
 
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
