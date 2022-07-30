@@ -90,7 +90,7 @@ functionKeys =
 screenshotAndRecordKeys =
   [ ("<Print>", spawn "flameshot gui --delay=1000"),
     ("C-<Print>", spawn "fish -c 'flameshot full -c'"),
-    ("<Pause>", spawn "fish -c 'record'"),
+    -- ("<Pause>", spawn "fish -c 'record'"),
     ("C-<Pause>", spawn "fish -c 'record_screen'")
   ]
 
@@ -179,3 +179,4 @@ myKeys c =
   c {mouseBindings = myMouseBindings}
     `additionalKeysP` Keys.keysP
       `additionalKeys` Keys.keys
+      `removeKeysP` ["<Insert>"]
